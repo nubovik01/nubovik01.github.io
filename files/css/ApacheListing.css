@@ -1,0 +1,8 @@
+hr {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 35px solid rgba(84, 84, 84, 0.1);
+  cursor: not-allowed;
+  border-radius: 5px;
+}
