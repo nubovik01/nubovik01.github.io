@@ -21,7 +21,8 @@ var footer_texts = [
   'furry furry furry!',
   'i like javascript',
   'go kitty go!',
-  'nikita is ga~.. w-what...'
+  'nikita is ga~.. w-what...',
+  'подписывайтесь на тгк: @nubovikxd'
 ];
 
 function footer_change_text() {
