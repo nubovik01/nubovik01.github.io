@@ -6,7 +6,7 @@ var isIphone = false;
 function codeText(text) {
   // return `<code class="code-blue"><span class="code-text-white-1_5proc">${text}</span></code>`;
   return text;
-}
+};
 
 var phrasesForFooter = [
   'я дед инсайд, мне 9 лет, я хочу в психокидс',
@@ -19,6 +19,7 @@ var phrasesForFooter = [
   'шни шна шнапи шнапи шнапи шнап',
   'Made in Russia w/ <3',
   'aSBsaWtlIGJveXM=',
+  'тильт, апатия, депрессия, холод...',
   'furry furry furry!',
   'я люблю милых фембойчиков каждому бы отдался',
   'я вас всех забаню хуесосы!, — Екатерина Мизулина',
@@ -52,5 +53,5 @@ function footerChangeText() {
     console.log("User from iPhone :)");
   } else {
     console.log("Not iPhone :(");
-  }
-}
+  };
+};
