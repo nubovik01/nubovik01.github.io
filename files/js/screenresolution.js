@@ -1,5 +1,5 @@
-// Code by Nubovik
-// Created: 09/05/21 0:20
+// code by t.me/qwkrtezzz
+// file created at 09 May 2021 00:20:29 AM (UTC+3)
 
 function getSize() {
   console.log(screen.height, screen.width);

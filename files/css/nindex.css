@@ -49,9 +49,11 @@
   display: flex;
 }
 
-@media only screen and (max-width : 992px) {
+.small-screen-list-buttons {
+  display: none;
+}
 
-  /* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
   .main-body {
     margin: 0px 10% 0px 10%;
   }
@@ -62,24 +64,12 @@
 }
 
 @media only screen and (max-width : 768px) {
-
-  /* iPad Mini */
   .image-for-error-page {
     display: flex;
   }
 }
 
 @media only screen and (max-width : 485px) {
-
-  /* Extra Small Devices, Phones */
-  .main-body {
-    height: 96vh;
-    margin: 0px 5% 0px 5%;
-  }
-
-  .big-body {
-    margin: 50px 5% 0px 5%;
-  }
 
   .btn-margin-mobile_only {
     margin: 5px 0px 0px 0px;
@@ -89,31 +79,13 @@
     width: 100%;
     height: 100%;
   }
-}
 
-@media only screen and (max-width : 440px) {
-
-  /* Extra Small Devices, Phones */
-  .main-body {
-    height: 98vh;
-    margin: 0px 5% 0px 5%;
+  .big-screen-list-buttons {
+    display: none;
   }
 
-  .big-body {
-    margin: 50px 5% 0px 5%;
-  }
-}
-
-@media only screen and (max-width : 280px) {
-
-  /* Galaxy Fold, etc... */
-  .main-body {
-    height: 100vh;
-    margin: 0px 5% 0px 5%;
-  }
-
-  .big-body {
-    margin: 50px 5% 0px 5%;
+  .small-screen-list-buttons {
+    display: block;
   }
 }
 
@@ -273,7 +245,7 @@ details[open]>summary {
 
 /* buttons */
 .buttons {
-  margin: 25px 0px 0px 0px;
+  margin: 17px 0px 0px 0px;
   text-align: center;
 }
 
@@ -333,8 +305,27 @@ details[open]>summary {
   }
 }
 
-/* brandbook */
+/* loader */
+.js-loader {
+  background-color: #000000;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hidded-content-of-page {
+  display: none;
+}
+
+/* brandbook */
 .brandbook-text-title {
   font-size: 110px;
   font-family: "VDiS";

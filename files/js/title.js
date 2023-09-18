@@ -1,8 +1,8 @@
-// Code by Nubovik
-// Created: 02/17/2022 01:58
+// code by t.me/qwkrtezzz
+// file created at 17 February 2022 01:58:38 AM (UTC+3)
 
-let pageTitle = document.title;
-let siteDomain = ' - '+window.location.hostname;
+const pageTitle = document.title;
+const siteDomain = ' - '+window.location.hostname;
 
 document.title = pageTitle+siteDomain;
 
