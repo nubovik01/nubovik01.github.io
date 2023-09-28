@@ -21,7 +21,7 @@ let speed = 20,
 (function main() {
   canvas = document.getElementById('tv-screen');
   ctx = canvas.getContext('2d');
-  dvd.img.src = '/files/images/flags/ua.png';
+  dvd.img.src = '/files/images/icons/JavaScript.png';
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   pickColor();
@@ -45,12 +45,10 @@ function update() {
 function checkHitBox() {
   if (dvd.x + dvd.img.width * scale >= canvas.width || dvd.x <= 0) {
     dvd.xspeed = -dvd.xspeed;
-    dvd.img.src="/files/images/flags/ua.png";
     pickColor();
   };
   if (dvd.y + dvd.img.height * scale >= canvas.height || dvd.y <= 0) {
     dvd.yspeed = -dvd.yspeed;
-    dvd.img.src="/files/images/flags/ru.png";
     pickColor();
   };
 
