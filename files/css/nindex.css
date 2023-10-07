@@ -227,6 +227,10 @@ details[open]>summary {
   border-bottom: 1px solid black;
 }
 
+.big-font-donate-bio {
+  font-size: 16px;
+}
+
 /* копирование текста */
 .copied_text {
   line-height: 40px;
@@ -527,8 +531,8 @@ hr {
 }
 
 .mask-display-big {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.56rem;
+  height: 2.56rem;
 }
 
 .text-margin-vklad_list-list-category_title {
