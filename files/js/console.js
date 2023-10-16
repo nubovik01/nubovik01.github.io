@@ -6,5 +6,5 @@ console.log("Hello, User! Found a bug? - admin[commercial-at]qwkrtezzz[dot]ru");
 console.log('User agent: '+navigator.userAgent);
 
 setTimeout(() => {
-  console.log('%ci so fuck3d hate everyone!!1', 'color: yellow;');
-}, 1182);
+  console.log('%ci\'m so fuck3d hate everyone!!1', 'color: yellow;');
+}, 1000);
