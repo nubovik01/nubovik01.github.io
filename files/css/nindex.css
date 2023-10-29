@@ -1,9 +1,6 @@
 /*
-
   Некоторые материалы для создания стилей для сайта были взяты отсюда (или с этих сайтов):
-
   https://blog.maxgraph.ru/adaptivnaya-tablicza-na-chistom-css/
-
 */
 
 /* page */
@@ -22,7 +19,7 @@
 }
 
 .main-body {
-  font-family: "Exo 2", Tahoma, 'Segoe UI', sans-serif, system-ui, emoji;
+  font-family: Tahoma, 'Segoe UI', sans-serif, emoji; /* "Exo 2", Tahoma, 'Segoe UI', sans-serif, system-ui, emoji */
   background: rgb(17, 17, 17);
   background: linear-gradient(74deg, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 1) 42%, rgba(0, 0, 0, 1) 92%);
   display: flex;
@@ -654,6 +651,10 @@ li::marker {
 
 .center-text {
   text-align: center;
+}
+
+.special-text-mark {
+  color: whitesmoke;
 }
 
 .rule-text {
