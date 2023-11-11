@@ -1,4 +1,4 @@
-// code by t.me/qwkrtezzz
+// code by qwkrtezzz (github.com/nubovik01)
 // file created at 07 Jule 2022 09:36:54 PM (UTC+3)
 
 const listBann3rs = [

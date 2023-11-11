@@ -1,4 +1,4 @@
-// code by t.me/qwkrtezzz
+// code by qwkrtezzz (github.com/nubovik01)
 // file created at 22 June 2023 01:23:13 AM (UTC+3)
 
 const folderName='/files/js';

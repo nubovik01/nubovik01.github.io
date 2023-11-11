@@ -1,4 +1,4 @@
-// code by t.me/qwkrtezzz
+// code by qwkrtezzz (github.com/nubovik01)
 // file created at 09 May 2021 00:20:29 AM (UTC+3)
 
 function getSize() {

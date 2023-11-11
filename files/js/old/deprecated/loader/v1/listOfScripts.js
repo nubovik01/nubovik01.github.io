@@ -1,4 +1,4 @@
-// Code by Nubovik & RedGuy
+// Code by qwkrtezzz (github.com/nubovik01) & RedGuy
 // Created: 07/26/22 14:41
 
 const jsDir = "/files/js";

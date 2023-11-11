@@ -1,6 +1,6 @@
 // code by t.me/rldv1 (rldv1.live), deobfuscated by t.me/kitenokgene (kshk.floyzi.ru)
 // original: 3.65.75.53, deobfuscated original: kshk.floyzi.ru/dvd (wheelchair🐳)
-// some keked changes by t.me/qwkrtezzz (nubovik01.github.io)
+// some keked changes by qwkrtezzz (github.com/nubovik01)
 // this file created at 1 August 2023 02:05:27 AM (UTC+3)
 
 function pickColor() {

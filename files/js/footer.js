@@ -1,4 +1,4 @@
-// code by t.me/qwkrtezzz
+// code by qwkrtezzz (github.com/nubovik01)
 // file created at 17 January 2022 02:53:49 AM (UTC+3)
 
 const phrasesForFooter = [

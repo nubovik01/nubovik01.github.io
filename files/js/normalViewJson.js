@@ -1,4 +1,4 @@
-// Code NOT by Nubovik
+// Code NOT by qwkrtezzz
 // Автора потeрял, сорри :(
 
 setTimeout(() => {

@@ -1,4 +1,4 @@
-// code by t.me/qwkrtezzz
+// code by qwkrtezzz (github.com/nubovik01)
 // file created at 11 April 2021 21:08:32 PM (UTC+3)
 
 console.log("%cHello, User! Found a bug? - admin[commercial-at]qwkrtezzz[dot]ru", 'color: lightgreen;');

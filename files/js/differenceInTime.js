@@ -1,4 +1,4 @@
-// code by t.me/qwkrtezzz
+// code by qwkrtezzz (github.com/nubovik01)
 // file created at 26 August 2023 04:52:29 PM (UTC+3)
 
 function differenceInTime(referenceDate) {

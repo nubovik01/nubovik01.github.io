@@ -1,4 +1,4 @@
-// code by t.me/qwkrtezzz
+// code by qwkrtezzz (github.com/nubovik01)
 // file created at 17 February 2022 01:58:38 AM (UTC+3)
 
 const pageTitle = document.title;
