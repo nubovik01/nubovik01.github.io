@@ -85,12 +85,4 @@ const phrasesForFooter = [
 
 function footerChangeText() {
   document.getElementById("footer-text").innerHTML = phrasesForFooter[Math.floor(Math.random() * phrasesForFooter.length)];
-
-  if (/iPhone/i.test(navigator.userAgent) && isIphone == false) {
-    isIphone = true;
-    document.getElementById("footer-text").innerHTML = 'айфончик 📱';
-    console.log("User from iPhone :)");
-  } else {
-    console.log("Not iPhone :(");
-  };
 };
