@@ -1,13 +1,6 @@
 // code by t.me/qwkrtezzz
 // file created at 17 January 2022 02:53:49 AM (UTC+3)
 
-const isIphone = false;
-
-function codeText(text) {
-  // return `<code class="code-blue"><span class="code-text-white-1_5proc">${text}</span></code>`;
-  return text;
-};
-
 const phrasesForFooter = [
   'я дед инсайд, мне 9 лет, я хочу в психокидс',
   '/беднi/груснi/нещаснi/уставшi/паломанi/псiх/галоднi/бальної/',
@@ -91,7 +84,7 @@ const phrasesForFooter = [
 ];
 
 function footerChangeText() {
-  document.getElementById("footer-text").innerHTML = codeText(phrasesForFooter[Math.floor(Math.random() * phrasesForFooter.length)]);
+  document.getElementById("footer-text").innerHTML = phrasesForFooter[Math.floor(Math.random() * phrasesForFooter.length)];
 
   if (/iPhone/i.test(navigator.userAgent) && isIphone == false) {
     isIphone = true;
