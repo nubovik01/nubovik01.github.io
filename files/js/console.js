@@ -5,6 +5,6 @@ console.log("Hello, User! Found a bug? - admin[commercial-at]qwkrtezzz[dot]ru");
 
 console.log('User agent: '+navigator.userAgent);
 
-setTimeout(() => {
-  console.log('%ci\'m so fuck3d hate everyone!!1', 'color: yellow;');
-}, 1000);
+if(!navigator.cookieEnabled) console.log('Cookie files on user client is disabled.');
+
+console.log('%ci\'m so fuck3d hate everyone!!1', 'color: yellow;');
