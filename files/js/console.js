@@ -7,4 +7,6 @@ console.log('User agent: '+navigator.userAgent);
 
 if(!navigator.cookieEnabled) console.log('Cookie files on user client is disabled.');
 
+if(navigator.doNotTrack == '1') console.log('Third party services will tracking you despite the "do not track" option being enabled.');
+
 console.log('%ci\'m so fuck3d hate everyone!!1', 'color: yellow;');
