@@ -1,5 +1,3 @@
-// Code by Yandex
-
 (function (m, e, t, r, i, k, a) {
   m[i] = m[i] || function () {
     (m[i].a = m[i].a || []).push(arguments)
@@ -10,8 +8,7 @@
   k.async = true;
   k.src = r;
   a.parentNode.insertBefore(k, a)
-})
-  (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+})(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
 
 ym(65547946, "init", {
   clickmap: true,
@@ -20,3 +17,5 @@ ym(65547946, "init", {
   webvisor: true,
   trackHash: true
 });
+
+console.log('Yandex metrica has been enabled.');
