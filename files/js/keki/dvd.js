@@ -1,5 +1,5 @@
 // code by rldv1 (github.com/rldv1), deobfuscated by kitenokgene (kshk.floyzi.ru)
-// original: 3.65.75.53, deobfuscated original: kshk.floyzi.ru/dvd (wheelchair🐳)
+// original: 3.65.75.53, deobfuscated original: kshk.floyzi.ru/dvd
 // some keked changes by qwkrtezzz (github.com/nubovik01)
 // this file created at 1 August 2023 02:05:27 AM (UTC+3)
 
