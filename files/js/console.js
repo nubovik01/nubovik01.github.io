@@ -9,4 +9,4 @@ console.log('User agent: '+navigator.userAgent);
 
 if(!navigator.cookieEnabled) console.log('Cookie files on user client is disabled.');
 
-console.log('%ci\'m so fuck3d hate everyone!!1', 'color: yellow;');
+console.log('Cookies: '+ document.cookie);

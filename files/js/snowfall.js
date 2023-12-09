@@ -61,7 +61,7 @@ Date.now || (Date.now = function() {
       var a = [],
         o = {
           flakeCount: 35,
-          flakeColor: "#ffffff",
+          flakeColor: "#ffffff", // цвет снежинок
           flakePosition: "absolute",
           flakeIndex: 999999,
           minSize: 1,
@@ -112,7 +112,7 @@ Date.now || (Date.now = function() {
             }
           } else i.collection = !1
       }
-      // create flakes
+      // create flakes ////////////////////////////////////////
       for (t(e).get(0).tagName === t(document).get(0).tagName && (c = 25), t(window).bind("resize", function() {
           l = t(e)[0].clientHeight, d = t(e)[0].offsetWidth
         }), r = 0; r < i.flakeCount; r += 1) a.push(new s(h(c, d - c), h(0, l), h(100 * i.minSize, 100 * i.maxSize) / 100, h(i.minSpeed, i.maxSpeed)));
@@ -131,6 +131,7 @@ Date.now || (Date.now = function() {
       }), n(), this.clear = function() {
         t(".snowfall-canvas").remove(), t(e).children(".snowfall-flakes").remove(), cancelAnimationFrame(f)
       }
+      ////////////////////////////////////////////////////////
     }, t.fn.snowfall = function(e) {
       return "object" == typeof e || void 0 == e ? this.each(function() {
         new t.snowfall(this, e)
