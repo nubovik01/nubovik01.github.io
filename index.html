@@ -46,6 +46,14 @@
   <script src="/files/js/checkTheme.js" type="text/javascript"></script>
   <script src="/files/js/cookieBlock.js" type="text/javascript"></script>
 
+  <script>
+    if(new Date().getMonth() + 1 == 12 && getCookie("theme") != 'white') { // let it snow!
+      $(document).ready(function() {
+        $(document).snowfall({ flakeCount: 1000 });
+      });
+    };
+  </script>
+
   <!-- for non-supported up-to-date js browsers or etc -->
   <noscript>
     <meta http-equiv="refresh" content="0; URL=/badbrowser.html">
