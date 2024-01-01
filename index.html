@@ -48,11 +48,11 @@
   <script src="/files/js/cookieBlock.js" type="text/javascript"></script>
 
   <script>
-    const snowMonths = [12, 1, 2];
-    const currentMonth = new Date().getMonth()+1;
-    const userTheme = getCookie("theme");
+    const winterMonths = [12, 1, 2]
+    const currentMonth = new Date().getMonth() + 1;
+    const canShowSnow = getCookie('theme') !== 'white';
 
-    if(snowMonths.includes(currentMonth) && userTheme != 'white') {
+    if (winterMonths.includes(currentMonth) && canShowSnow) {
       $(document).ready(() => $(document).snowfall({ flakeCount: 1000 }));
     };
   </script>
