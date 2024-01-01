@@ -52,8 +52,14 @@
     const currentMonth = new Date().getMonth() + 1;
     const canShowSnow = getCookie('theme') !== 'white';
 
-    if (winterMonths.includes(currentMonth) && canShowSnow) {
-      $(document).ready(() => $(document).snowfall({ flakeCount: 1000 }));
+    if(winterMonths.includes(currentMonth) && canShowSnow) {
+      $(document).ready(() => {
+        $(document).snowfall({ flakeCount: 1000 });
+        $(window).resize(() => {
+          $(document).snowfall('clear');
+          $(document).snowfall({ flakeCount: 1000 });
+        });
+      });
     };
   </script>
 
@@ -86,14 +92,20 @@
     </div>
 
     <div class="footer footer-margin">
-      <span class="small-size-2 gray-font" id="footer-text" onclick="footerChangeText();">У вас выключен JavaScript на этом сайте<br>Please turn on JavaScript on this site</span>
+      <span class="small-size-2 gray-font" id="footer-text" onclick="footerChangeText();">
+        У вас выключен JavaScript на этом сайте<br>
+        Please turn on JavaScript on this site
+      </span>
 
       <script>footerChangeText();</script>
     </div>
   </div>
 
   <div class="information-block-about-cookies white-font" id="block-about-cookie">
-    <span class="small-size">🚨 Сайт использует печеньки для улучшения взаимодействия пользователя. Они <b>не</b> используются для сбора аналитики.</span>
+    <span class="small-size">
+      🚨 Сайт использует печеньки для улучшения взаимодействия пользователя.
+      Они <b>не</b> используются для сбора аналитики.
+    </span>
     <br>
     <a class="btn btn-margin" onclick="closeCookieBlock();">OK</a>
     <a class="btn btn-margin" href="https://ru.wikipedia.org/wiki/Cookie" target="_blank">Что это?</a>
