@@ -10,7 +10,7 @@ const phrasesForFooter = [
   // 'факт: в 2021 никита сделал 2787 коммитов на github',
   // 't.me/minitypebot',
   'я люблю милых фембойчиков каждому бы отдался',
-  'возвращаем эру гулей и дед инсайдиков день #'+differenceInTime('2023-06-13'),
+  'возвращаем эру гулей и дед инсайдиков день #' + differenceInTime('2023-06-13'),
   // 'обнови страницу и этот текст изменится',
   // 'нажми на меня и этот текст изменится',
   'жертва стокгольмского синдрома',
@@ -67,5 +67,7 @@ const phrasesForFooter = [
 ];
 
 function footerChangeText() {
-  document.getElementById("footer-text").innerHTML = phrasesForFooter[Math.floor(Math.random() * phrasesForFooter.length)];
+  const footer = document.getElementById("footer-text");
+  const phrase = phrasesForFooter[Math.floor(Math.random() * phrasesForFooter.length)];
+  footer.innerHTML = phrase;
 };

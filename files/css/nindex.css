@@ -1,3 +1,26 @@
+:root {
+  --white-color: white;
+  --some-transparent-white-color: rgba(255, 255, 255, 0.944);
+  --white-gradient: linear-gradient(74deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 1) 42%, rgba(255, 255, 255, 1) 92%);
+  --whitesmoke-color: whitesmoke;
+  --red-color: red;
+  --strong-blue-color: blue;
+  --blue-color: #0077FF;
+  --strong-lightblue-color: #1ea3f5db;
+  --lightblue-color: rgba(114, 167, 253, 0.952);
+  --green-color: green;
+  --yellow-color: yellow;
+  --orange-color: orange;
+  --purple-color: purple;
+  --gray-color: gray;
+  --darkgray-color: darkgray;
+  --transparent-dark-color: rgba(255, 255, 255, .2);
+  --less-transparent-dark-color: rgba(216, 216, 216, 0.323);
+  --black-color: black;
+  --black-gradient: linear-gradient(74deg, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 1) 42%, rgba(0, 0, 0, 1) 92%);
+  --pink-color: #ff58ec;
+}
+
 @font-face {
   font-family: "Exo 2";
   src: url("https://fonts.gstatic.com/s/exo2/v10/7cH1v4okm5zmbvwkAx_sfcEuiD8jvvKsOdC_.woff2")
@@ -8,9 +31,9 @@
 }
 
 body {
-  font-family: Tahoma, 'Segoe UI', sans-serif, emoji; /* "Exo 2", Tahoma, 'Segoe UI', sans-serif, system-ui, emoji */
-  background: rgb(17, 17, 17);
-  background: linear-gradient(74deg, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 1) 42%, rgba(0, 0, 0, 1) 92%);
+  font-family: Tahoma, 'Segoe UI', sans-serif, emoji;
+  /* "Exo 2", Tahoma, 'Segoe UI', sans-serif, system-ui, emoji */
+  background: var(--black-gradient);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,12 +43,7 @@ body {
 }
 
 body.white-theme {
-  background: rgba(255, 255, 255, 0.944);
-  background: linear-gradient(74deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 1) 42%, rgba(255, 255, 255, 1) 92%);
-}
-
-.small-screen-list-buttons {
-  display: none;
+  background: var(--white-gradient);
 }
 
 .block-with-tools {
@@ -37,7 +55,7 @@ body.white-theme {
 }
 
 .information-block-about-cookies {
-  background-color: red;
+  background-color: var(--red-color);
   position: fixed;
   left: 50%;
   bottom: 0px;
@@ -70,16 +88,6 @@ body.white-theme {
   }
 }
 
-@media only screen and (max-width : 485px) {
-  .big-screen-list-buttons {
-    display: none;
-  }
-
-  .small-screen-list-buttons {
-    display: block;
-  }
-}
-
 /* scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
@@ -101,78 +109,73 @@ body.white-theme {
   border: 2px solid #303030;
 }
 
-.buttons {
+.buttons-block {
   margin: 17px 0px 0px 0px;
   text-align: center;
 }
 
-.btn {
+.btn { /* батон)) */
   display: inline-block;
-  color: white;
+  color: var(--white-color);
   font-weight: 600;
   text-decoration: none;
   user-select: none;
   padding: .62em 1.98em;
   border: 2px solid;
-  cursor: pointer;
 }
 
 .white-theme .btn {
-  color: black;
+  color: var(--black-color);
 }
 
 .white-theme .information-block-about-cookies .btn {
-  color: white;
+  color: var(--white-color);
 }
 
 .btn:focus {
-  background: rgba(255, 255, 255, .2);
+  background: var(--transparent-dark-color);
 }
 
 .white-theme .btn:focus {
-  color: white;
-  background: black;
+  color: var(--white-color);
+  background: var(--black-color);
 }
 
 .btn:hover {
-  background: rgba(255, 255, 255, .2);
+  background: var(--transparent-dark-color);
 }
 
 .white-theme .btn:hover {
-  background: rgba(216, 216, 216, 0.323);
-}
-
-.btn-margin {
-  margin: 5px 0px 0px 0px;
+  background: var(--less-transparent-dark-color);
 }
 
 .btn:active {
-  color: black;
-  background: white;
+  color: var(--black-color);
+  background: var(--white-color);
 }
 
 .white-theme .btn:active {
-  color: white;
-  background: black;
+  color: var(--white-color);
+  background: var(--black-color);
 }
 
 .link-pink {
-  color: #ff58ec;
+  color: var(--pink-color);
   text-decoration: none;
 }
 
-.link-lightblue {
-  color: rgba(114, 167, 253, 0.952);
+.link-strong-lightblue {
+  color: var(--strong-lightblue-color);
   text-decoration: none;
 }
 
 h1 {
-  color: #fff;
+  color: var(--white-color);
   font-size: 1.2rem;
 }
 
 .white-theme h1 {
-  color: black;
+  color: var(--black-color);
 }
 
 hr {
@@ -184,126 +187,84 @@ hr {
   border-radius: 5px;
 }
 
-.full-text::after {
-  content: ' 🔎';
-}
-
-.full-text:hover::after {
-  content: ' (' attr(hidden-text)')';
-}
-
-.big-text {
-  font-size: 2rem;
-}
-
-.center-text {
-  text-align: center;
-}
-
-.special-text-mark {
-  color: whitesmoke;
-}
-
-.red-heart-emoji {
-  margin: 0px 0px -4.7px 0px;
-}
-
 code.code-blue {
-  background-color: #1ea3f5db;
+  background-color: var(--lightblue-color);
   border-radius: 15px;
 }
 
 .footer {
-  overflow: visible;
-  text-align: center;
   user-select: none;
   cursor: pointer;
 }
 
-.footer-margin {
-  margin: 5px 0px 0px 0px;
+.footer-emoji {
+  margin: 0px 0px -4.7px 0px;
 }
 
-.small-size {
-  font-size: 0.90rem;
+.text-align-center { text-align: center; }
+
+.margin-down-1 { margin: 5px 0px 0px 0px;}
+
+.font-size-1 { font-size: 0.95rem; }
+.font-size-2 { font-size: 0.90rem; }
+.font-size-3 { font-size: 0.85rem; }
+.font-size-4 { font-size: 0.80rem; }
+.font-size-5 { font-size: 0.75rem; }
+.font-size-6 { font-size: 0.70rem; }
+.font-size-7 { font-size: 0.65rem; }
+.font-size-8 { font-size: 0.60rem; }
+.font-size-9 { font-size: 0.55rem; }
+.font-size-10 { font-size: 0.50rem; }
+
+.default-color-text,
+.white-theme .information-block-about-cookies.default-color-text,
+.white-theme .black-color-text {
+  color: var(--white-color);
 }
 
-.small-size-1 {
-  font-size: 0.80rem;
+.white-theme .default-color-text {
+  color: var(--black-color);
 }
 
-.small-size-2 {
-  font-size: 0.75rem;
+.red-color-text {
+  color: var(--red-color);
 }
 
-.small-size-3 {
-  font-size: 0.95rem;
+.strong-blue-color-text {
+  color: var(--strong-blue-color);
 }
 
-.white-font {
-  color: white;
+.blue-color-text {
+  color: var(--blue-color);
 }
 
-.white-theme .white-font {
-  color: black;
+.green-color-text {
+  color: var(--green-color);
 }
 
-.white-theme .information-block-about-cookies.white-font {
-  color: white;
+.yellow-color-text,
+.white-theme .yellow-color-text {
+  color: var(--yellow-color);
 }
 
-.red-font {
-  color: red;
+.orange-color-text {
+  color: var(--orange-color);
 }
 
-.blue-font {
-  color: blue;
+.purple-color-text {
+  color: var(--purple-color);
 }
 
-.ultra-blue-font {
-  color: #0077FF;
+.black-color-text {
+  color: var(--black-color);
 }
 
-.green-font {
-  color: green;
+.gray-color-text,
+.white-theme .gray-color-text {
+  color: var(--gray-color);
 }
 
-.yellow-font {
-  color: yellow;
-}
-
-.white-theme .yellow-font {
-  color: rgba(237, 237, 31, 0.893);
-}
-
-.orange-font {
-  color: orange;
-}
-
-.purple-font {
-  color: purple;
-}
-
-.black-font {
-  color: black;
-}
-
-.white-theme .black-font {
-  color: white;
-}
-
-.gray-font {
-  color: gray;
-}
-
-.white-theme .gray-font {
-  color: rgb(108, 108, 108);
-}
-
-.darkgray-font {
-  color: darkgray;
-}
-
-.white-theme .darkgray-font {
-  color: rgb(142, 142, 142);
+.darkgray-color-text,
+.white-theme .darkgray-color-text {
+  color: var(--darkgray-color);
 }

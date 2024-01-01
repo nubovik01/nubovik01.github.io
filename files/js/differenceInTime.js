@@ -6,6 +6,5 @@ function differenceInTime(referenceDate) {
   const currentDate = new Date();
   const differenceInTime = currentDate.getTime() - startDate.getTime();
   const differenceInDays = Math.floor(differenceInTime / (1000 * 60 * 60 * 24));
-
   return differenceInDays;
 };

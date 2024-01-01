@@ -5,10 +5,8 @@ function getSize() {
   console.log(screen.height, screen.width);
 };
 
-function getScreenResolution() {
-  console.log("Get screen resolution per 150 ms.");
+function getScreenResolution(ms = 150) {
+  console.log("Get screen resolution per %s ms.", ms);
 
-  setInterval(() => {
-    getSize();
-  }, 150);
+  setInterval(() => getSize(), ms);
 };

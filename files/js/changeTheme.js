@@ -1,6 +1,8 @@
 // code by qwkrtezzz (github.com/nubovik01)
 // file created at 9 December 2023 07:50:17 PM (UTC+3)
 
+if(checkUserTheme() == undefined) setCookie('theme', 'black', 'forever');
+
 document.body.classList.add(checkUserTheme() + '-theme');
 
 const changeThemeButton = document.getElementById('changeThemeButton');
@@ -11,7 +13,7 @@ if (changeThemeButton) {
     document.body.classList.toggle('black-theme');
 
     const theme = checkUserTheme() === 'white' ? 'black' : 'white';
-    document.cookie = "theme=" + theme + "; max-age=31536000;";
+    setCookie('theme', theme, 'forever');
 
     if (theme == 'white' && $(document).snowfall()) {
       $(document).snowfall('clear');
