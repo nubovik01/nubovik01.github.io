@@ -1,3 +1,4 @@
+////////////////////////////////////////////////////////////////////////////////////
 Date.now || (Date.now = function() {
     return (new Date).getTime()
   }),
@@ -141,3 +142,24 @@ Date.now || (Date.now = function() {
       }) : void 0
     }
   }(jQuery);
+////////////////////////////////////////////////////////////////////////////////////
+
+// code by qwkrtezzz (https://github.com/nubovik01)
+// writted at 1 January 2024 08:06:31 PM (UTC+3)
+
+const winterMonths = [12, 1, 2];
+const currentMonth = new Date().getMonth() + 1;
+const canShowSnow = getCookie('theme') !== 'white';
+
+if (winterMonths.includes(currentMonth)) {
+  $(document).ready(() => {
+    if (canShowSnow) $(document).snowfall({ flakeCount: 1000 });
+  });
+
+  $(window).resize(() => {
+    $(document).snowfall('clear');
+    if (getCookie('theme') == 'black') {
+      $(document).snowfall({ flakeCount: 1000 });
+    };
+  });
+};
