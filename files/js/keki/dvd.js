@@ -4,7 +4,11 @@
 // this file created at 1 August 2023 02:05:27 AM (UTC+3)
 
 function pickColor() {
-  logoColor = 'rgb(' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ')';
+  logoColor = 'rgb('
+    + Math.floor(Math.random() * 256)
+    + ',' + Math.floor(Math.random() * 256)
+    + ',' + Math.floor(Math.random() * 256)
+    + ')';
 };
 
 let speed = 20,
@@ -53,9 +57,9 @@ function checkHitBox() {
   };
 
   // check if image hits a corner
-  if ((dvd.x <= 0 && dvd.y <= 0) || 
+  if ((dvd.x <= 0 && dvd.y <= 0) ||
     (dvd.x + dvd.img.width * scale >= canvas.width && dvd.y <= 0) ||
-    (dvd.x <= 0 && dvd.y + dvd.img.height * scale >= canvas.height) || 
+    (dvd.x <= 0 && dvd.y + dvd.img.height * scale >= canvas.height) ||
     (dvd.x + dvd.img.width * scale >= canvas.width && dvd.y + dvd.img.height * scale >= canvas.height)) {
     alert("bonus");
   };

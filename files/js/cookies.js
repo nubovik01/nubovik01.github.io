@@ -7,7 +7,9 @@ function setCookie(name, value, time) {
     console.log(`%cA persistent cookie "${name}" with value "${value}" was created.`, 'color: lightblue;');
   } else if (Number(time) && !isNaN(time)) {
     document.cookie = `${name}=${value}; max-age=${time};`;
-    console.log(`%cCreated a cookie expiring in ${time} seconds with name "${name}" and value "${value}"`, 'color: lightblue;');
+    console.log(
+      `%cCreated a cookie expiring in ${time} seconds with name "${name}" and value "${value}"`, 'color: lightblue;'
+    );
   } else {
     document.cookie = `${name}=${value};`;
     console.log(`%cA cookie "${name}" with value "${value}" was created for one session.`, 'color: lightblue;');
@@ -25,7 +27,7 @@ function closeCookieBlock() {
 
   console.log('HTML block with alert about cookie-files was closed.');
 
-  if(!getCookie("stopCookieAlert")) setCookie('stopCookieAlert', true, 'forever');
+  if (!getCookie("stopCookieAlert")) setCookie('stopCookieAlert', true, 'forever');
 };
 
 function checkUserTheme() {
