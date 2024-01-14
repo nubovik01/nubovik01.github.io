@@ -40,6 +40,12 @@ const phrasesList = [
     }
   },
   {
+    text: 'срач\n💪 Play',
+    meta: {
+      enabled: true
+    }
+  },
+  {
     text: "глаза как у ребёнка, и я забываю голос твой",
     meta: {
       enabled: true
