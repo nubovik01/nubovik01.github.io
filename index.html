@@ -63,20 +63,22 @@
 <body>
   <div class="block-with-tools default-color-text">
     <a id="changeThemeButton">[ 👀 ]</a>
+    <a id="changeVisibilitySnowfall">[ ❄️ ]</a>
   </div>
 
   <div class="text-align-center">
     <h1>Hello, I'm Nikita!</h1>
-    <div class="buttons-block">
-      <div>
-        <a class="btn" href="/dvd">DVD</a>
-        <a class="btn margin-down-1" href="https://t.me/qwkrzbot/">Telegram</a>
-        <a class="btn margin-down-1" href="https://github.com/nubovik01/">GitHub</a>
+
+    <div class="buttons-container">
+      <div class="buttons-block">
+        <a href="/dvd">DVD</a>
+        <a href="https://t.me/qwkrzbot/">Telegram</a>
+        <a href="https://github.com/nubovik01/">GitHub</a>
       </div>
-      <div>
-        <a class="btn margin-down-1" href="mailto:kittyy@qwkrtezzz.ru">Email</a>
-        <a class="btn margin-down-1" href="https://t.me/nbvkbio">Bio</a>
-        <a class="btn margin-down-1" href="https://t.me/nbvkxd">Blog</a>
+      <div class="buttons-block">
+        <a href="mailto:kittyy@qwkrtezzz.ru">Email</a>
+        <a href="https://t.me/nbvkbio">Bio</a>
+        <a href="https://t.me/nbvkxd">Blog</a>
       </div>
     </div>
 
@@ -85,8 +87,6 @@
         У вас выключен JavaScript на этом сайте<br>
         Please turn on JavaScript on this site
       </span>
-
-      <script>footerChangeText();</script>
     </div>
   </div>
 
@@ -95,16 +95,21 @@
       🚨 Сайт использует печеньки для улучшения взаимодействия пользователя.
       Они <b>не</b> используются для сбора аналитики.
     </span>
-    <br>
-    <a class="btn margin-down-1" href="#" onclick="closeCookieBlock();">OK</a>
-    <a class="btn margin-down-1" href="https://fwd.qwkrtezzz.ru/vO5Xt4" target="_blank">Что это?</a>
+
+    <div class="buttons-block">
+      <a href="#" onclick="closeCookieBlock();">OK</a>
+      <a href="https://fwd.qwkrtezzz.ru/vO5Xt4" target="_blank">Что это?</a>
+    </div>
   </div>
 
   <script src="/files/js/changeTheme.js" type="text/javascript"></script>
+  <script src="/files/js/snowfallUtils.js" type="text/javascript"></script>
 </body>
 
 <script>
-  if (getCookie("stopCookieAlert")) closeCookieBlock();
+  if (getCookie("stopCookieAlert")) closeCookieBlock(); // hide block about cookie files
+
+  footerChangeText(); // change text on footer with visit a page
 </script>
 
 </html>

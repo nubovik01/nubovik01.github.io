@@ -1,4 +1,3 @@
-////////////////////////////////////////////////////////////////////////////////////
 Date.now || (Date.now = function () {
   return (new Date).getTime()
 }),
@@ -49,7 +48,7 @@ Date.now || (Date.now = function () {
               } else this.speed = 1, this.stepSize = 0, parseInt(e) + 1 < this.target.width && void 0 == n[parseInt(e) + 1][parseInt(s) + 1] ? this.x++ : parseInt(e) - 1 > 0 && void 0 == n[parseInt(e) - 1][parseInt(s) + 1] ? this.x-- : (t.fillStyle = "#fff", t.fillRect(e, s, this.size, this.size), n[parseInt(e)][parseInt(s)] = 1, this.reset())
           } (this.x + this.size > d - c || this.x < c) && this.reset()
         }, this.reset = function () {
-          this.y = 0, this.x = h(c, d - c), this.stepSize = h(1, 10) / 100, this.size = h(100 * i.minSize, 100 * i.maxSize) / 100, this.element.style.width = this.size + "px", this.element.style.height = this.size + "px", this.speed = h(i.minSpeed, i.maxSpeed)
+          this.y = 0, this.x = h(c, d - c), this.stepSize = h(1, 10) / 100, this.size = h(110 * i.minSize, 110 * i.maxSize) / 100, this.element.style.width = this.size-1 + "px", this.element.style.height = this.size + "px", this.speed = h(i.minSpeed, i.maxSpeed)
         }
       }
 
@@ -61,18 +60,18 @@ Date.now || (Date.now = function () {
       }
       var a = [],
         o = {
-          flakeCount: 35,
-          flakeColor: "#ffffff", // цвет снежинок
+          flakeCount: 351,
+          flakeColor: "#ffffff", 
           flakePosition: "absolute",
           flakeIndex: 999999,
           minSize: 0.89,
           maxSize: 3.2,
           minSpeed: 1,
-          maxSpeed: 1.54,
-          round: 221,
+          maxSpeed: 1.49,
+          round: 22,
           shadow: !1,
           collection: !1,
-          collectionHeight: 73,
+          collectionHeight: 7333,
           deviceorientation: !1
         },
         i = t.extend(o, i),
@@ -116,7 +115,7 @@ Date.now || (Date.now = function () {
       // create flakes
       for (t(e).get(0).tagName === t(document).get(0).tagName && (c = 25), t(window).bind("resize", function () {
         l = t(e)[0].clientHeight, d = t(e)[0].offsetWidth
-      }), r = 0; r < i.flakeCount; r += 1) a.push(new s(h(c, d - c), h(0, l), h(100 * i.minSize, 100 * i.maxSize) / 100, h(i.minSpeed, i.maxSpeed)));
+      }), r = 0; r < i.flakeCount; r += 1) a.push(new s(h(c, d - c), h(0, l), h(50 * i.minSize, 50 * i.maxSize) / 100, h(i.minSpeed, i.maxSpeed)));
       i.round && t(".snowfall-flakes").css({
         "-moz-border-radius": i.maxSize,
         "-webkit-border-radius": i.maxSize,
@@ -141,24 +140,3 @@ Date.now || (Date.now = function () {
       }) : void 0
     }
   }(jQuery);
-////////////////////////////////////////////////////////////////////////////////////
-
-// code by qwkrtezzz (https://github.com/nubovik01)
-// writted at 1 January 2024 08:06:31 PM (UTC+3)
-
-const winterMonths = [12, 1, 2];
-const currentMonth = new Date().getMonth() + 1;
-const canShowSnow = getCookie('theme') !== 'white';
-
-if (winterMonths.includes(currentMonth)) {
-  $(document).ready(() => {
-    if (canShowSnow) $(document).snowfall({ flakeCount: 1000 });
-  });
-
-  $(window).resize(() => {
-    $(document).snowfall('clear');
-    if (getCookie('theme') == 'black') {
-      $(document).snowfall({ flakeCount: 1000 });
-    };
-  });
-};

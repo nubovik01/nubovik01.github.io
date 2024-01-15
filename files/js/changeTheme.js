@@ -1,7 +1,7 @@
 // code by qwkrtezzz (github.com/nubovik01)
 // file created at 9 December 2023 07:50:17 PM (UTC+3)
 
-if(checkUserTheme() == undefined) setCookie('theme', 'black', 'forever');
+if (!checkUserTheme()) setCookie('theme', 'black', 'forever');
 
 document.body.classList.add(checkUserTheme() + '-theme');
 
@@ -17,7 +17,7 @@ if (changeThemeButton) {
 
     if (theme == 'white' && $(document).snowfall()) {
       $(document).snowfall('clear');
-    } else if (theme == 'black' && winterMonths.includes(currentMonth)) {
+    } else if (theme == 'black' && winterMonths.includes(currentMonth) && checkSnowfallVisibility() == 'true') {
       $(document).snowfall({ flakeCount: 1000 });
     };
   };

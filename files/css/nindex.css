@@ -1,5 +1,6 @@
 :root {
   --white-color: white;
+  --transparent-white-color: rgba(146, 146, 146, 0.2);
   --some-transparent-white-color: rgba(255, 255, 255, 0.944);
   --white-gradient: linear-gradient(74deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 1) 42%, rgba(255, 255, 255, 1) 92%);
   --whitesmoke-color: whitesmoke;
@@ -54,14 +55,22 @@ body.white-theme {
   cursor: pointer;
 }
 
+.block-with-tools > a:first-of-type {
+  margin: 0px 0px 0px 0px;
+}
+
+.block-with-tools > a {
+  margin: 0px 0px 0px 10px;
+}
+
 .information-block-about-cookies {
   background-color: var(--red-color);
+  padding: 15px;
+  transform: translateX(-50%);
+  max-width: 100%;
+  bottom: 0px;
   position: fixed;
   left: 50%;
-  bottom: 0px;
-  padding: 15px;
-  max-width: 100%;
-  transform: translateX(-50%);
 }
 
 @media only screen and (max-width : 992px) {
@@ -88,33 +97,11 @@ body.white-theme {
   }
 }
 
-/* scrollbar */
-::-webkit-scrollbar {
-  width: 12px;
-  border-radius: 15px;
-  background: #292929;
+.buttons-block > a {
+  margin: 5px 0px 0px 0px;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #1c1c1c;
-  border-radius: 15px;
-  -webkit-border-radius: 1ex;
-  border: 2px solid #303030;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(22, 22, 22);
-  border-radius: 15px;
-  -webkit-border-radius: 1ex;
-  border: 2px solid #303030;
-}
-
-.buttons-block {
-  margin: 17px 0px 0px 0px;
-  text-align: center;
-}
-
-.btn { /* батон)) */
+.buttons-block > a { /* батон)) */
   display: inline-block;
   color: var(--white-color);
   font-weight: 600;
@@ -124,37 +111,36 @@ body.white-theme {
   border: 2px solid;
 }
 
-.white-theme .btn {
+.white-theme .buttons-block > a {
   color: var(--black-color);
 }
 
-.white-theme .information-block-about-cookies .btn {
+.white-theme .information-block-about-cookies .buttons-block > a {
   color: var(--white-color);
 }
 
-.btn:focus {
+.buttons-block > a:focus {
   background: var(--transparent-dark-color);
 }
 
-.white-theme .btn:focus {
-  color: var(--white-color);
-  background: var(--black-color);
+.white-theme .buttons-block > a:focus {
+  background: var(--transparent-white-color);
 }
 
-.btn:hover {
+.buttons-block > a:hover {
   background: var(--transparent-dark-color);
 }
 
-.white-theme .btn:hover {
+.white-theme .buttons-block > a:hover {
   background: var(--less-transparent-dark-color);
 }
 
-.btn:active {
+.buttons-block > a:active {
   color: var(--black-color);
   background: var(--white-color);
 }
 
-.white-theme .btn:active {
+.white-theme .buttons-block > a:active {
   color: var(--white-color);
   background: var(--black-color);
 }

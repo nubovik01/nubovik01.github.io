@@ -33,3 +33,7 @@ function closeCookieBlock() {
 function checkUserTheme() {
   return getCookie("theme");
 };
+
+function checkSnowfallVisibility() {
+  return getCookie("snowfallVisibility");
+}
