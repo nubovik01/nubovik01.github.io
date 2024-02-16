@@ -1,12 +1,10 @@
-// code by qwkrtezzz (github.com/nubovik01)
-// file created at 11 April 2021 09:08:32 PM (UTC+3)
+// code by qwkrtezzz (https://github.com/nubovik01)
+// file created at 4 February 2024 12:26:03 PM (UTC+3)
 
-console.log('%cHello, User! Found a bug? - admin[commercial-at]qwkrtezzz[dot]ru', 'color: lightgreen;');
+console.log("site created by qwkrtezzz (https://github.com/nubovik01)");
 
-console.log('This site created by qwkrtezzz (github.com/nubovik01)');
+console.log("%cHello! Found a bug? - t[dot]me[slash]nktdev", 'color: lightgreen;');
 
-console.log('User agent: '+navigator.userAgent);
+console.log(navigator.userAgent);
 
-if(!navigator.cookieEnabled) console.log('Cookie files on user client is disabled.');
-
-console.log('Cookies: '+ document.cookie);
+console.log(`%c${screen.height}x${screen.width}`, 'color: rgb(163, 72, 248);');

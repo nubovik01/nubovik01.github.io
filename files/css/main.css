@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --default-white-color: white;
+  --default-black-color: black;
+  --default-gray-color: gray;
+  --default-font-size: 115%;
+  --more-gray-color: rgba(128, 128, 128, 0.787);
+  --transparent-white-color: rgba(146, 146, 146, 0.2);
+  --dark-color: rgba(84, 84, 84, 0.723);
+  --transparent-dark-color: rgba(255, 255, 255, .2);
+  --normal-font-size: 75%;
+  --buttons-font-size: 85%;
+  --footer-font-size: 80%;
+  --bio-font-size: 90%;
+  --default-page-font: monospace;
+  --special-blue-color: #0077FF;
+  --special-pink-color: #ff58ec;
+  --old-black-color: #000000e8;
+  --light-gray-color: rgb(227, 227, 227);
+  --default-red-color: red;
+  --special-yellow-color: rgba(255, 255, 0, 0.849);
+  --old-yellow-color: #f5e503;
+  --special-red-color: #ff6262ed;
+  --more-red-color: #ff2222;
+  --transparent-dark-yellow-color: #ccc128cf;
+  --default-yellow-color: yellow;
+  --special-orange-color: #f39c12;
+  --special-black-color: #242424;
+}
+
+body {
+  background-color: var(--default-black-color);
+  color: var(--default-white-color);
+  font-family: monospace;
+  font-size: var(--default-font-size);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--default-white-color);
+    color: var(--default-black-color);
+  }
+}
+
+#hidden {
+  display: none;
+}
+
+p, pre {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--special-blue-color);
+}
+
+.buttons > a {
+  color: var(--default-white-color);
+  background-color: var(--default-black-color);
+  text-decoration: none;
+  cursor: grab;
+  padding: 8px;
+  padding-left: 14px;
+  padding-right: 14px;
+  display: inline-block;
+  font-size: var(--buttons-font-size);
+  border: 2px solid var(--default-white-color);
+  user-select: none;
+  -webkit-user-select: none;
+  margin: 5px 0 0 0;
+}
+
+@-moz-document url-prefix() {
+  .buttons > a {
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  .buttons > a {
+    padding: 8px;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin: 6px 0 0 0;
+  }
+}
+
+.buttons > a:focus {
+  background: var(--transparent-white-color);
+}
+
+.buttons > a:hover {
+  background: var(--transparent-dark-color);
+}
+
+.buttons > a:active {
+  color: var(--default-black-color);
+  background: var(--default-white-color);
+}
+
+#second-brick {
+  display: none;
+}
+
+@media only screen and (min-width: 690px)  {
+  .buttons #second-brick {
+    display: block;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .buttons > a {
+    color: var(--default-black-color);
+    background-color: var(--default-white-color);
+    border: 2px solid var(--default-black-color);
+  }
+
+  .buttons > a:focus {
+    background: var(--transparent-dark-color);
+  }
+
+  .buttons > a:hover {
+    background: var(--transparent-white-color);
+  }
+
+  .buttons > a:active {
+    color: var(--default-white-color);
+    background: var(--default-black-color);
+  } 
+}
+
+.footer {
+  margin-top: 3px;
+  color: var(--default-gray-color);
+  font-style: italic;
+}
+
+.footer p {
+  margin: 0;
+  font-size: var(--footer-font-size);
+}
+
+.footer .copyrights {
+  color: var(--more-gray-color);
+  font-size: var(--footer-font-size);
+}
+
+.footer #commit {
+  color: var(--more-gray-color);
+}
+
+#copyright {
+  color: var(--more-gray-color);
+}
+
+.footer #quote {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.footer span {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.footer a {
+  cursor: text;
+  color: var(--more-gray-color);
+}
+
+.footer noscript span#noscript {
+  color: var(--default-yellow-color);
+  font-size: var(--footer-font-size);
+}
+
+.bio p {
+  font-size: var(--bio-font-size);
+}
+
+@-moz-document url-prefix() {
+  .bio p {
+    font-weight: 600;
+  }
+}
+
+.bio p span#aka {
+  background-color: var(--dark-color);
+}
+
+@media (prefers-color-scheme: light) {
+  .bio p span#aka {
+    background-color: var(--light-gray-color);
+  }
+}
+
+noscript > p {
+  color: var(--old-yellow-color);
+}
