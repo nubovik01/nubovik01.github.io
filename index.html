@@ -39,17 +39,15 @@
   <link ref="apple-touch-icon" href="./files/images/omyum.png">
 </head>
 
-<body>
+<body class="default-body">
   <div>
     <div class="bio">
-      <p>
-        Привет. Я Никита (<span id="aka">AKA</span> dempix, nubovik, qwkrtezzz)
-      </p>
+      <p>Привет. Я Никита (<span id="aka">AKA</span> dempix, nubovik, qwkrtezzz)</p>
     </div>
 
     <div class="buttons">
       <a href="https://vk.com/qwkrtezzz">VK</a>
-      <a href="https://t.me/nktdev">Telegram</a>
+      <a href="https://t.me/qwkrzbot">Telegram</a>
       <a href="https://x.com/impostornubovik">Twitter</a> <!-- now X -->
       <a href="https://discord.gg/EJc8Uc7yhZ">Discord</a>
       <a href="https://monkeytype.com/profile/qwkrtezzz">monkeytype</a>
@@ -59,30 +57,33 @@
       <a href="https://reddit.com/user/nubovik01">Reddit</a>
       <a href="https://t.me/nbvkxd">Блог</a>
       <a href="https://tiktok.com/@nubovik">TikTok</a>
-      <a href="https://t.me/nbvkbio">Bio</a>
-      <a href="https://steamcommunity.com/id/nubovik01">Steam</a>
+      <a href="https://t.me/nbvkbio">Био</a>
       <!-- <a href="/dvd">DVD</a> -->
     </div>
 
     <div class="footer">
       <span id="line">- - - - - - - - - - - - - - - -</span>
       <noscript>
-        <p id="noscript">
+        <p>
           У вас отключён JavaScript.<br>
-          Please turn on JavaScript!<br>
           Пожалуйста, включите JavaScript!
         </p>
       </noscript>
+      <!-- A.R.: ./quotes.txt -->
       <p id="quote" onclick="quotes.change();"></p>
-      <p id="commit">
-        <!-- hash 03a773e &middot; 2024.02.16 (UTC) -->
-      </p>
+      <!-- hash 03a773e &middot; 2024.02.16 (UTC) -->
+      <p id="commit"></p>
       <p class="copyrights">
         Created by qwkrtezzz not w/ &lt;3<br>
-        &COPY; qwkrtezzz, 2021&mdash;2024<br>
+        &COPY; qwkrtezzz, 2021&mdash;<span id="year">2023</span><br>
       </p>
     </div>
   </div>
 </body>
+
+<script>
+  const element = document.getElementById("year");
+  element.innerText = new Date().getFullYear();
+</script>
 
 </html>

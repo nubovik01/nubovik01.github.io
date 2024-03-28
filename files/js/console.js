@@ -3,7 +3,7 @@
 
 console.log("site created by qwkrtezzz (https://github.com/nubovik01)");
 
-console.log("%cHello! Found a bug? - t[dot]me[slash]nktdev", 'color: lightgreen;');
+console.log("%cHello! Found a bug? - cutie@qwkrtezzz.ru", 'color: lightgreen;');
 
 console.log(navigator.userAgent);
 
