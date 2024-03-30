@@ -1,3 +1,6 @@
+// code by qwkrtezzz (https://github.com/nubovik01)
+// file created at 17 February 2024 01:57:08 AM (UTC+3)
+
 const Commit = function () {
   this.owner = "nubovik01";
   this.repo = "nubovik01.github.io";

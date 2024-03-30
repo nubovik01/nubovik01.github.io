@@ -9,8 +9,7 @@
   <title>Главная страница</title>
   <meta name="language" content="Russian">
   <meta name="description" content="Главная страница этого сайта">
-  <meta name="keywords"
-    content="nubovik, нубовик, js, nbvk, нбвк, qwkrtezzz, квиртиз, квиктиз, qwkrz, квиз, квир, квик, qwz, qwk_sh, qwz_sh, qwk_shara, qwz_shara, qwksh, qwkshara, qwzshara, qwkrz, qwzrtezzz, квизтиз, qwkrzx3, qwkrzgx3y, qwkrzbot, qwzrzbot, qwzrtbot, qwzrtbot, hotdev01, myakish, мякиш, myak1sh, nbvk0, nbvk01, nbvkbio, био нубовика, био никиты, sh1tofqwk, sh1tofqwz, sh1tofnbvk, sh1tofnbvk0, sh1tofnbvk01, sh1itofnbvk0, fckedqwk, fckedqwz, fckednubovik, fckednubovik01, fckednubovik0, fckednubovik1, fckednbvk01, fckednbvk0, fckednbvk1, qwkpcbot, qwzpcbot, nubovikxd, nbvkxd, nbvk0xd, nbvk1xd, nbvk01xd, nubovik01xd, nubovikhub, nubovik01hub, nubovik0hub, nubovik1hub, нубовикхаб, хабофнубовик, hub of nubovik, хаб нубовика, хаб никиты, хаб квиза, хаб квиртиза, хаб квика, хаб мякиша, хаб квира, хаб квиктиза, хаб квиртиза, хаб квиртиза, nbvkhub, nbvk0hub, nbvk1hub, nbvk01hub, secretplacetw, secretplace, nbvkxd, nbvk0xd, nbvk01xd">
+  <meta name="keywords" content="nubovik, нубовик, js, nbvk, нбвк, qwkrtezzz, квиртиз, квиктиз, qwkrz, квиз, квир, квик, qwz, qwk_sh, qwz_sh, qwk_shara, qwz_shara, qwksh, qwkshara, qwzshara, qwkrz, qwzrtezzz, квизтиз, qwkrzx3, qwkrzgx3y, qwkrzbot, qwzrzbot, qwzrtbot, qwzrtbot, hotdev01, myakish, мякиш, myak1sh, nbvk0, nbvk01, nbvkbio, био нубовика, био никиты, sh1tofqwk, sh1tofqwz, sh1tofnbvk, sh1tofnbvk0, sh1tofnbvk01, sh1itofnbvk0, fckedqwk, fckedqwz, fckednubovik, fckednubovik01, fckednubovik0, fckednubovik1, fckednbvk01, fckednbvk0, fckednbvk1, qwkpcbot, qwzpcbot, nubovikxd, nbvkxd, nbvk0xd, nbvk1xd, nbvk01xd, nubovik01xd, nubovikhub, nubovik01hub, nubovik0hub, nubovik1hub, нубовикхаб, хабофнубовик, hub of nubovik, хаб нубовика, хаб никиты, хаб квиза, хаб квиртиза, хаб квика, хаб мякиша, хаб квира, хаб квиктиза, хаб квиртиза, хаб квиртиза, nbvkhub, nbvk0hub, nbvk1hub, nbvk01hub, secretplacetw, secretplace, nbvkxd, nbvk0xd, nbvk01xd">
   <meta name="theme-color" content="#242424">
   <meta name="author" lang="en" content="qwkrtezzz (https://github.com/nubovik01)">
   <meta property="og:locale" content="ru_RU">
@@ -27,46 +26,50 @@
   <script src="./files/js/footer.js"></script>
   <script src="./files/js/console.js"></script>
   <script src="./files/js/sha.js"></script>
+  <script src="./files/js/projects.js"></script>
   <script>
     const quotes = new Quotes();
     const commit = new Commit();
+    const projects = new Projects();
     window.onload = function () {
       quotes.change();
       commit.update();
+      projects.list("prepend");
     };
   </script>
   <link ref="icon" type="image/png" href="./files/images/omyum.png">
   <link ref="apple-touch-icon" href="./files/images/omyum.png">
 </head>
 
-<body class="default-body">
-  <div>
+<body>
+  <div class="wrapper">
     <div class="bio">
-      <p>Привет. Я Никита (<span id="aka">AKA</span> dempix, nubovik, qwkrtezzz)</p>
+      <h3>✌ hello, i'm nikita!</h3>
+      <p>junior(?) developer from st. petersburg, russia</p>
+      <div class="buttons">
+        <a href="https://t.me/nbvkxd">Blog</a>
+        <a href="https://vk.com/qwkrtezzz">VK</a>
+        <a href="https://t.me/qwkrzbot">Telegram</a>
+        <a href="https://x.com/impostornubovik">Twitter</a> <!-- now X -->
+        <a href="https://t.me/nbvkbio">Bio</a>
+        <a href="https://discord.gg/EJc8Uc7yhZ">Discord</a>
+        <a href="https://reddit.com/user/nubovik01">Reddit</a>
+        <a href="https://monkeytype.com/profile/qwkrtezzz">monkeytype</a>
+        <a href="https://github.com/nubovik01">GitHub</a>
+        <!-- <a href="mailto:nubovik01@gmail.com">Email</a> -->
+        <!-- <a href="/dvd">DVD</a> -->
+      </div>
     </div>
-
-    <div class="buttons">
-      <a href="https://vk.com/qwkrtezzz">VK</a>
-      <a href="https://t.me/qwkrzbot">Telegram</a>
-      <a href="https://x.com/impostornubovik">Twitter</a> <!-- now X -->
-      <a href="https://discord.gg/EJc8Uc7yhZ">Discord</a>
-      <a href="https://monkeytype.com/profile/qwkrtezzz">monkeytype</a>
-      <!-- <a href="mailto:nubovik01@gmail.com">Эл. почта</a> -->
-      <span id="second-brick"></span>
-      <a href="https://github.com/nubovik01">GitHub</a>
-      <a href="https://reddit.com/user/nubovik01">Reddit</a>
-      <a href="https://t.me/nbvkxd">Блог</a>
-      <a href="https://tiktok.com/@nubovik">TikTok</a>
-      <a href="https://t.me/nbvkbio">Био</a>
-      <!-- <a href="/dvd">DVD</a> -->
-    </div>
-
+    <!-- todo: добавить отображение проектов по убыванию и по возрастанию -->
+    <div class="projects" hidden></div>
     <div class="footer">
-      <span id="line">- - - - - - - - - - - - - - - -</span>
+      <span class="line">- - - - - - - - - - - - - - -</span>
       <noscript>
         <p>
-          У вас отключён JavaScript.<br>
-          Пожалуйста, включите JavaScript!
+          У вас отключён JavaScript. Пожалуйста, включите JS!<br>
+          Chromium? chrome://settings/content/javascript<br>
+          Firefox? about:preferences#privacy<br>
+          Edge? edge://settings/content/javascript
         </p>
       </noscript>
       <!-- A.R.: ./quotes.txt -->
@@ -75,15 +78,15 @@
       <p id="commit"></p>
       <p class="copyrights">
         Created by qwkrtezzz not w/ &lt;3<br>
-        &COPY; qwkrtezzz, 2021&mdash;<span id="year">2023</span><br>
+        nubovik01(at)gmail(dot)com<br>
+        &COPY; qwkrtezzz, 2021&mdash;<span id="year">latest</span>
+        <script>
+          const element = document.getElementById("year");
+          element.innerText = new Date().getFullYear();
+        </script>
       </p>
     </div>
   </div>
 </body>
-
-<script>
-  const element = document.getElementById("year");
-  element.innerText = new Date().getFullYear();
-</script>
 
 </html>
