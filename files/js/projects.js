@@ -6,7 +6,6 @@ const projectsJson = [
     title: "BotDobryak",
     icon: "./files/images/logos/bots/botdobryak/botdobryak.png",
     working: "2019—2020",
-    version: "1.7.9",
     show: true,
   },
   {
@@ -20,7 +19,6 @@ const projectsJson = [
       и имеющий 290+ тысяч пользователей из разных уголков планеты.
     `,
     working: "2020—2024'Q1",
-    version: "3.0.3-pre2",
     show: true
   },
   {
@@ -32,7 +30,42 @@ const projectsJson = [
       обходить обязательную авторизацию на PornHub для пользователей из РФ.
     `,
     working: "2022—2023",
-    version: "1.0.4",
+    show: true
+  },
+  {
+    title: "auto-bonus-claim-twitch",
+    link: "https://github.com/nubovik01/auto-bonus-claim-twitch",
+    description: `
+      Браузерный скрипт для расширения Tampermonkey, позволяющий автоматически
+      собирать баллы канала на Twitch при просмотре стримов.
+    `,
+    shortLink: "github.com",
+    working: "2022-2023",
+    show: false
+  },
+  {
+    title: "genpass",
+    link: "https://github.com/nubovik01/genpass",
+    shortLink: "github.com",
+    working: "2022-2023",
+    show: false
+  },
+  {
+    title: "nbvk-quotes-api",
+    link: "https://github.com/nubovik01/nbvk-quotes-api",
+    shortLink: "github.com",
+    working: "2023",
+    show: false
+  },
+  {
+    title: "downloader-js",
+    link: "https://github.com/nubovik01/downloader-js",
+    shortLink: "github.com",
+    description: `
+      Фановый скрипт. Делался чисто по приколу из-за отсутствия капчи на сайте
+      знакомого, который сохранял картинки по нумерации.
+    `,
+    working: "2023",
     show: true
   },
   {
@@ -41,7 +74,6 @@ const projectsJson = [
     link: "https://github.com/nubovik01/nyanbot",
     shortLink: "github.com",
     working: "2023—2024'Q1",
-    version: "0.4.9.b12⌂",
     show: true
   },
   {
@@ -53,7 +85,6 @@ const projectsJson = [
       Игровой бот с небольшим уклоном на Северную Корею (КНДР) в мессенджере Telegram.
     `,
     working: "2024",
-    version: "1.6.5",
     show: true
   }
 ];
@@ -82,7 +113,7 @@ Projects.prototype.list = function (sort = "prepend") {
       const projectLink = project.link && project.shortLink
         ? `
             <span class="link">
-              v${project.version} · ${project.shortLink}
+              ${project.shortLink}
             </span>
             <br>
           `
@@ -102,7 +133,7 @@ Projects.prototype.list = function (sort = "prepend") {
             <div class="header">
               ${projectIcon}
               <div>
-                ${project.title} (${project.working})<br>
+                ${project.title}<br>
                 ${projectLink}
               </div>
             </div>

@@ -89,7 +89,7 @@ a {
   padding-right: 14px;
   display: inline-block;
   font-size: var(--buttons-font-size);
-  border: 1px solid var(--default-white-color);
+  border: 2px solid var(--default-white-color);
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -206,7 +206,7 @@ noscript > p {
 }
 
 .projects > div {
-  border: 0.16em solid rgb(24, 24, 24);
+  border: 0.16em solid rgb(27, 27, 27);
   border-radius: 8px;
   margin-top: 10px;
 }
@@ -264,7 +264,7 @@ noscript > p {
 }
 
 .projects img {
-  width: 34px;
+  width: 31px;
   margin-right: 8px;
   margin-bottom: -3px;
   border: 0.15em solid rgb(31, 31, 31);
