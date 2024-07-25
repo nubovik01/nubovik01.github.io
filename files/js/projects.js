@@ -22,53 +22,6 @@ const projectsJson = [
     show: true
   },
   {
-    title: "anti-auth-pornhub",
-    link: "https://github.com/nubovik01/anti-auth-pornhub",
-    shortLink: "github.com",
-    description: `
-      Браузерный скрипт для расширения Tampermonkey в пару строк. Позволяет
-      обходить обязательную авторизацию на PornHub для пользователей из РФ.
-    `,
-    working: "2022—2023",
-    show: true
-  },
-  {
-    title: "auto-bonus-claim-twitch",
-    link: "https://github.com/nubovik01/auto-bonus-claim-twitch",
-    description: `
-      Браузерный скрипт для расширения Tampermonkey, позволяющий автоматически
-      собирать баллы канала на Twitch при просмотре стримов.
-    `,
-    shortLink: "github.com",
-    working: "2022-2023",
-    show: false
-  },
-  {
-    title: "genpass",
-    link: "https://github.com/nubovik01/genpass",
-    shortLink: "github.com",
-    working: "2022-2023",
-    show: false
-  },
-  {
-    title: "nbvk-quotes-api",
-    link: "https://github.com/nubovik01/nbvk-quotes-api",
-    shortLink: "github.com",
-    working: "2023",
-    show: false
-  },
-  {
-    title: "downloader-js",
-    link: "https://github.com/nubovik01/downloader-js",
-    shortLink: "github.com",
-    description: `
-      Фановый скрипт. Делался чисто по приколу из-за отсутствия капчи на сайте
-      знакомого, который сохранял картинки по нумерации.
-    `,
-    working: "2023",
-    show: true
-  },
-  {
     title: "NyanBot",
     icon: "./files/images/noAvatarDiscord2.png",
     link: "https://github.com/nubovik01/nyanbot",
@@ -126,6 +79,8 @@ Projects.prototype.list = function (sort = "prepend") {
             </div>
           `
         : "";
+
+      newProjectElement.className = "project";
 
       newProjectElement.innerHTML = `
         <div class="native">
