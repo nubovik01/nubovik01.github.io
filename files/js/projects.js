@@ -20,25 +20,6 @@ const projectsJson = [
     `,
     working: "2020—2024'Q1",
     show: true
-  },
-  {
-    title: "NyanBot",
-    icon: "./files/images/noAvatarDiscord2.png",
-    link: "https://github.com/nubovik01/nyanbot",
-    shortLink: "github.com",
-    working: "2023—2024'Q1",
-    show: true
-  },
-  {
-    title: "Korean Agent",
-    icon: "./files/images/logos/bots/koreanagent/KoreanAgentBot_Avatar-150x150.png",
-    link: "https://t.me/koreanagentbot",
-    shortLink: "telegram.me",
-    description: `
-      Игровой бот с небольшим уклоном на Северную Корею (КНДР) в мессенджере Telegram.
-    `,
-    working: "2024",
-    show: true
   }
 ];
 
