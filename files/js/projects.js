@@ -5,7 +5,6 @@ const projectsJson = [
   {
     title: "BotDobryak",
     icon: "./files/images/logos/bots/botdobryak/botdobryak.png",
-    working: "2019—2020",
     show: true,
   },
   {
@@ -18,7 +17,6 @@ const projectsJson = [
       необходимых возможностей, состоящий на более чем 600 серверах
       и имеющий 290+ тысяч пользователей из разных уголков планеты.
     `,
-    working: "2020—2024'Q1",
     show: true
   }
 ];

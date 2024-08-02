@@ -46,11 +46,8 @@ const Quotes = function () {
   this.check = function (quote, quoteId) {
     const checkQuoteId = this.quoteIdCache != quoteId;
 
-    if (quote.text && checkQuoteId) {
-      return true;
-    } else {
-      return false;
-    };
+    if (quote.text && checkQuoteId) return true;
+    return false;
   };
 };
 
