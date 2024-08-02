@@ -59,7 +59,7 @@ body {
 }
 
 .wrapper {
-  margin: 30px;
+  margin: 25px;
   width: 325px;
 }
 
@@ -73,30 +73,49 @@ a {
   color: var(--special-blue-color);
 }
 
+/*
+  AB - кнопки с адаптивным изменением их ширины и количества
+  рядов взависимости от размера экрана пользователя (фича
+  добавлена 3 августа по запросам юзеров, ибо с маленьких
+  телефончиков смотреть на кнопки слегка противно)
+*/
+.buttons {
+  margin-top: 2px;
+  display: flex; /* AB */
+  flex-wrap: wrap; /* AB */
+  margin-left: -5px; /* AB */
+}
+
 .buttons > a {
   color: var(--default-white-color);
   background-color: var(--default-black-color);
   text-decoration: none;
   cursor: grab;
-  padding: 8px;
+  /* padding: 8px;
   padding-left: 16px;
-  padding-right: 16px;
+  padding-right: 16px; */
+  padding: 8px 11px; /* AB */
   display: inline-block;
   font-size: var(--buttons-font-size);
   border: 2px solid var(--default-white-color);
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  margin: 5px 0 0 0;
+  /* margin-left: 5px; */
+  margin: 5px 0 0 5px; /* AB */
+  flex: 1 0 calc(25% - 32px); /* AB */
+  text-align: center; /* AB */
+  font-weight: 600;
 }
 
+/*
 @-moz-document url-prefix() {
   .buttons > a {
     padding-left: 15px;
     padding-right: 15px;
-    font-weight: 600;
   }
 }
+*/
 
 .buttons > a:focus {
   background: var(--transparent-white-color);
@@ -202,6 +221,10 @@ noscript > p {
   width: 100%;
 }
 
+.projects .native {
+  margin: 10px;
+}
+
 .projects .project {
   border: 0.16em solid rgb(29, 29, 29);
   border-radius: 8px;
@@ -214,16 +237,12 @@ noscript > p {
   }
 }
 
-.projects .native {
-  margin: 10px;
-}
-
-.projects .native a {
+.projects .project a {
   color: var(--default-white-color);
 }
 
 @media (prefers-color-scheme: light) {
-  .projects .native a {
+  .projects .project a {
     color: var(--default-black-color);
   }
 }

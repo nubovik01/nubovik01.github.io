@@ -4,20 +4,26 @@
 const projectsJson = [
   {
     title: "BotDobryak",
-    icon: "./files/images/logos/bots/botdobryak/botdobryak.png",
-    show: true,
+    icon: "./files/images/logos/bots/botdobryak/botdobryak.png"
   },
   {
     title: "FlameOut",
+    description: `
+      Многофункциональный бот для Discord с множеством полезных
+      и самых необходимых возможностей для Вас и вашего сервера,
+      состоящий на более чем 600 серверах (за всё время - 3k+)
+      и имеющий 290k+ пользователей с разных уголков планеты.
+    `,
     icon: "./files/images/logos/bots/flameout/flame_64x64.png",
     link: "https://nubovik.gitbook.io/flameout",
-    shortLink: "gitbook.io",
-    description: `
-      Многофункциональный бот в Discord с множеством полезных и самых
-      необходимых возможностей, состоящий на более чем 600 серверах
-      и имеющий 290+ тысяч пользователей из разных уголков планеты.
-    `,
-    show: true
+    shortLink: "gitbook.io"
+  },
+  {
+    title: "воздушный квиртиз.",
+    description: "Мой личный канал в Telegram. Моя жизнь, немножко мемчиков, щитпоста и прочее...",
+    icon: "https://cdn5.cdn-telegram.org/file/YyKn4bAkKI1gJ4s3UzaZi8KfEPwczSH-FB3bJ8MctIXICEd7mAH9McVWCTxL3m3TCIEYzcczq4649vpVNZ3F3bGNVEnGy0bMSVpcrrUTNjCp1L6XG_tJGbp6U-R0e3BEg7SqcTK_wrC2dkaOO5sy1RlpkG12uewMTiMnbir4-mKBL4ekTXpZ0pSjrZm9VETaGu6mBkKCColMADRLQBNHRKYlR0quTWob2GsaIYoSrbfDVMQ8fQ1DrmLxRlhyQOj4TjXB5aXelquRGYIiWDXSthzhq1cbZAsT-yHdsiF1KTjA8Uk-H-CIBLBAjTlb6GNTpFci27ayWAZMIPG19hRg-A.jpg",
+    link: "https://t.me/nbvkxd/",
+    shortLink: "telegram.me"
   }
 ];
 
@@ -31,8 +37,9 @@ Projects.prototype.list = function (sort = "prepend") {
   projectsElement.innerHTML = "";
 
   for (const project of projectsJson) {
-    if (project.show) {
+    if (!project.hide) {
       const newProjectElement = document.createElement("div");
+      newProjectElement.className = "project";
 
       const projectIcon = project.icon
         ? `
@@ -59,15 +66,18 @@ Projects.prototype.list = function (sort = "prepend") {
           `
         : "";
 
-      newProjectElement.className = "project";
-
       newProjectElement.innerHTML = `
         <div class="native">
           ${project.link ? `<a href="${project.link}">` : ""}
             <div class="header">
               ${projectIcon}
               <div>
-                ${project.title}<br>
+                ${project.title}
+                ${project.link
+                  ? `<svg style="margin: 0 0 -1px -5px;" width="13" height="13" stroke="#757575" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 22 22" stroke-width="2"><path d="M12 6h-6a2 0 0 0 0 -2 2v10a2 0 0 0 0 2 2h10a2 0 0 0 0 2 -2v-6"></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"></path></svg>`
+                  : ""
+                }
+                <br>
                 ${projectLink}
               </div>
             </div>
