@@ -4,7 +4,7 @@
 const projectsJson = [
   {
     title: "BotDobryak",
-    icon: "./files/images/logos/bots/botdobryak/botdobryak.png"
+    icon: "./files/images/logos/bots/botdobryak/botdobryak.webp"
   },
   {
     title: "FlameOut",
@@ -14,14 +14,14 @@ const projectsJson = [
       состоящий на более чем 600 серверах (за всё время - 3k+)
       и имеющий 290k+ пользователей с разных уголков планеты.
     `,
-    icon: "./files/images/logos/bots/flameout/flame_64x64.png",
+    icon: "./files/images/logos/bots/flameout/flame_64x64.webp",
     link: "https://nubovik.gitbook.io/flameout",
     shortLink: "gitbook.io"
   },
   {
     title: "воздушный квиртиз.",
     description: "Мой личный канал в Telegram. Моя жизнь, немножко мемчиков, щитпоста и прочее...",
-    icon: "https://cdn5.cdn-telegram.org/file/YyKn4bAkKI1gJ4s3UzaZi8KfEPwczSH-FB3bJ8MctIXICEd7mAH9McVWCTxL3m3TCIEYzcczq4649vpVNZ3F3bGNVEnGy0bMSVpcrrUTNjCp1L6XG_tJGbp6U-R0e3BEg7SqcTK_wrC2dkaOO5sy1RlpkG12uewMTiMnbir4-mKBL4ekTXpZ0pSjrZm9VETaGu6mBkKCColMADRLQBNHRKYlR0quTWob2GsaIYoSrbfDVMQ8fQ1DrmLxRlhyQOj4TjXB5aXelquRGYIiWDXSthzhq1cbZAsT-yHdsiF1KTjA8Uk-H-CIBLBAjTlb6GNTpFci27ayWAZMIPG19hRg-A.jpg",
+    icon: "./files/images/killua-blog-avatar.webp",
     link: "https://t.me/nbvkxd/",
     shortLink: "telegram.me"
   }
