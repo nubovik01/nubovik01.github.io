@@ -22,6 +22,7 @@ Commit.prototype.update = function () {
 
   this.getInfo().then(result => {
     element.innerText = `sha ${result.sha} · ${result.date} (UTC)`;
+    if (element.hasAttribute("hidden")) element.toggleAttribute("hidden");
   }).catch(error => {
     console.log("An unexpected error occurred while trying to get information from GitHub.");
     console.error(error);

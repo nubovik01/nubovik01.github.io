@@ -5,3 +5,5 @@ const documentTitle = document.title;
 const siteDomain = window.location.hostname || "nubovik01.github.io";
 
 document.title = documentTitle + " - " + siteDomain;
+
+console.log("A title of page has been changed.");
