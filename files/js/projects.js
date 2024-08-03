@@ -14,7 +14,7 @@ const projectsJson = [
       состоящий на более чем 600 серверах (за всё время - 3k+)
       и имеющий 290k+ пользователей с разных уголков планеты.
     `,
-    icon: "./files/images/logos/bots/flameout/flame_64x64.webp",
+    icon: "./files/images/logos/bots/flameout/flame_32x32.webp",
     link: "https://nubovik.gitbook.io/flameout",
     shortLink: "gitbook.io"
   },
