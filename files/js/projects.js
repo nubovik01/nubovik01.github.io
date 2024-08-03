@@ -89,4 +89,4 @@ Projects.prototype.list = function (sort = "prepend") {
       projectsElement[sort](newProjectElement);
     }
   };
-}
+};

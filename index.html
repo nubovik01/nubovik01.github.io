@@ -31,11 +31,11 @@
     const quotes = new Quotes();
     const commit = new Commit();
     const projects = new Projects();
-    window.onload = function () {
+    document.addEventListener('DOMContentLoaded', () => {
       quotes.change();
       projects.list("prepend");
       commit.update();
-    };
+    });
   </script>
   <link rel="shortcut icon" href="./files/images/omyum.ico">
   <link ref="apple-touch-icon" src="./files/images/omyum.ico">
@@ -95,5 +95,13 @@
     </div>
   </div>
 </body>
+
+<script>
+  window.onload = () => {
+    const domContentLoadedEventEnd = window.performance.timing.domContentLoadedEventEnd;
+    const navigationStart = window.performance.timing.navigationStart;
+    console.log('Page load time: %sms', domContentLoadedEventEnd - navigationStart);
+  };
+</script>
 
 </html>
