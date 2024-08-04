@@ -8,6 +8,11 @@ const Commit = function () {
 
   this.getInfo = async function () {
     const response = await fetch(this.apiUrl);
+
+    if (response.status != 200) {
+      return console.warn("[!] An error occurred while getting information from GitHub.");
+    };
+
     const firstCommit = (await response.json())[0];
 
     const sha = firstCommit.sha.slice(0, 7);
@@ -21,10 +26,11 @@ Commit.prototype.update = function () {
   const element = document.getElementById("commit");
 
   this.getInfo().then(result => {
+    if (!result) throw new Error("No result from GitHub.");
     element.innerText = `sha ${result.sha} · ${result.date} (UTC)`;
     if (element.hasAttribute("hidden")) element.toggleAttribute("hidden");
   }).catch(error => {
-    console.log("An unexpected error occurred while trying to get information from GitHub.");
+    console.warn("[!] An error occurred while displaying information.");
     console.error(error);
   });
 };

@@ -32,7 +32,8 @@ const quotesList = [
   "Я не знаю как тебя понять",
   "Тёмная ночь, приведения стучат по трубам",
   "Закрой глаза и сны запиши в тетрадь",
-  "Хочу побывать в океанариуме"
+  "Хочу побывать в океанариуме",
+  "Я не хочу думать, в моей бошке бардак"
 ];
 
 const Quotes = function () {
@@ -59,12 +60,10 @@ Quotes.prototype.change = function () {
 
   if (check) {
     const quoteText = "&#8221;" + quote.text + "&#8221;";
-
     footer.innerHTML = quoteText;
-
     this.quoteIdCache = quote.id;
   } else {
-    console.log('Repeat the search to find a quote.');
+    console.log("[*] Repeat the search to find a quote.");
     this.change();
   };
 };

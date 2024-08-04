@@ -33,7 +33,7 @@
     const projects = new Projects();
     document.addEventListener('DOMContentLoaded', () => {
       quotes.change();
-      projects.list("prepend");
+      projects.list();
       commit.update();
     });
   </script>
@@ -100,7 +100,7 @@
   window.onload = () => {
     const domContentLoadedEventEnd = window.performance.timing.domContentLoadedEventEnd;
     const navigationStart = window.performance.timing.navigationStart;
-    console.log('Page load time: %sms', domContentLoadedEventEnd - navigationStart);
+    console.log("[*] Page load time: %sms", domContentLoadedEventEnd - navigationStart);
   };
 </script>
 
