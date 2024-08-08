@@ -266,6 +266,10 @@ noscript > p {
   color: var(--default-gray-color);
 }
 
+.projects .header .work {
+  color: var(--default-gray-color);
+}
+
 @media (prefers-color-scheme: light) {
   .projects .header .link {
     color: var(--more-gray-color);

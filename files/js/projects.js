@@ -4,7 +4,8 @@
 const projectsJson = [
   {
     title: "BotDobryak",
-    icon: "./files/images/logos/bots/botdobryak/botdobryak.webp"
+    icon: "./files/images/logos/bots/botdobryak/botdobryak.webp",
+    work: "2018-2020"
   },
   {
     title: "FlameOut",
@@ -16,14 +17,27 @@ const projectsJson = [
     `,
     icon: "./files/images/logos/bots/flameout/flame_32x32.webp",
     link: "https://nubovik.gitbook.io/flameout",
-    shortLink: "gitbook.io"
+    shortLink: "gitbook.io",
+    work: "2020-2024"
+  },
+  {
+    title: "nbvk-quotes-api",
+    description: `
+      API создавалось для FlameOut ради разнообразия
+      цитат в боте. Несмотря на прекращение разработки
+      сам цитатник продолжает работу в прежнем режиме.
+    `,
+    link: "https://github.com/nubovik01/nbvk-quotes-api",
+    shortLink: "github.com",
+    work: "2023"
   },
   {
     title: "воздушный квиртиз.",
     description: "Мой личный канал в Telegram. Моя жизнь, немножко мемчиков, щитпоста и прочее...",
     icon: "./files/images/killua-blog-avatar.webp",
     link: "https://t.me/nbvkxd/",
-    shortLink: "telegram.me"
+    shortLink: "telegram.me",
+    work: "2022-2024"
   }
 ];
 
@@ -48,20 +62,26 @@ Projects.prototype.list = function () {
         `
       : "";
 
-    const projectLink = project.link && project.shortLink
-      ? `
-          <span class="link">
-            ${project.shortLink}
-          </span>
-          <br>
-        `
-      : "";
-
     const projectDescription = project.description
       ? `
           <div class="description">
             <p>${project.description}</p>
           </div>
+        `
+      : "";
+    
+    const projectWork = project.work
+      ? `
+        <span class="work">${project.work}</span>
+      `
+      : "";
+
+    const projectLink = project.link && project.shortLink
+      ? `
+          ${projectWork ? "·" : ""}
+          <span class="link">
+            ${project.shortLink}
+          </span>
         `
       : "";
 
@@ -77,7 +97,7 @@ Projects.prototype.list = function () {
                 : ""
               }
               <br>
-              ${projectLink}
+              ${projectWork} ${projectLink}
             </div>
           </div>
         ${project.link ? "</a>" : ""}
