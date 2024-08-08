@@ -5,6 +5,7 @@ const projectsJson = [
   {
     title: "BotDobryak",
     icon: "./files/images/logos/bots/botdobryak/botdobryak.webp",
+    iconAlt: "[logo of botdobryak]",
     work: "2018-2020"
   },
   {
@@ -15,7 +16,8 @@ const projectsJson = [
       состоящий на более чем 600 серверах (за всё время - 3k+)
       и имеющий 290k+ пользователей с разных уголков планеты.
     `,
-    icon: "./files/images/logos/bots/flameout/flame_32x32.webp",
+    icon: "./files/images/logos/bots/flameout/flame_64x64.webp",
+    iconAlt: "[logo of bot flameout]",
     link: "https://nubovik.gitbook.io/flameout",
     shortLink: "gitbook.io",
     work: "2020-2024"
@@ -35,6 +37,7 @@ const projectsJson = [
     title: "воздушный квиртиз.",
     description: "Мой личный канал в Telegram. Моя жизнь, немножко мемчиков, щитпоста и прочее...",
     icon: "./files/images/killua-blog-avatar.webp",
+    iconAlt: "[logo of my telegram channel]",
     link: "https://t.me/nbvkxd/",
     shortLink: "telegram.me",
     work: "2022-2024"
@@ -57,7 +60,7 @@ Projects.prototype.list = function () {
     const projectIcon = project.icon
       ? `
           <div>
-            <img src="${project.icon}">
+            <img alt="${project.iconAlt}" src="${project.icon}">
           </div>
         `
       : "";

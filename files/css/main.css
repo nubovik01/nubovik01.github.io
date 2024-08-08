@@ -164,6 +164,12 @@ a {
   font-style: italic;
 }
 
+@media (prefers-color-scheme: light) {
+  .footer {
+    color: var(--special-gray-color);
+  }
+}
+
 .footer p {
   margin: 0;
   font-size: var(--footer-font-size);
@@ -176,20 +182,6 @@ a {
 
 .footer #commit {
   color: var(--more-gray-color);
-}
-
-@media (prefers-color-scheme: light) {
-  .footer {
-    color: var(--special-gray-color);
-  }
-
-  .footer #commit {
-    color: var(--more-gray-color);
-  }
-
-  .footer .copyrights {
-    color: var(--more-gray-color);
-  }
 }
 
 .footer #quote {
@@ -266,13 +258,19 @@ noscript > p {
   color: var(--default-gray-color);
 }
 
+@media (prefers-color-scheme: light) {
+  .projects .header .link {
+    color: var(--dark-color);
+  }
+}
+
 .projects .header .work {
   color: var(--default-gray-color);
 }
 
 @media (prefers-color-scheme: light) {
-  .projects .header .link {
-    color: var(--more-gray-color);
+  .projects .header .work {
+    color: var(--dark-color);
   }
 }
 
@@ -321,4 +319,10 @@ noscript > p {
 
 h3 {
   margin-bottom: 7px;
+}
+
+img {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
