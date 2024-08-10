@@ -23,17 +23,6 @@ const projectsJson = [
     work: "2020-2024"
   },
   {
-    title: "nbvk-quotes-api",
-    description: `
-      API создавалось для FlameOut ради разнообразия
-      цитат в боте. Несмотря на прекращение разработки
-      сам цитатник продолжает работу в прежнем режиме.
-    `,
-    link: "https://github.com/nubovik01/nbvk-quotes-api",
-    shortLink: "github.com",
-    work: "2023"
-  },
-  {
     title: "воздушный квиртиз.",
     description: "Мой личный канал в Telegram. Моя жизнь, немножко мемчиков, щитпоста и прочее...",
     icon: "./files/images/killua-blog-avatar.webp",

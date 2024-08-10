@@ -18,7 +18,7 @@
   --normal-font-size: 80%;
   --buttons-font-size: 90%;
   --footer-font-size: 85%;
-  --bio-font-size: 95%;
+  --heading-font-size: 95%;
   --error-page-font-size: 95%;
   --projects-font-size: 95%;
   --default-page-font: monospace;
@@ -195,6 +195,10 @@ a {
   -moz-user-select: none;
 }
 
+.line::before {
+  content: "- - - - - - - - - - - - - - -";
+}
+
 @media (prefers-color-scheme: light) {
   .line {
     color: var(--special-gray-color);
@@ -206,8 +210,8 @@ a {
   color: var(--more-gray-color);
 }
 
-.bio p {
-  font-size: var(--bio-font-size);
+.heading p {
+  font-size: var(--heading-font-size);
 }
 
 noscript > p {
