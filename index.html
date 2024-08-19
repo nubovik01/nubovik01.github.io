@@ -6,21 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-slace=1, maximum-scale=1, user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta http-equiv="Cache-Control" content="no-cache">
-  <title>Главная страница</title>
+  <title>Main page</title>
   <meta name="language" content="Russian">
-  <meta name="description" content="Главная страница сайта">
+  <meta name="description" content="Main page of the site">
   <meta name="keywords" content="nubovik, нубовик, js, nbvk, нбвк, qwkrtezzz, квиртиз, квиктиз, qwkrz, квиз, квир, квик, qwz, qwk_sh, qwz_sh, qwk_shara, qwz_shara, qwksh, qwkshara, qwzshara, qwkrz, qwzrtezzz, квизтиз, qwkrzx3, qwkrzgx3y, qwkrzbot, qwzrzbot, qwzrtbot, qwzrtbot, hotdev01, myakish, мякиш, myak1sh, nbvk0, nbvk01, nbvkbio, био нубовика, био никиты, sh1tofqwk, sh1tofqwz, sh1tofnbvk, sh1tofnbvk0, sh1tofnbvk01, sh1itofnbvk0, fckedqwk, fckedqwz, fckednubovik, fckednubovik01, fckednubovik0, fckednubovik1, fckednbvk01, fckednbvk0, fckednbvk1, qwkpcbot, qwzpcbot, nubovikxd, nbvkxd, nbvk0xd, nbvk1xd, nbvk01xd, nubovik01xd, nubovikhub, nubovik01hub, nubovik0hub, nubovik1hub, нубовикхаб, хабофнубовик, hub of nubovik, хаб нубовика, хаб никиты, хаб квиза, хаб квиртиза, хаб квика, хаб мякиша, хаб квира, хаб квиктиза, хаб квиртиза, хаб квиртиза, nbvkhub, nbvk0hub, nbvk1hub, nbvk01hub, secretplacetw, secretplace, nbvkxd, nbvk0xd, nbvk01xd">
   <meta name="theme-color" content="#242424">
   <meta name="author" lang="en" content="qwkrtezzz (https://github.com/nubovik01)">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="NUBOVIK01.GITHUB.IO">
-  <meta property="og:site_name" content="Главная страница">
-  <meta property="twitter:title" content="Главная страница">
+  <meta property="og:title" content="nubovik01.gitbook.io">
+  <meta property="og:site_name" content="Main page">
+  <meta property="twitter:title" content="Main page">
   <meta property="og:url" content="https://nubovik01.gitbook.io/">
   <meta property="twitter:url" content="https://nubovik01.gitbook.io/">
   <meta property="og:image" content="https://nubovik01.gitbook.io/files/images/omyum.ico">
   <meta property="twitter:image" content="https://nubovik01.gitbook.io/files/images/omyum.ico">
+  <script src="./files/js/redirecter.js" type="text/javascript"></script>
   <link href="./files/css/main.css" rel="stylesheet">
   <script src="./files/js/title.js" type="text/javascript"></script>
   <script src="./files/js/footer.js" type="text/javascript"></script>
@@ -42,7 +43,7 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="root">
     <div class="heading">
       <h3>✌ hello, i'm nikita! ヾ( ˃ᴗ˂ )◞ • *✰</h3>
     </div>
@@ -65,20 +66,20 @@
       <a href="https://steamcommunity.com/id/nubovik01">steam</a>
       <a href="https://music.yandex.ru/users/Nubovikgg/">y.music</a>
     </div>
+    <noscript>
+      <p>
+        У вас отключён JavaScript. Пожалуйста, включите JS!<br>
+        JavaScript is disabled. Please turn on JavaScript!<br>
+        Chromium? chrome://settings/content/javascript<br>
+        Firefox? about:preferences#privacy<br>
+        Opera? opera://settings/content/javascript<br>
+        Safari? Settings -> Security -> Web-content<br>
+        Edge? edge://settings/content/javascript
+      </p>
+    </noscript>
     <div class="projects" hidden></div>
     <div class="footer">
       <span class="line"></span>
-      <noscript>
-        <p>
-          У вас отключён JavaScript. Пожалуйста, включите JS!<br>
-          JavaScript is disabled. Please turn on JavaScript!<br>
-          Chromium? chrome://settings/content/javascript<br>
-          Firefox? about:preferences#privacy<br>
-          Opera? opera://settings/content/javascript<br>
-          Safari? Settings -> Security -> Web-content<br>
-          Edge? edge://settings/content/javascript
-        </p>
-      </noscript>
       <!-- A.R.: ./quotes.txt -->
       <p id="quote" onclick="quotes.change();"></p>
       <!-- hash 03a773e &middot; 2024.02.16 (UTC) -->
@@ -86,10 +87,13 @@
       <p class="copyrights">
         Created by qwkrtezzz not w/ &lt;3<br>
         nubovik01(at)gmail(dot)com (DND)<br>
-        &COPY; qwkrtezzz, 2021&mdash;<span id="year">now</span>
+        &COPY; qwkrtezzz, 2021&mdash;<span class="year">now</span><br>
+        &COPY; dreamworld, <span class="year">now</span>
         <script>
-          const element = document.getElementById("year");
-          element.innerText = new Date().getFullYear();
+          const elements = document.getElementsByClassName("year");
+          for (const element of elements) {
+            element.innerText = new Date().getFullYear();
+          };
         </script>
       </p>
     </div>
