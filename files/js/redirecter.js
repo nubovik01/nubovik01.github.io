@@ -4,6 +4,7 @@
 const platform = window.location.search.split("?r=")[1];
 const urls = {
   "ds-serv": "https://discord.gg/EJc8UC7yhZ",
+  "kladmen-rabota": "https://youtu.be/dQw4w9WgXcQ",
   vk: "https://vk.com/qwkrtezzz",
   blog: "https://t.me/nbvkxd"
 };
