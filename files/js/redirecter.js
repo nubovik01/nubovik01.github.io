@@ -4,6 +4,7 @@
 const platform = window.location.search.split("?r=")[1];
 const urls = {
   "kladmen-rabota": "https://youtu.be/dQw4w9WgXcQ",
+  "flameout-rip": "https://t.me/flameoutupdates/845",
   screenshot: "https://nubovik01.github.io/prntsc-screamer",
   "ds-serv": "https://discord.gg/EJc8UC7yhZ",
   ds: "https://discord.gg/EJc8UC7yhZ",
