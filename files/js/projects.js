@@ -21,15 +21,6 @@ const projectsJson = [
     link: "https://nubovik.gitbook.io/flameout",
     shortLink: "gitbook.io",
     work: "2020-2024"
-  },
-  {
-    title: "воздушный квиртиз.",
-    description: "Мой личный канал в Telegram. Моя жизнь, немножко мемчиков, щитпоста и прочее...",
-    icon: "./files/images/killua-blog-avatar.webp",
-    iconAlt: "[logo of my telegram channel]",
-    link: "https://t.me/nbvkxd/",
-    shortLink: "telegram.me",
-    work: "2022-2024"
   }
 ];
 
