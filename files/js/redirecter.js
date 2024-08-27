@@ -28,4 +28,4 @@ const urls = {
 
 if (platform && urls[platform]) window.location.href = urls[platform];
 
-if (!urls[platform]) console.log("There doesn't seem to be such a redirect...");
+if (!urls[platform]) console.log("[!] There doesn't seem to be such a redirect...");
