@@ -1,7 +1,7 @@
 // code by qwkrtezzz (https://github.com/nubovik01)
 // file created at 19 August 2024 03:38:25 PM (UTC+3)
 
-const platform = window.location.search.split("#")[1];
+const platform = window.location.hash.split("#")[1];
 const urls = {
   "kladmen-rabota": "https://youtu.be/dQw4w9WgXcQ",
   "flameout-rip": "https://t.me/flameoutupdates/845",
