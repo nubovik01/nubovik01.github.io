@@ -5,22 +5,14 @@ const projectsJson = [
   {
     title: "BotDobryak",
     icon: "./files/images/logos/bots/botdobryak/botdobryak.webp",
-    iconAlt: "[logo of botdobryak]",
-    work: "2018-2020"
+    iconAlt: "[logo of botdobryak]"
   },
   {
     title: "FlameOut",
-    description: `
-      Многофункциональный бот для Discord с множеством полезных
-      и самых необходимых возможностей для Вас и вашего сервера,
-      состоящий на более чем 600 серверах (за всё время - 3k+)
-      и имеющий 290k+ пользователей с разных уголков планеты.
-    `,
     icon: "./files/images/logos/bots/flameout/flame_64x64.webp",
     iconAlt: "[logo of bot flameout]",
     link: "https://nubovik.gitbook.io/flameout",
-    shortLink: "gitbook.io",
-    work: "2020-2024"
+    shortLink: "gitbook.io"
   }
 ];
 
@@ -31,7 +23,6 @@ const Projects = function () {
 Projects.prototype.list = function () {
   const projectsElement = document.getElementsByClassName("projects")[0];
   if (projectsElement.hasAttribute("hidden")) projectsElement.toggleAttribute("hidden");
-  projectsElement.innerHTML = "";
 
   for (const project of projectsJson) {
     const newProjectElement = document.createElement("div");
@@ -52,16 +43,9 @@ Projects.prototype.list = function () {
           </div>
         `
       : "";
-    
-    const projectWork = project.work
-      ? `
-        <span class="work">${project.work}</span>
-      `
-      : "";
 
     const projectLink = project.link && project.shortLink
       ? `
-          ${projectWork ? "·" : ""}
           <span class="link">
             ${project.shortLink}
           </span>
@@ -80,7 +64,7 @@ Projects.prototype.list = function () {
                 : ""
               }
               <br>
-              ${projectWork} ${projectLink}
+              ${projectLink}
             </div>
           </div>
         ${project.link ? "</a>" : ""}

@@ -38,7 +38,7 @@
   --special-black-color: #242424;
   --other-black-color: rgb(29, 29, 29);
   --some-black-color: rgb(31, 31, 31);
-  --noscript-font-size: 88%;
+  --noscript-font-size: 85%;
 }
 
 body {
@@ -63,7 +63,7 @@ body {
 
 .root {
   margin: 25px;
-  width: 335px;
+  width: 340px;
 }
 
 p, pre {
@@ -162,6 +162,7 @@ a {
 .footer {
   color: var(--default-gray-color);
   font-style: italic;
+  margin-top: 2px;
 }
 
 @media (prefers-color-scheme: light) {
@@ -218,7 +219,7 @@ noscript p {
   font-size: var(--noscript-font-size);
   color: var(--old-yellow-color);
   margin: 0;
-  margin-top: 7px;
+  margin-top: 10px;
 }
 
 @media (prefers-color-scheme: light) {
@@ -228,7 +229,6 @@ noscript p {
 }
 
 .projects {
-  margin-top: 10px;
   width: 100%;
 }
 
