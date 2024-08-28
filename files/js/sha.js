@@ -10,8 +10,11 @@ class Commit {
 
   async getInfo() {
     const api = await fetch(this.apiUrl);
+    
     if (api.status !== 200) return console.warn("[!] An error while getting commit from GitHub.");
+    
     const firstCommit = (await api.json())[0];
+    
     return {
       sha: firstCommit.sha.slice(0, 7),
       date: firstCommit.commit.author.date.slice(0, 10).replace(/-/g, '.')
@@ -20,9 +23,12 @@ class Commit {
 
   update() {
     const element = document.getElementById("commit");
+    
     this.getInfo().then(result => {
       if (!result) throw new Error("No result from GitHub.");
+    
       element.innerText = `sha ${result.sha} · ${result.date} (UTC)`;
+    
       if (element.hasAttribute("hidden")) element.toggleAttribute("hidden");
     }).catch(error => {
       console.warn("[!] An error occurred while displaying information.");
