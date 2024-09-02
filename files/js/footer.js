@@ -46,28 +46,21 @@ if ([11, 12, 0].includes(new Date().getMonth() + 1)) {
 const Quotes = function () {
   this.quoteIdCache = null;
 
-  this.random = function () {
+  this.random = () => {
     const quoteId = Math.floor(Math.random() * quotesList.length);
     const quote = quotesList[quoteId];
     return { text: quote, id: quoteId };
   };
 
-  this.check = function (quote, quoteId) {
-    const checkQuoteId = this.quoteIdCache != quoteId;
-
-    if (quote.text && checkQuoteId) return true;
-    return false;
-  };
+  this.check = (quote, quoteId) => quote.text && this.quoteIdCache !== quoteId;
 };
 
 Quotes.prototype.change = function () {
   const footer = document.getElementById("quote");
   const quote = this.random();
-  const check = this.check(quote, quote.id);
 
-  if (check) {
-    const quoteText = "&#8221;" + quote.text + "&#8221;";
-    footer.innerHTML = quoteText;
+  if (this.check(quote, quote.id)) {
+    footer.innerHTML = `&#8221;${quote.text}&#8221;`;
     this.quoteIdCache = quote.id;
   } else {
     console.log("[*] Repeat the search to find a quote.");
