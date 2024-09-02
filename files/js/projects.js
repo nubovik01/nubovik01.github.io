@@ -4,7 +4,8 @@
 const projectsJson = [
   {
     title: "BotDobryak",
-    icon: "./files/images/logos/bots/botdobryak/botdobryak.webp"
+    icon: "./files/images/logos/bots/botdobryak/botdobryak.webp",
+    translate: false
   },
   {
     title: "FlameOut",
@@ -16,19 +17,19 @@ const projectsJson = [
 const Projects = function () {};
 
 const createTemplate = (project) => `
-  <div class="native">
-    ${project.link ? `<a href="${project.link}" target="_blank">` : ''}
+  <div class="native" ${!project.translate ? `translate="no"` : ""}>
+    ${project.link ? `<a href="${project.link}" target="_blank">` : ""}
       <div class="header">
-        ${project.icon ? `<div><img alt="${project.title}" src="${project.icon}"></div>` : ''}
+        ${project.icon ? `<div><img alt="${project.title}" src="${project.icon}"></div>` : ""}
         <div>
           ${project.title}
-          ${project.link ? `<img id="blankImg" src="/files/images/newBlank.webp">` : ''}
+          ${project.link ? `<img id="blankImg" src="/files/images/newBlank.webp">` : ""}
           <br>
-          ${project.link ? `<span class="link">${project.link.split('/')[2]}</span>` : ''}
+          ${project.link ? `<span class="link">${project.link.split('/')[2]}</span>` : ""}
         </div>
       </div>
-    ${project.link ? '</a>' : ''}
-    ${project.description ? `<div class="description"><p>${project.description}</p></div>` : ''}
+    ${project.link ? "</a>" : ""}
+    ${project.description ? `<div class="description"><p>${project.description}</p></div>` : ""}
   </div>
 `;
 
