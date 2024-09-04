@@ -49,24 +49,29 @@
       <h3>✌️ hello, i'm nikita! ヾ( ˃ᴗ˂ )◞ • *✰</h3>
     </div>
     <img alt="*photo with killua and gon" src="./files/images/killua.webp" width="100%">
-    <div class="buttons" translate="no">
-      <a href="?r=#blog">blog</a>
-      <a href="?r=#bio">bio</a>
-      <a href="?r=#mt">monkeytype</a>
-      <a href="?r=#ds">discord</a>
-      <a href="?r=#spotify">spotify</a>
-      <a href="?r=#tt">tiktok</a>
-      <a href="?r=#tg">telegram</a>
-      <a href="?r=#faq">faq</a>
-      <a href="?r=#gh">github</a>
-      <a href="?r=#pint">pinterest</a>
-      <a href="?r=#twx">twitter</a> <!-- now X -->
-      <a href="?r=#vk">vk</a>
-      <a href="?r=#redit">reddit</a>
-      <a href="?r=#dnt">donate</a>
-      <a href="?r=#stim">steam</a>
-      <a href="?r=#ymuz">y.music</a>
+    <div id="buttons" translate="no" hidden>
+      <a href="?r=blog">blog</a>
+      <a href="?r=bio">bio</a>
+      <a href="?r=mt">monkeytype</a>
+      <a href="?r=ds">discord</a>
+      <a href="?r=spotify">spotify</a>
+      <a href="?r=tt">tiktok</a>
+      <a href="?r=tg">telegram</a>
+      <a href="?r=faq">faq</a>
+      <a href="?r=gh">github</a>
+      <a href="?r=pint">pinterest</a>
+      <a href="?r=twx">twitter</a> <!-- now X -->
+      <a href="?r=vk">vk</a>
+      <a href="?r=redit">reddit</a>
+      <a href="?r=dnt">donate</a>
+      <a href="?r=stim">steam</a>
+      <a href="?r=ymuz">y.music</a>
     </div>
+    <script>
+      const buttonsDiv = document.getElementById("buttons");
+      buttonsDiv.hidden = false;
+      buttonsDiv.className = "buttons";
+    </script>
     <noscript>
       <p>
         JavaScript is disabled. Please turn on JavaScript!<br>
@@ -86,13 +91,12 @@
       <p id="commit" translate="no" hidden></p>
       <p class="copyrights" translate="no">
         Created by qwkrtezzz not w/ &lt;3<br>
-        &COPY; qwkrtezzz, 2021&mdash;<span class="year">now</span><br>
-        &COPY; dreamworld, <span class="year">now</span>
+        &COPY; qwkrtezzz, 2021&mdash;<span class="year">2024</span><br>
+        &COPY; dreamworld, <span class="year">2024</span>
         <script>
-          const elements = document.getElementsByClassName("year");
-          for (const element of elements) {
-            element.innerText = new Date().getFullYear();
-          };
+          document.querySelectorAll(".year").forEach(element => {
+            element.innerText = new Date().getFullYear()
+          });
         </script>
       </p>
     </div>
