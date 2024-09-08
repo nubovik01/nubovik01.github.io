@@ -302,13 +302,3 @@ input {
 .inputs div:not(:first-child) {
   margin-top: 15px;
 }
-
-.inputs .error {
-  color: var(--special-red-color);
-  margin: 5px 0 0 0;
-}
-
-.inputs .info {
-  color: var(--old-yellow-color);
-  margin: 5px 0 0 0;
-}
