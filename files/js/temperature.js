@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   inputs.forEach(input => input.addEventListener("input", () => {
     const value = Number(input.value);
 
-    if (value && !isNaN(value)) {
+    if (!isNaN(value) && input.value) {
       switch (input.id) {
         case "celsius":
           inputs[1].value = ((value * 9 / 5) + 32).toFixed(2);
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
           inputs[2].value = (value * 5 / 4 + 273.15).toFixed(2);
           break;
       };
-    } else {
+    } else if (value === 0) {
       inputs.forEach(input => input.value = "");
     };
   }));
