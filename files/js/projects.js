@@ -4,12 +4,12 @@
 const projectsJson = [
   {
     title: "BotDobryak",
-    icon: "./files/images/logos/bots/botdobryak/botdobryak.webp",
+    icon: "./files/images/logos/botdobryak.webp",
     translate: false
   },
   {
     title: "FlameOut",
-    icon: "./files/images/logos/bots/flameout/flame_64x64.webp",
+    icon: "./files/images/logos/flame_64x64.webp",
     link: "https://nubovik.gitbook.io/flameout"
   }
 ];
