@@ -14,9 +14,7 @@ const projectsJson = [
   }
 ];
 
-const Projects = function () {};
-
-const createTemplate = (project) => `
+const projectTemplate = (project) => `
   <div class="native" ${!project.translate ? `translate="no"` : ""}>
     ${project.link ? `<a href="${project.link}" target="_blank">` : ""}
       <div class="header">
@@ -33,14 +31,14 @@ const createTemplate = (project) => `
   </div>
 `;
 
-Projects.prototype.list = function () {
+function listProjects() {
   const projects = document.getElementsByClassName("projects")[0];
   if (projects.hasAttribute("hidden")) projects.toggleAttribute("hidden");
 
   projectsJson.forEach(project => {
     const element = document.createElement("div");
     element.className = "project";
-    element.innerHTML = createTemplate(project);
+    element.innerHTML = projectTemplate(project);
     projects.prepend(element);
   });
 };
