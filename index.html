@@ -33,11 +33,10 @@
   <script src="./files/js/sha.js" type="text/javascript"></script>
   <script src="./files/js/projects.js" type="text/javascript"></script>
   <script>
-    const quotes = new Quotes();
     const commit = new Commit();
     const projects = new Projects();
     document.addEventListener('DOMContentLoaded', () => {
-      quotes.change();
+      changeQuote();
       projects.list();
       commit.update("nubovik01", "nubovik01.github.io");
     });
@@ -73,7 +72,7 @@
     <div class="footer">
       <span class="line"></span>
       <!-- A.R.: ./quotes.txt -->
-      <p id="quote" onclick="quotes.change();"></p>
+      <p id="quote" onclick="changeQuote();"></p>
       <p id="commit" translate="no" hidden></p>
       <p class="copyrights" translate="no">
         Created by qwkrtezzz not w&sol; &lt;3<br>

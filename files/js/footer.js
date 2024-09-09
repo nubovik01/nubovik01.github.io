@@ -41,27 +41,24 @@ const quotesList = [
   "Нет чувств нет боли, нет сердца нет воли"
 ];
 
-const Quotes = function () {
-  this.quoteIdCache = null;
-
-  this.random = () => {
-    const quoteId = Math.floor(Math.random() * quotesList.length);
-    const quote = quotesList[quoteId];
-    return { text: quote, id: quoteId };
-  };
-
-  this.check = (quote, quoteId) => quote.text && this.quoteIdCache !== quoteId;
+function randomQuote() {
+  const id = Math.floor(Math.random() * quotesList.length);
+  return { text: quotesList[id], id: id };
 };
 
-Quotes.prototype.change = function () {
-  const footer = document.getElementById("quote");
-  const quote = this.random();
+let quoteIdCache = null;
 
-  if (this.check(quote, quote.id)) {
+const checkQuote = (text, id) => text && quoteIdCache !== id;
+
+function changeQuote() {
+  const footer = document.getElementById("quote");
+  const quote = randomQuote();
+
+  if (checkQuote(quote.text, quote.id)) {
     footer.innerHTML = `&#8221;${quote.text}&#8221;`;
-    this.quoteIdCache = quote.id;
+    quoteIdCache = quote.id;
   } else {
     console.log("[*] Repeat the search to find a quote.");
-    this.change();
+    changeQuote();
   };
 };
