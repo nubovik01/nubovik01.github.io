@@ -26,3 +26,7 @@ function updateSha() {
     console.error(error);
   });
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateSha();
+});
