@@ -324,3 +324,7 @@ textarea {
     border: 2px solid black;
   }
 }
+
+.images img:not(:first-child) {
+  margin-top: 10px;
+}
