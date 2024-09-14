@@ -16,7 +16,7 @@
   --some-light-gray-color: rgb(204, 204, 204);
   --old-yellow-color: #f5e503;
   --special-red-color: #ff6262ed;
-  --other-black-color: rgb(29, 29, 29);
+  --other-black-color: rgb(41, 41, 41);
   --some-black-color: rgb(31, 31, 31);
 }
 
@@ -78,12 +78,6 @@ noscript p {
   }
 }
 
-/*
-  AB - кнопки с адаптивным изменением их ширины и количества
-  рядов взависимости от размера экрана пользователя (фича
-  добавлена 3 августа по запросам юзеров, ибо с маленьких
-  телефончиков смотреть на кнопки слегка противно)
-*/
 .buttons {
   margin-top: 2px;
   display: flex; /* AB */
@@ -161,33 +155,33 @@ noscript p {
   } 
 }
 
-.projects .native {
+.cards .native {
   margin: 10px;
 }
 
-.projects .project {
+.cards > div {
   border: 0.16em solid var(--other-black-color);
   border-radius: 8px;
   margin-top: 10px;
 }
 
 @media (prefers-color-scheme: light) {
-  .projects .project {
+  .cards > div {
     border: 0.16em solid var(--light-gray-color);
   }
 }
 
-.projects .project a {
+.cards > div a {
   color: white;
 }
 
 @media (prefers-color-scheme: light) {
-  .projects .project a {
+  .cards > div a {
     color: black;
   }
 }
 
-.projects .header {
+.cards .header {
   display: flex;
   align-items: center;
   font-size: 95%;
@@ -196,24 +190,25 @@ noscript p {
   -moz-user-select: none;
 }
 
-.projects .header .link {
+.cards .link {
   color: gray;
+  margin-left: auto;
 }
 
 @media (prefers-color-scheme: light) {
-  .projects .header .link {
+  .cards .link {
     color: var(--dark-color);
   }
 }
 
-.projects #blankImg {
-  margin: 0 0 -1px -5px;
-  width: 13px;
-  height: 13px;
+.cards #blankImg {
+  margin: 0 0 -2px -6px;
+  width: 14px;
+  height: 14px;
   border: none;
 }
 
-.projects img {
+.cards img {
   width: 31px;
   margin-right: 8px;
   margin-bottom: -3px;
@@ -222,13 +217,14 @@ noscript p {
 }
 
 @media (prefers-color-scheme: light) {
-  .projects img {
+  .cards img {
     border: 0.15em solid var(--light-gray-color);
   }
 }
 
-.projects .description p {
-  margin-top: 0.3em;
+.cards p {
+  margin: 5px 3px 13px 3px;
+  font-size: 95%;
 }
 
 .line {
@@ -273,7 +269,7 @@ noscript p {
 }
 
 .inputs {
-  margin: 15px 0 15px 0;
+  margin: 15px 0 0 0;
 }
 
 .inputs p {
@@ -300,8 +296,8 @@ input {
   }
 }
 
-.inputs div:not(:first-child) {
-  margin-top: 15px;
+.inputs > div:not(:first-child) {
+  margin-top: 18px;
 }
 
 textarea {

@@ -22,23 +22,17 @@
   <meta property="og:image" content="https://nubovik01.gitbook.io/files/images/omyum.ico">
   <meta property="twitter:image" content="https://nubovik01.gitbook.io/files/images/omyum.ico">
   <noscript>
-    <meta http-equiv="refresh" content="0; url=./badbrowser.html"/>
+    <meta http-equiv="refresh" content="0; url=./badbrowser.html" />
   </noscript>
-  <link rel="preconnect" href="https://r.kittyy.ru"/>
+  <link rel="preconnect" href="https://r.kittyy.ru" />
   <script src="./files/js/redirecter.js" type="text/javascript"></script>
   <link href="./files/css/main.css" rel="stylesheet">
   <script src="./files/js/title.js" type="text/javascript"></script>
   <script src="./files/js/console.js" type="text/javascript"></script>
-  <script src="./files/js/projects.js" type="text/javascript"></script>
+  <script src="./files/js/cards.js" type="text/javascript"></script>
   <script src="./files/js/footer.js" type="text/javascript"></script>
   <script src="./files/js/quotes.js" type="text/javascript"></script>
   <script src="./files/js/sha.js" type="text/javascript"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      listProjects();
-      changeQuote();
-    });
-  </script>
   <link rel="shortcut icon" href="./files/images/omyum.ico">
   <link ref="apple-touch-icon" src="./files/images/omyum.ico">
 </head>
@@ -67,9 +61,32 @@
     <div class="buttons">
       <a href="./temperature" target="_blank">temperature conversion</a>
     </div>
-    <div class="projects" hidden></div>
+    <div class="cards" hidden></div>
     <div class="footer"></div>
   </div>
 </body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    listCards([
+      {
+        title: "BotDobryak",
+        icon: "./files/images/logos/botdobryak.webp",
+        translate: false
+      },
+      {
+        title: "FlameOut",
+        icon: "./files/images/logos/flame_64x64.webp",
+        link: "https://flame.kittyy.ru",
+        description: `
+          Multifunctional bot for Discord with 500+ servers and
+          300k+ users. No longer work since February 25, 2024.
+        `
+      }
+    ]);
+
+    changeQuote();
+  });
+</script>
 
 </html>
