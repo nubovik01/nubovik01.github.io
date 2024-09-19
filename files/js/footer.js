@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
         src="./files/images/not-by-ai/en-created.svg">
     </a>
   `;
-  // todo: сделать чтобы цвет notbyai зависел от темы юзера 
 
   footer.innerHTML = html;
 
