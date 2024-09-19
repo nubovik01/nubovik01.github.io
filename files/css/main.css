@@ -346,3 +346,9 @@ textarea {
   width: 120px;
   margin-top: 3px;
 }
+
+@media (prefers-color-scheme: light) {
+  .notbyai {
+    filter: invert(100%);
+  }
+}
