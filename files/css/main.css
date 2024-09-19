@@ -343,18 +343,6 @@ textarea {
 }
 
 .notbyai {
-  width: 35%;
+  width: 120px;
   margin-top: 3px;
-}
-
-@media (max-width: 400px) {
-  .notbyai {
-    width: 38%;
-  }
-}
-
-@media (max-width: 375px) {
-  .notbyai {
-    width: 45%;
-  }
 }
