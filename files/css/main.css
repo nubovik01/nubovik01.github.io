@@ -346,3 +346,15 @@ textarea {
   width: 35%;
   margin-top: 3px;
 }
+
+@media (max-width: 400px) {
+  .notbyai {
+    width: 38%;
+  }
+}
+
+@media (max-width: 375px) {
+  .notbyai {
+    width: 45%;
+  }
+}
