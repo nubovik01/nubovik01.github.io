@@ -62,7 +62,13 @@ p, pre {
 
 a {
   text-decoration: none;
-  color: var(--special-blue-color);
+  color: var(--old-yellow-color);
+}
+
+@media (prefers-color-scheme: light) {
+  a {
+    color: var(--special-red-color);
+  }
 }
 
 noscript p {
@@ -104,6 +110,7 @@ noscript p {
   margin: 5px 0 0 5px; /* AB */
   flex: 1 0 calc(25% - 32px); /* AB */
   text-align: center; /* AB */
+  font-weight: bold;
 }
 
 /*
@@ -114,12 +121,6 @@ noscript p {
   }
 }
 */
-
-@-moz-document url-prefix() {
-  .buttons > a {
-    font-weight: 600;
-  }
-}
 
 .buttons > a:focus {
   background: var(--transparent-white-color);
@@ -296,6 +297,11 @@ input {
   }
 }
 
+input[readonly] {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.785);
+}
+
 .inputs > div:not(:first-child) {
   margin-top: 18px;
 }
@@ -323,4 +329,20 @@ textarea {
 
 .images img:not(:first-child) {
   margin-top: 10px;
+}
+
+.AI {
+  font-size: 85%;
+  color: var(--some-light-gray-color);
+}
+
+@media (prefers-color-scheme: light) {
+  .AI {
+    color: var(--more-gray-color);
+  }
+}
+
+.notbyai {
+  width: 35%;
+  margin-top: 3px;
 }

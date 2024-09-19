@@ -14,7 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
       &COPY; qwkrtezzz&comma; <span class="year">2021</span><br>
       &COPY; dreamworld&comma; <span class="year">2024</span>
     </p>
+    <a href="https://notbyai.fyi">
+      <img class="notbyai" alt="site created by human, not by AI"
+        src="./files/images/not-by-ai/en/created/black.svg">
+    </a>
   `;
+  // todo: сделать чтобы цвет notbyai зависел от темы юзера 
 
   footer.innerHTML = html;
 
