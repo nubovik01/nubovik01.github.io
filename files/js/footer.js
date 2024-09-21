@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </p>
     <a href="https://notbyai.fyi">
       <img class="notbyai" alt="site created by human, not by AI"
-        src="./files/images/not-by-ai/en-created.svg">
+        src="/files/images/not-by-ai/en-created.svg">
     </a>
   `;
 
