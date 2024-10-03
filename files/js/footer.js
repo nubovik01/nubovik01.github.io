@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     <p id="quote" onclick="changeQuote();"></p>
     <p id="commit" translate="no"></p>
     <p class="copyrights" translate="no">
-      Created by qwkrtezzz not w&sol; &lt;3<br>
-      &COPY; qwkrtezzz&comma; <span class="year">2021</span><br>
-      &COPY; dreamworld&comma; <span class="year">2024</span>
+      Created by qwkrtezzz not w/ <3<br>
+      © qwkrtezzz, <span class="year">2021</span><br>
+      © dreamworld, <span class="year">2024</span>
     </p>
     <a href="https://notbyai.fyi">
       <img class="notbyai" alt="site created by human, not by AI"

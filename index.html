@@ -33,6 +33,7 @@
   <script src="./files/js/footer.js" type="text/javascript"></script>
   <script src="./files/js/quotes.js" type="text/javascript"></script>
   <script src="./files/js/sha.js" type="text/javascript"></script>
+  <script src="./files/js/age.js" type="text/javascript"></script>
   <link rel="shortcut icon" href="./files/images/omyum.ico">
   <link ref="apple-touch-icon" src="./files/images/omyum.ico">
 </head>
@@ -40,8 +41,15 @@
 <body>
   <div class="root">
     <div class="heading">
-      <h3>✌️ hello, i&apos;m nikita&excl; ヾ( ˃ᴗ˂ )◞ • *✰</h3>
+      <h3>✌️ hello, i'm nikita! ヾ( ˃ᴗ˂ )◞ • *✰</h3>
       <p>AKA dempix, nubovik, qwkrtezzz, etc...</p>
+      <p>
+        <span id="yo">13</span> y.o., fullstack middle
+        javascript developer from saint-petersburg, russia.
+      </p>
+      <script>
+        const yo = document.getElementById("yo").textContent = calculateAge("04.09.2008");
+      </script>
     </div>
     <img alt="*photo with killua and gon" src="https://hunter.kittyy.ru/with-gon.webp" width="100%">
     <div class="buttons" translate="no">
@@ -67,24 +75,27 @@
 </body>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    listCards([
-      {
-        title: "BotDobryak",
-        icon: "./files/images/logos/botdobryak.webp",
-        translate: false
-      },
-      {
-        title: "FlameOut",
-        icon: "./files/images/logos/flame_64x64.webp",
-        link: "https://flame.kittyy.ru",
-        description: `
-          Multifunctional bot for Discord with 500+ servers and
-          300k+ users. No longer work since February 25, 2024.
-        `
-      }
-    ]);
+  listCards([
+    {
+      title: "BotDobryak",
+      icon: "./files/images/logos/botdobryak.webp",
+      description: `
+        Some time ago I got interested in programming and BotDobryak
+        became my first bot. It was with him that my path in IT.
+      `
+    },
+    {
+      title: "FlameOut",
+      icon: "./files/images/logos/flame_64x64.webp",
+      link: "https://flame.kittyy.ru",
+      description: `
+        Multifunctional bot for Discord with 500+ servers and
+        300k+ users. No longer work since February 25, 2024.
+      `
+    }
+  ]);
 
+  document.addEventListener('DOMContentLoaded', () => {
     changeQuote();
   });
 </script>

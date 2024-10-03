@@ -47,22 +47,42 @@
     <div class="inputs">
       <div>
         <p>Celsius (°C):</p>
-        <input input="number" id="celsius" placeholder="ex. 36.6" spellcheck="false" maxlength="20">
+        <div class="input-with-buttons">
+          <input input="number" id="celsius" placeholder="ex. 36.6" spellcheck="false" maxlength="20">
+          <div class="buttons right-input-buttons">
+            <a href="#">🡺</a>
+          </div>
+        </div>
         <div class="cards celsius"></div>
       </div>
       <div>
         <p>Fahrenheit (°F):</p>
-        <input input="number" id="fahrenheit" placeholder="ex. 97.88" spellcheck="false" maxlength="20">
+        <div class="input-with-buttons">
+          <input input="number" id="fahrenheit" placeholder="ex. 97.88" spellcheck="false" maxlength="20">
+          <div class="buttons right-input-buttons">
+            <a href="#">🡺</a>
+          </div>
+        </div>
         <div class="cards fahrenheit"></div>
       </div>
       <div>
         <p>Kelvin (K):</p>
-        <input input="number" id="kelvin" placeholder="ex. 309.75" spellcheck="false" maxlength="20">
+        <div class="input-with-buttons">
+          <input input="number" id="kelvin" placeholder="ex. 309.75" spellcheck="false" maxlength="20">
+          <div class="buttons right-input-buttons">
+            <a href="#">🡺</a>
+          </div>
+        </div>
         <div class="cards kelvin"></div>
       </div>
       <div>
         <p>Reaumur (°Re):</p>
-        <input input="number" id="reaumur" placeholder="ex. 29.28" spellcheck="false" maxlength="20">
+        <div class="input-with-buttons">
+          <input input="number" id="reaumur" placeholder="ex. 29.28" spellcheck="false" maxlength="20">
+          <div class="buttons right-input-buttons">
+            <a href="#">🡺</a>
+          </div>
+        </div>
         <div class="cards reaumur"></div>
       </div>
     </div>
@@ -106,18 +126,12 @@
     cards.forEach(card => card.toggleAttribute("hidden"));
 
     const button = document.getElementById("toggle");
-    button.innerText = cards[1].hidden ? "show math" : "hide math"; 
+    button.innerText = cards[1].hidden ? "show math" : "hide math";
 
     if (cards[1].hidden) {
       document.querySelectorAll(".input").forEach(input => input.style.marginTop = "15px");
     };
   };
 </script>
-
-<style>
-  .cards .card {
-    margin-top: 8px;
-  }
-</style>
 
 </html>
