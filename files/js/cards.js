@@ -6,7 +6,7 @@ const cardTemplate = (card) => `
     ${card.link ? `<a href="${card.link}" target="_blank">` : ""}
       <div class="header">
         ${card.icon ? `<div><img alt="${card.title}" src="${card.icon}"></div>` : ""}
-        ${card.title && card.icon ? `<div>${card.title}</div>` : ""}
+        ${card.title && card.icon ? `<div translate="no">${card.title}</div>` : ""}
         ${card.link ? `
           <div class="link">
             <span>${card.link.split('/')[2]}</span>
