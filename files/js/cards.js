@@ -4,9 +4,9 @@
 const cardTemplate = (card) => `
   <div class="native" ${!card.translate ? `translate="no"` : ""}>
     ${card.link ? `<a href="${card.link}" target="_blank">` : ""}
-      <div class="header">
+      <div class="header" translate="no">
         ${card.icon ? `<div><img alt="${card.title}" src="${card.icon}"></div>` : ""}
-        ${card.title && card.icon ? `<div translate="no">${card.title}</div>` : ""}
+        ${card.title && card.icon ? `<div>${card.title}</div>` : ""}
         ${card.link ? `
           <div class="link">
             <span>${card.link.split('/')[2]}</span>
