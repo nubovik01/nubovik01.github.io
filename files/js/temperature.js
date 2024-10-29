@@ -28,17 +28,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const inputs = document.querySelectorAll("#celsius, #fahrenheit, #kelvin, #reaumur");
 
   inputs.forEach(pageInput => pageInput.addEventListener('input', () => {
-    pageInput.value = pageInput.value.replace(/[^0-9\-\+\.]/g, '');
+    pageInput.value = pageInput.value.replace(/[^0-9+-.]/g, '');
     const value = Number(pageInput.value);
 
-    if (!isNaN(value) && pageInput.value) {
+    if (pageInput.value) {
       inputs.forEach(userInput => {
         if (userInput !== pageInput) {
-          userInput.value = units[pageInput.id][userInput.id](value).toFixed(2);
+          userInput.value = !isNaN(units[pageInput.id][userInput.id](value))
+          ? units[pageInput.id][userInput.id](value).toFixed(2)
+          : '';
         };
       });
     } else {
-      inputs.forEach(pageInput => pageInput.value = '');
+      inputs.forEach(userInput => userInput.value = '');
     };
   }));
 });
