@@ -6,6 +6,7 @@ function convertDateFormat(date) { // dd.mm.yyyy => yyyy-mm-dd
   return `${parts[2]}-${parts[1]}-${parts[0]}`;
 };
 
+// https://stackoverflow.com/questions/4060004/
 function calculateAge(birth) {
   const [birthDate, today] = [new Date(convertDateFormat(birth)), new Date()];
 
