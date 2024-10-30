@@ -20,7 +20,6 @@ const cardTemplate = (card) => `
 
 function listCards(cardsList, className = "cards") {
   const cards = document.getElementsByClassName(className)[0];
-  if (cards.hasAttribute("hidden")) cards.toggleAttribute("hidden");
 
   cardsList.forEach(card => {
     const element = document.createElement("div");

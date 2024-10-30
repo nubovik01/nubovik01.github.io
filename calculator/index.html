@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-slace=1, maximum-scale=1, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <title>Calculator</title>
+  <meta name="language" content="English">
+  <meta name="description" content="Converse Celsius (°C) to Fahrenheit (°F), Kelvin (K) or Reaumur (°Re) and back.">
+  <meta name="keywords" content="ceonvert, temperature, temperature, calculator, calc, реомюры, реамюры, reaumur, reomur, reamur, римюры, ремюры, градусы, калькулятор, кельвин, kelvin, конвертатор, температура, Fahrenheit, celsius, цельсий, фаренгерт, нубовик, js, nbvk, нбвк, qwkrtezzz, квиртиз, квиктиз, qwkrz, квиз, квир, квик, qwz, qwk_sh, qwz_sh, qwk_shara, qwz_shara, qwksh, qwkshara, qwzshara, qwkrz, qwzrtezzz, квизтиз, qwkrzx3, qwkrzgx3y, qwkrzbot, qwzrzbot, qwzrtbot, qwzrtbot, hotdev01, myakish, мякиш, myak1sh, nbvk0, nbvk01, nbvkbio, био нубовика, био никиты, sh1tofqwk, sh1tofqwz, sh1tofnbvk, sh1tofnbvk0, sh1tofnbvk01, sh1itofnbvk0, fckedqwk, fckedqwz, fckednubovik, fckednubovik01, fckednubovik0, fckednubovik1, fckednbvk01, fckednbvk0, fckednbvk1, qwkpcbot, qwzpcbot, nubovikxd, nbvkxd, nbvk0xd, nbvk1xd, nbvk01xd, nubovik01xd, nubovikhub, nubovik01hub, nubovik0hub, nubovik1hub, нубовикхаб, хабофнубовик, hub of nubovik, хаб нубовика, хаб никиты, хаб квиза, хаб квиртиза, хаб квика, хаб мякиша, хаб квира, хаб квиктиза, хаб квиртиза, хаб квиртиза, nbvkhub, nbvk0hub, nbvk1hub, nbvk01hub, secretplacetw, secretplace, nbvkxd, nbvk0xd, nbvk01xd">
+  <meta name="theme-color" content="#242424">
+  <meta name="author" lang="en" content="qwkrtezzz (https://github.com/nubovik01)">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="nubovik01.gitbook.io">
+  <meta property="og:site_name" content="Fancy calculator of all sorts of shit">
+  <meta property="twitter:title" content="Fancy calculator of all sorts of shit">
+  <meta property="og:url" content="https://nubovik01.gitbook.io/temperature">
+  <meta property="twitter:url" content="https://nubovik01.gitbook.io/temperature">
+  <meta property="og:image" content="https://nubovik01.gitbook.io/files/images/omyum.ico">
+  <meta property="twitter:image" content="https://nubovik01.gitbook.io/files/images/omyum.ico">
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=../badbrowser.html" />
+  </noscript>
+  <link href="../files/css/main.css" rel="stylesheet">
+  <script src="../files/js/title.js" type="text/javascript"></script>
+  <script src="../files/js/console.js" type="text/javascript"></script>
+  <script src="../files/js/cards.js" type="text/javascript"></script>
+  <script src="../files/js/temperature.js" type="text/javascript"></script>
+  <script src="../files/js/footer.js" type="text/javascript"></script>
+  <script src="../files/js/sha.js" type="text/javascript"></script>
+  <link rel="shortcut icon" href="../files/images/omyum.ico">
+  <link ref="apple-touch-icon" src="../files/images/omyum.ico">
+</head>
+
+<body>
+  <div class="root">
+    <div class="heading">
+      <h3>Fancy calculator</h3>
+    </div>
+    <div class="buttons">
+      <a href="#" onclick="toggleCards()" id="toggle">show math</a>
+      <a href="/">main page</a>
+    </div>
+    <div class="inputs">
+      <div>
+        <p>Celsius (°C):</p>
+        <div class="input-with-buttons">
+          <input input="number" id="celsius" placeholder="ex. 36.6" spellcheck="false" maxlength="20">
+          <div class="buttons right-input-buttons">
+            <a href="#">🡺</a>
+          </div>
+        </div>
+        <div class="cards celsius"></div>
+      </div>
+      <div>
+        <p>Fahrenheit (°F):</p>
+        <div class="input-with-buttons">
+          <input input="number" id="fahrenheit" placeholder="ex. 97.88" spellcheck="false" maxlength="20">
+          <div class="buttons right-input-buttons">
+            <a href="#">🡺</a>
+          </div>
+        </div>
+        <div class="cards fahrenheit"></div>
+      </div>
+      <div>
+        <p>Kelvin (K):</p>
+        <div class="input-with-buttons">
+          <input input="number" id="kelvin" placeholder="ex. 309.75" spellcheck="false" maxlength="20">
+          <div class="buttons right-input-buttons">
+            <a href="#">🡺</a>
+          </div>
+        </div>
+        <div class="cards kelvin"></div>
+      </div>
+      <div>
+        <p>Reaumur (°Re):</p>
+        <div class="input-with-buttons">
+          <input input="number" id="reaumur" placeholder="ex. 29.28" spellcheck="false" maxlength="20">
+          <div class="buttons right-input-buttons">
+            <a href="#">🡺</a>
+          </div>
+        </div>
+        <div class="cards reaumur"></div>
+      </div>
+    </div>
+    <div class="footer"></div>
+  </div>
+</body>
+
+<script>
+  const descriptions = {
+    celsius: `
+      fahrenheit: (value * 9 / 5) + 32<br>
+      kelvin: value + 273.15<br>
+      reaumur: value * 4 / 5
+    `,
+    fahrenheit: `
+      celsius: (value - 32) * 5 / 9<br>
+      kelvin: (value + 459.67) * 5 / 9<br>
+      reaumur: (value - 32) * 4 / 9
+    `,
+    kelvin: `
+      celsius: value - 273.15<br>
+      fahrenheit: (value * 9 / 5) - 459.67<br>
+      reaumur: (value - 273.15) * 4 / 5
+    `,
+    reaumur: `
+      celsius: value * 5 / 4<br>
+      fahrenheit: value * 9 / 4 + 32<br>
+      kelvin: value * 5 / 4 + 273.15
+    `
+  };
+
+  const cards = document.querySelectorAll(".cards");
+
+  Object.keys(descriptions).forEach((type) => {
+    listCards([{ description: descriptions[type] }], type);
+  });
+
+  cards.forEach(card => card.toggleAttribute("hidden"));
+
+  function toggleCards() {
+    cards.forEach(card => card.toggleAttribute("hidden"));
+
+    const button = document.getElementById("toggle");
+    button.innerText = cards[1].hidden ? "show math" : "hide math";
+
+    if (cards[1].hidden) {
+      document.querySelectorAll(".input").forEach(input => input.style.marginTop = "15px");
+    };
+  };
+</script>
+
+</html>

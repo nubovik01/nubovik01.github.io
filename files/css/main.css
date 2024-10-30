@@ -20,28 +20,24 @@
   --some-black-color: rgb(31, 31, 31);
 }
 
-body {
+html {
   background-color: black;
   color: white;
   font-family: monospace;
   font-size: 100%;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
-  /* text-align: center; */
-  /* height: 100vh; */
-  /* overflow: hidden; */
+  margin: 25px;
 }
 
 @media (prefers-color-scheme: light) {
-  body {
+  html {
     background-color: white;
     color: black;
   }
 }
 
 .root {
-  margin: 25px;
   width: 340px;
 }
 
@@ -65,27 +61,7 @@ a {
   }
 }
 
-img {
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-}
-
-noscript p {
-  font-size: 85%;
-  color: var(--old-yellow-color);
-  margin: 0;
-  margin-top: 10px;
-}
-
-@media (prefers-color-scheme: light) {
-  noscript p {
-    color: var(--special-red-color);
-  }
-}
-
 .buttons {
-  margin-top: 2px;
   display: flex;
   flex-wrap: wrap;
   margin-left: -5px;
@@ -93,11 +69,9 @@ noscript p {
 
 .buttons > a {
   color: white;
-  background-color: black;
   text-decoration: none;
   cursor: grab;
-  padding: 8px 11px;
-  display: inline-block;
+  padding: 8px 1em;
   font-size: 94%;
   border: 2px solid white;
   user-select: none;
@@ -106,7 +80,6 @@ noscript p {
   margin: 5px 0 0 5px;
   flex: 1 0 calc(25% - 32px);
   text-align: center;
-  font-weight: bold;
 }
 
 @-moz-document url-prefix() {
@@ -147,16 +120,6 @@ noscript p {
     color: white;
     background: black;
   } 
-}
-
-.left-input-buttons {
-  margin-top: 0;
-  margin-right: 5px;
-}
-
-.right-input-buttons {
-  margin-left: 0;
-  margin-top: 0;
 }
 
 .cards .native {
@@ -231,13 +194,6 @@ noscript p {
   font-size: 94%;
 }
 
-.line {
-  color: gray;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-}
-
 .line::before {
   content: "- - - - - - - - - - - - - - -";
 }
@@ -263,13 +219,8 @@ noscript p {
   cursor: pointer;
 }
 
-.footer #commit {
+.footer #commit, .copyrights {
   color: var(--more-gray-color);
-}
-
-.footer .copyrights {
-  color: var(--more-gray-color);
-  font-size: var(--footer-font-size);
 }
 
 .inputs {
@@ -280,16 +231,11 @@ noscript p {
   margin: 0 0 0 0;
 }
 
-.input-with-buttons {
-  display: -webkit-flex;
-}
-
 input {
   background-color: black;
   color: white;
   height: 35px;
   border: 2px solid white;
-  font-size: 80%;
   padding-left: 8px;
   width: 100%;
   margin-top: 5px;
@@ -313,30 +259,21 @@ input[readonly] {
   margin-top: 18px;
 }
 
-/*
-textarea {
-  background-color: black;
-  color: white;
-  min-height: 150px;
-  border: 2px solid white;
-  font-size: 80%;
-  padding: 8px 8px 0 8px;
-  width: 100%;
-  margin-top: 5px;
-  border-radius: 0px;
-  resize: vertical;
+.input-with-buttons {
+  display: -webkit-flex;
 }
 
-@media (prefers-color-scheme: light) {
-  textarea {
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-  }
+.left-input-buttons {
+  margin-top: 0;
+  margin-right: 5px;
 }
-*/
 
-.notbyai {
+.right-input-buttons {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+/* .notbyai {
   width: 120px;
   margin-top: 3px;
 }
@@ -344,5 +281,18 @@ textarea {
 @media (prefers-color-scheme: light) {
   .notbyai {
     filter: invert(100%);
+  }
+} */
+
+noscript p {
+  font-size: 85%;
+  color: var(--old-yellow-color);
+  margin: 0;
+  margin-top: 10px;
+}
+
+@media (prefers-color-scheme: light) {
+  noscript p {
+    color: var(--special-red-color);
   }
 }

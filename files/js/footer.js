@@ -6,18 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const html = `
     <span class="line"></span>
-    <!-- A.R.: ./quotes.txt -->
+    <!-- A.R.: /quotes.txt -->
     <p id="quote" onclick="changeQuote();" translate="no"></p>
     <p id="commit" translate="no"></p>
     <p class="copyrights" translate="no">
       Created by qwkrtezzz not w/ <3<br>
-      © qwkrtezzz, <span class="year">2021</span><br>
-      © dreamworld, <span class="year">2024</span>
+      © qwkrtezzz, <span class="year">2021</span>
     </p>
-    <a href="https://notbyai.fyi">
-      <img class="notbyai" alt="site created by human, not by AI"
-        src="https://nbvk.kittyy.ru/files/images/not-by-ai/en-created.svg">
-    </a>
   `;
 
   footer.innerHTML = html;
