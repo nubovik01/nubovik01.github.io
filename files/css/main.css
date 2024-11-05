@@ -20,24 +20,25 @@
   --some-black-color: rgb(31, 31, 31);
 }
 
-html {
+body {
   background-color: black;
   color: white;
   font-family: monospace;
   font-size: 100%;
   display: flex;
   justify-content: center;
-  margin: 25px;
+  height: 100%;
 }
 
 @media (prefers-color-scheme: light) {
-  html {
+  body {
     background-color: white;
     color: black;
   }
 }
 
 .root {
+  margin: 25px;
   width: 340px;
 }
 
@@ -62,6 +63,7 @@ a {
 }
 
 .buttons {
+  margin-top: 2px;
   display: flex;
   flex-wrap: wrap;
   margin-left: -5px;
@@ -69,6 +71,7 @@ a {
 
 .buttons > a {
   color: white;
+  background-color: black;
   text-decoration: none;
   cursor: grab;
   padding: 8px 1em;
@@ -231,11 +234,16 @@ a {
   margin: 0 0 0 0;
 }
 
+.input-with-buttons {
+  display: -webkit-flex;
+}
+
 input {
   background-color: black;
   color: white;
   height: 35px;
   border: 2px solid white;
+  font-size: 80%;
   padding-left: 8px;
   width: 100%;
   margin-top: 5px;
@@ -273,17 +281,6 @@ input[readonly] {
   margin-top: 0;
 }
 
-/* .notbyai {
-  width: 120px;
-  margin-top: 3px;
-}
-
-@media (prefers-color-scheme: light) {
-  .notbyai {
-    filter: invert(100%);
-  }
-} */
-
 noscript p {
   font-size: 85%;
   color: var(--old-yellow-color);
@@ -294,5 +291,24 @@ noscript p {
 @media (prefers-color-scheme: light) {
   noscript p {
     color: var(--special-red-color);
+  }
+}
+
+#aka {
+  background-color: var(--dark-color);
+  border-radius: 5px;
+}
+
+#aka:before {
+  content: "\00a0";
+}
+
+#aka:after {
+  content: "\00a0";
+}
+
+@media (prefers-color-scheme: light) {
+  #aka {
+    background-color: var(--light-gray-color);
   }
 }
