@@ -9,7 +9,9 @@
   --more-gray-color: rgba(128, 128, 128, 0.808);
   --transparent-white-color: rgba(146, 146, 146, 0.2);
   --dark-color: rgba(84, 84, 84, 0.723);
-  --transparent-dark-color: rgba(255, 255, 255, .2);
+  --light-dark-color: rgba(84, 84, 84, 0.6);
+  --light-color: rgba(230, 228, 228, 0.7);
+  --transparent-dark-color: rgba(255, 255, 255, 0.2);
   --footer-font-size: 85%;
   --special-blue-color: #0077FF;
   --light-gray-color: rgb(227, 227, 227);
@@ -310,5 +312,23 @@ noscript p {
 @media (prefers-color-scheme: light) {
   #aka {
     background-color: var(--light-gray-color);
+  }
+}
+
+.notify {
+  position: fixed;
+  display: none;
+  background-color: var(--light-dark-color);
+  bottom: 15px;
+  width: 340px;
+  padding: 10px;
+  text-align: center;
+  font-size: 80%;
+  border-radius: 4px;
+}
+
+@media (prefers-color-scheme: light) {
+  .notify {
+    background-color: var(--light-color);
   }
 }
