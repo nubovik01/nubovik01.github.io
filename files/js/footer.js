@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const html = `
     <span class="line"></span>
     <!-- A.R.: /quotes.txt -->
-    <p id="quote" onclick="changeQuote();" translate="no"></p>
+    <p id="quote" onclick="changeQuote();" translate="no">
+      ://: 02:11. RUN AWAY.
+    </p>
     <p id="commit" translate="no"></p>
     <p class="copyrights" translate="no">
       Created by qwkrtezzz not w/ <3<br>
