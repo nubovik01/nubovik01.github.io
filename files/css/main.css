@@ -311,7 +311,7 @@ noscript p {
 
 @media (prefers-color-scheme: light) {
   #aka {
-    background-color: var(--light-gray-color);
+    background-color: rgb(227, 227, 227, 0.67);
   }
 }
 
@@ -323,7 +323,7 @@ noscript p {
   width: 340px;
   padding: 10px;
   text-align: center;
-  font-size: 80%;
+  font-size: 85%;
   border-radius: 4px;
 }
 
