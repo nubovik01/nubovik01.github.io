@@ -40,8 +40,6 @@
 
       changeQuote();
     };
-
-    const notifications = new Notifications();
   </script>
   <link rel="shortcut icon" href="./files/images/omyum.ico">
   <link ref="apple-touch-icon" src="./files/images/omyum.ico">
@@ -56,8 +54,7 @@
       </p>
       <p>
         <!-- put a like if you're the same! https://nbvk.kittyy.ru/files/images/keki/baza.jpeg -->
-        <span id="yo">13</span> y.o, fullstack middle
-        javascript developer from saint-petersburg, russia.
+        <span id="yo">13</span> y.o, fullstack middle javascript developer from saint petersburg, russia.
       </p>
     </div>
     <img alt="*photo with killua and gon" src="https://hunter.kittyy.ru/with-gon.webp" width="100%" height="180px">
@@ -65,15 +62,11 @@
       <a href="?r=blog">blog</a>
       <a href="?r=bio">bio</a>
       <a href="?r=mt">monkeytype</a>
-      <a href="?r=dsuz">discord</a>
       <a href="?r=tt">tiktok</a>
       <a href="?r=tg">telegram</a>
-      <a href="?r=faq">faq</a>
       <a href="?r=gh">github</a>
       <a href="?r=vk">vk</a>
       <a href="?r=dnt">donate</a>
-      <a href="?r=stim">steam</a>
-      <a href="?r=ymuz">y.music</a>
     </div>
     <div class="cards"></div>
     <div class="footer"></div>
@@ -84,22 +77,26 @@
   listCards([
     {
       title: "BotDobryak",
-      icon: "./files/images/logos/botdobryak.webp",
-      description: `
-        Some time ago I got interested in programming and BotDobryak
-        became my first bot. It was with him that my path in IT.
-      `,
-      translate: true
+      icon: "./files/images/logos/botdobryak.webp"
     },
     {
       title: "FlameOut",
       icon: "./files/images/logos/flame_64x64.webp",
       link: "https://flame.kittyy.ru",
       description: `
-        Multifunctional bot for Discord with 500+ servers and
-        300k+ users. No longer work since February 25, 2024.
+        Multifunctional Discord bot with 500+ servers and 300k+
+        users. No longer work and develops since February 25, 2024.
       `,
       translate: true
+    },
+    {
+      title: "Anonymous ratings",
+      icon: "./files/images/logos/retorobot.png",
+      link: "https://t.me/retorobot/?start=from-kittyyru",
+      description: `
+        Telegram bot for <u>anonymous</u> rating your friends and acquaintances
+        on a ten-point scale. No ads and other shit. Fully free.
+      `
     }
   ]);
 </script>

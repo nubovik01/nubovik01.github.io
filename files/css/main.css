@@ -204,15 +204,9 @@ a {
 }
 
 .footer {
-  color: gray;
+  color: var(--more-gray-color);;
   font-style: italic;
   margin-top: 2px;
-}
-
-@media (prefers-color-scheme: light) {
-  .footer {
-    color: gray;
-  }
 }
 
 .footer p {
@@ -221,11 +215,8 @@ a {
 }
 
 .footer #quote {
+  color: gray;
   cursor: pointer;
-}
-
-.footer #commit, .copyrights {
-  color: var(--more-gray-color);
 }
 
 .inputs {

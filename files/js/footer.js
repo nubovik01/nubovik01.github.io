@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const html = `
     <span class="line"></span>
-    <!-- A.R.: /quotes.txt -->
     <p id="quote" onclick="changeQuote();" translate="no">
       ://: 02:11. RUN AWAY.
     </p>
