@@ -314,21 +314,3 @@ noscript p {
     background-color: rgb(227, 227, 227, 0.67);
   }
 }
-
-.notify {
-  position: fixed;
-  display: none;
-  background-color: var(--light-dark-color);
-  bottom: 15px;
-  width: 340px;
-  padding: 10px;
-  text-align: center;
-  font-size: 85%;
-  border-radius: 4px;
-}
-
-@media (prefers-color-scheme: light) {
-  .notify {
-    background-color: var(--light-color);
-  }
-}

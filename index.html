@@ -34,12 +34,8 @@
   <script src="./files/js/quotes.js" type="text/javascript"></script>
   <script src="./files/js/sha.js" type="text/javascript"></script>
   <script src="./files/js/age.js" type="text/javascript"></script>
-  <script src="./files/js/notifications.js" type="text/javascript"></script>
   <script>
     window.onload = function () {
-      const notifications = new Notifications();
-      notifications.showNotify("this is a test notification that will disappear after 5 seconds. i'm testing a new feature on the site =) reload the page to view it again");
-
       document.getElementById("yo").textContent = calculateAge("04.09.2008");
 
       changeQuote();
@@ -81,7 +77,6 @@
     </div>
     <div class="cards"></div>
     <div class="footer"></div>
-    <div class="notify"></div>
   </div>
 </body>
 
