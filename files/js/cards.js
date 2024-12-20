@@ -5,7 +5,7 @@ const cardTemplate = (card) => `
   <div class="native" ${!card.translate ? `translate="no"` : ""}>
     ${card.link ? `<a href="${card.link}" target="_blank">` : ""}
       <div class="header" translate="no">
-        ${card.icon ? `<div><img alt="${card.title}" src="${card.icon}"></div>` : ""}
+        ${card.icon ? `<div><img alt="${card.title} Icon" src="${card.icon}"></div>` : ""}
         ${card.title ? `<div>${card.title}</div>` : ""}
         ${card.link ? `
           <div class="link">

@@ -143,16 +143,6 @@ a {
   }
 }
 
-.cards > div a {
-  color: white;
-}
-
-@media (prefers-color-scheme: light) {
-  .cards > div a {
-    color: black;
-  }
-}
-
 .cards .header {
   display: flex;
   align-items: center;
@@ -160,6 +150,13 @@ a {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
+  color: white;
+}
+
+@media (prefers-color-scheme: light) {
+  .cards .header {
+    color: black;
+  }
 }
 
 .cards .link {
