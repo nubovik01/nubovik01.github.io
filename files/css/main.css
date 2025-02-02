@@ -302,3 +302,19 @@ noscript p {
     background-color: rgb(227, 227, 227, 0.67);
   }
 }
+
+del {
+  color: var(--some-light-gray-color);
+	text-decoration-color: rgb(255, 139, 139);
+}
+
+.italic {
+  color: var(--some-light-gray-color);
+  font-style: italic;
+}
+
+@media (prefers-color-scheme: light) {
+  .italic {
+    color: var(--more-gray-color);
+  }
+}
