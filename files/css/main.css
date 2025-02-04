@@ -41,7 +41,7 @@ body {
 
 .root {
   margin: 25px;
-  width: 340px;
+  width: 325px;
 }
 
 h3 {
@@ -50,7 +50,7 @@ h3 {
 
 p, pre {
   margin-top: 0.6em;
-  margin-bottom: 0.6em;
+  margin-bottom: 0.4em;
 }
 
 a {
@@ -201,7 +201,7 @@ a {
 }
 
 .footer {
-  color: var(--more-gray-color);;
+  color: var(--more-gray-color);
   font-style: italic;
   margin-top: 2px;
 }
@@ -209,11 +209,6 @@ a {
 .footer p {
   margin: 0;
   font-size: var(--footer-font-size);
-}
-
-.footer #quote {
-  color: gray;
-  cursor: pointer;
 }
 
 .inputs {
