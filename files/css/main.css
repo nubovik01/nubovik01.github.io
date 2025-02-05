@@ -41,27 +41,20 @@ body {
 
 .root {
   margin: 25px;
-  width: 325px;
+  width: 335px;
 }
 
 h3 {
   margin-bottom: 7px;
 }
 
-p, pre {
+p {
   margin-top: 0.6em;
   margin-bottom: 0.4em;
 }
 
 a {
   text-decoration: none;
-  color: var(--old-yellow-color);
-}
-
-@media (prefers-color-scheme: light) {
-  a {
-    color: var(--special-red-color);
-  }
 }
 
 .buttons {
@@ -74,7 +67,6 @@ a {
 .buttons > a {
   color: white;
   background-color: black;
-  text-decoration: none;
   cursor: grab;
   padding: 8px 1em;
   font-size: 94%;
@@ -170,7 +162,7 @@ a {
   }
 }
 
-.cards #blankImg {
+.cards #blank {
   margin: 0 0 -3px -4px;
   width: 14px;
   height: 14px;

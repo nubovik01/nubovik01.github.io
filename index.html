@@ -9,8 +9,7 @@
   <title>Main page</title>
   <meta name="language" content="English">
   <meta name="description" content="Main page of the site">
-  <meta name="keywords"
-    content="nubovik, нубовик, js, nbvk, нбвк, qwkrtezzz, квиртиз, квиктиз, qwkrz, квиз, квир, квик, qwz, qwk_sh, qwz_sh, qwk_shara, qwz_shara, qwksh, qwkshara, qwzshara, qwkrz, qwzrtezzz, квизтиз, qwkrzx3, qwkrzgx3y, qwkrzbot, qwzrzbot, qwzrtbot, qwzrtbot, hotdev01, myakish, мякиш, myak1sh, nbvk0, nbvk01, nbvkbio, био нубовика, био никиты, sh1tofqwk, sh1tofqwz, sh1tofnbvk, sh1tofnbvk0, sh1tofnbvk01, sh1itofnbvk0, fckedqwk, fckedqwz, fckednubovik, fckednubovik01, fckednubovik0, fckednubovik1, fckednbvk01, fckednbvk0, fckednbvk1, qwkpcbot, qwzpcbot, nubovikxd, nbvkxd, nbvk0xd, nbvk1xd, nbvk01xd, nubovik01xd, nubovikhub, nubovik01hub, nubovik0hub, nubovik1hub, нубовикхаб, хабофнубовик, hub of nubovik, хаб нубовика, хаб никиты, хаб квиза, хаб квиртиза, хаб квика, хаб мякиша, хаб квира, хаб квиктиза, хаб квиртиза, хаб квиртиза, nbvkhub, nbvk0hub, nbvk1hub, nbvk01hub, secretplacetw, secretplace, nbvkxd, nbvk0xd, nbvk01xd">
+  <meta name="keywords" content="nubovik, нубовик, js, nbvk, нбвк, qwkrtezzz, квиртиз, квиктиз, qwkrz, квиз, квир, квик, qwz, qwk_sh, qwz_sh, qwk_shara, qwz_shara, qwksh, qwkshara, qwzshara, qwkrz, qwzrtezzz, квизтиз, qwkrzx3, qwkrzgx3y, qwkrzbot, qwzrzbot, qwzrtbot, qwzrtbot, hotdev01, myakish, мякиш, myak1sh, nbvk0, nbvk01, nbvkbio, био нубовика, био никиты, sh1tofqwk, sh1tofqwz, sh1tofnbvk, sh1tofnbvk0, sh1tofnbvk01, sh1itofnbvk0, fckedqwk, fckedqwz, fckednubovik, fckednubovik01, fckednubovik0, fckednubovik1, fckednbvk01, fckednbvk0, fckednbvk1, qwkpcbot, qwzpcbot, nubovikxd, nbvkxd, nbvk0xd, nbvk1xd, nbvk01xd, nubovik01xd, nubovikhub, nubovik01hub, nubovik0hub, nubovik1hub, нубовикхаб, хабофнубовик, hub of nubovik, хаб нубовика, хаб никиты, хаб квиза, хаб квиртиза, хаб квика, хаб мякиша, хаб квира, хаб квиктиза, хаб квиртиза, хаб квиртиза, nbvkhub, nbvk0hub, nbvk1hub, nbvk01hub, secretplacetw, secretplace, nbvkxd, nbvk0xd, nbvk01xd">
   <meta name="theme-color" content="#242424">
   <meta name="author" lang="en" content="qwkrtezzz (https://github.com/nubovik01)">
   <meta property="og:locale" content="ru_RU">
@@ -32,20 +31,12 @@
   <script src="./files/js/console.js" type="text/javascript"></script>
   <script src="./files/js/cards.js" type="text/javascript"></script>
   <script src="./files/js/quotes.js" type="text/javascript"></script>
+  <script src="./files/js/footer.js" type="text/javascript"></script>
   <script src="./files/js/sha.js" type="text/javascript"></script>
   <script src="./files/js/age.js" type="text/javascript"></script>
   <script>
     window.onload = function () {
       document.getElementById("yo").textContent = calculateAge("09.04.2008");
-
-      document.querySelectorAll(".year").forEach(element => {
-        const nowYear = new Date().getFullYear();
-        const copyrightYear = element.textContent;
-
-        if (nowYear != copyrightYear) {
-          element.innerText = copyrightYear + "-" + nowYear;
-        };
-      });
     };
   </script>
   <link rel="shortcut icon" href="./files/images/omyum.ico">
@@ -69,26 +60,22 @@
       </p>
     </div>
     <div class="buttons" translate="no">
-      <!-- <a href="?r=blog">blog</a>
-      <a href="?r=bio">bio</a> -->
+      <a href="https://t.me/nevermorelife">blog</a>
+      <!-- <a href="?r=bio">bio</a> -->
       <a href="?r=tg">telegram</a>
+      <a href="?r=dnt">donate</a>
       <a href="?r=gh">github</a>
       <a href="?r=wktm">wakatime</a>
-      <a href="?r=dnt">donate</a>
-      <a href="?r=mt">monkeytype</a>
+      <a href="?r=inst">instagram</a>
       <a href="?r=tt">tiktok</a>
+      <a href="?r=stim">steam</a>
+      <a href="?r=ds">discord</a>
+      <a href="?r=mt">monkeytype</a>
       <a href="?r=vk">vk</a>
       <a href="?r=ymuz">y.music</a>
     </div>
     <div class="cards"></div>
-    <div class="footer">
-      <span class="line"></span>
-      <p id="commit" translate="no"></p>
-      <p class="copyrights" translate="no">
-        Created by qwkrtezzz not w/ <3<br>
-        © qwkrtezzz, <span class="year">2021</span><br>
-      </p>
-    </div>
+    <div class="footer"></div>
   </div>
 </body>
 

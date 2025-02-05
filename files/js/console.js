@@ -2,7 +2,7 @@
 // file created at 4 February 2024 12:26:03 PM (UTC+3)
 
 console.log("[*] %cHello! Found a bug? - https://t.me/qwkrzbot", "color: lightgreen;");
-console.log("[*] %csite created by qwkrtezzz (github.com/nubovik01)", "color: lightgreen;");
+console.log("[*] %csite created by qwkrtezzz (www.github.com/nubovik01)", "color: lightgreen;");
 
 console.log("[*] %cGet status of my services! https://r.kittyy.ru/#status", "color: orange;");
 
