@@ -55,6 +55,13 @@ p {
 
 a {
   text-decoration: none;
+  color: var(--old-yellow-color);
+}
+
+@media (prefers-color-scheme: light) {
+  a {
+    color: var(--special-blue-color);
+  }
 }
 
 .buttons {
