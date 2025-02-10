@@ -1,0 +1,28 @@
+:root {
+  color-scheme: light dark;
+}
+
+#preloader {
+  background-color: light-dark(white, black);
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.spinner {
+  border: 5px solid light-dark(black, white);
+  border-top-color: light-dark(rgb(227, 227, 227), rgb(145, 145, 145));
+  padding: 0 40px 40px 0;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
