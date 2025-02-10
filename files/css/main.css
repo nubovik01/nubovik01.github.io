@@ -124,6 +124,7 @@ a {
 
 .cards img {
   width: 31px;
+  height: 31px;
   margin-right: 8px;
   margin-bottom: -3px;
   border: 0.15em solid var(--cards-img-border-color);
@@ -220,4 +221,22 @@ noscript p {
 .italic {
   color: var(--italic-text-color);
   font-style: italic;
+}
+
+.menu {
+  display: flex;
+  padding-bottom: 15px;
+  color: gray;
+}
+
+.menu-items {
+  display: flex;
+  margin-left: auto;
+  gap: 5px;
+  font-size: smaller;
+}
+
+.menu-items > a {
+  color: #62abff;
+  font-size: 120%;
 }

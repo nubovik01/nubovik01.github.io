@@ -34,15 +34,11 @@ function changeQuote() {
   let id, quote;
 
   do {
-    id = Math.floor(Math.random() * quotesList.length); // quoteIdCache + 1
+    id = Math.floor(Math.random() * quotesList.length);
     quote = quotesList[id];
   } while (
     quote && id === quoteIdCache
   );
-
-  if (!quote) {
-    footer.hidden = true;
-  };
 
   footer.textContent = `”${quote}”`;
   quoteIdCache = quote ? id : quoteIdCache;
