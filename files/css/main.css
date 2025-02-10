@@ -6,37 +6,28 @@
 }
 
 :root {
-  --more-gray-color: rgba(128, 128, 128, 0.808);
-  --transparent-white-color: rgba(146, 146, 146, 0.2);
-  --dark-color: rgba(84, 84, 84, 0.723);
-  --light-dark-color: rgba(84, 84, 84, 0.6);
-  --light-color: rgba(230, 228, 228, 0.7);
-  --transparent-dark-color: rgba(255, 255, 255, 0.2);
-  --footer-font-size: 85%;
-  --special-blue-color: #0077FF;
-  --light-gray-color: rgb(227, 227, 227);
-  --some-light-gray-color: rgb(204, 204, 204);
-  --old-yellow-color: #f5e503;
-  --special-red-color: #ff6262ed;
-  --other-black-color: rgb(41, 41, 41);
-  --some-black-color: rgb(31, 31, 31);
+  color-scheme: light dark;
+  --text-color: light-dark(black, white);
+  --background-color: light-dark(white, black);
+  --link-color: light-dark(#0077FF, #f5e503);
+  --cards-link-color: light-dark(rgba(84, 84, 84, 0.723), gray);
+  --warning-color: light-dark(#f5e503, #ff6262ed);
+  --cards-border-color: light-dark(rgb(227, 227, 227), rgb(41, 41, 41));
+  --cards-img-border-color: light-dark(rgb(227, 227, 227), rgb(31, 31, 31));
+  --buttons-focus-color: light-dark(rgba(255, 255, 255, 0.2), rgba(84, 84, 84, 0.723));
+  --buttons-hover-color: light-dark(rgba(146, 146, 146, 0.2), rgba(255, 255, 255, 0.2));
+  --aka-color: light-dark(rgb(227, 227, 227, 0.67), rgba(84, 84, 84, 0.723));
+  --italic-text-color: light-dark(rgba(128, 128, 128, 0.808), rgb(204, 204, 204));
 }
 
 body {
-  background-color: black;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-family: monospace;
   font-size: 100%;
   display: flex;
   justify-content: center;
   height: 100%;
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: white;
-    color: black;
-  }
 }
 
 .root {
@@ -55,13 +46,7 @@ p {
 
 a {
   text-decoration: none;
-  color: var(--old-yellow-color);
-}
-
-@media (prefers-color-scheme: light) {
-  a {
-    color: var(--special-blue-color);
-  }
+  color: var(--link-color);
 }
 
 .buttons {
@@ -72,12 +57,12 @@ a {
 }
 
 .buttons > a {
-  color: white;
-  background-color: black;
+  color: var(--text-color);
+  background-color: var(--background-color);
   cursor: grab;
   padding: 8px 1em;
   font-size: 94%;
-  border: 2px solid white;
+  border: 2px solid var(--text-color);
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -93,37 +78,16 @@ a {
 }
 
 .buttons > a:focus {
-  background: var(--transparent-white-color);
+  background: var(--buttons-focus-color);
 }
 
 .buttons > a:hover {
-  background: var(--transparent-dark-color);
+  background: var(--buttons-hover-color);
 }
 
 .buttons > a:active {
-  color: black;
-  background: white;
-}
-
-@media (prefers-color-scheme: light) {
-  .buttons > a {
-    color: black;
-    background-color: white;
-    border: 2px solid black;
-  }
-
-  .buttons > a:focus {
-    background: var(--transparent-dark-color);
-  }
-
-  .buttons > a:hover {
-    background: var(--transparent-white-color);
-  }
-
-  .buttons > a:active {
-    color: white;
-    background: black;
-  } 
+  color: var(--background-color);
+  background: var(--text-color);
 }
 
 .cards .native {
@@ -131,15 +95,9 @@ a {
 }
 
 .cards > div {
-  border: 0.16em solid var(--other-black-color);
+  border: 0.16em solid var(--cards-border-color);
   border-radius: 8px;
   margin-top: 10px;
-}
-
-@media (prefers-color-scheme: light) {
-  .cards > div {
-    border: 0.16em solid var(--light-gray-color);
-  }
 }
 
 .cards .header {
@@ -149,24 +107,12 @@ a {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  color: white;
-}
-
-@media (prefers-color-scheme: light) {
-  .cards .header {
-    color: black;
-  }
+  color: var(--text-color);
 }
 
 .cards .link {
-  color: gray;
+  color: var(--cards-link-color);
   margin-left: auto;
-}
-
-@media (prefers-color-scheme: light) {
-  .cards .link {
-    color: var(--dark-color);
-  }
 }
 
 .cards #blank {
@@ -180,14 +126,8 @@ a {
   width: 31px;
   margin-right: 8px;
   margin-bottom: -3px;
-  border: 0.15em solid var(--some-black-color);
+  border: 0.15em solid var(--cards-img-border-color);
   border-radius: 7px;
-}
-
-@media (prefers-color-scheme: light) {
-  .cards img {
-    border: 0.15em solid var(--light-gray-color);
-  }
 }
 
 .cards p {
@@ -200,14 +140,14 @@ a {
 }
 
 .footer {
-  color: var(--more-gray-color);
+  color: rgba(128, 128, 128, 0.808);
   font-style: italic;
   margin-top: 2px;
 }
 
 .footer p {
   margin: 0;
-  font-size: var(--footer-font-size);
+  font-size: 85%;
 }
 
 .inputs {
@@ -223,23 +163,15 @@ a {
 }
 
 input {
-  background-color: black;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
   height: 35px;
-  border: 2px solid white;
+  border: 2px solid var(--text-color);
   font-size: 80%;
   padding-left: 8px;
   width: 100%;
   margin-top: 5px;
   border-radius: 0px;
-}
-
-@media (prefers-color-scheme: light) {
-  input {
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-  }
 }
 
 input[readonly] {
@@ -267,19 +199,13 @@ input[readonly] {
 
 noscript p {
   font-size: 85%;
-  color: var(--old-yellow-color);
+  color: var(--warning-color);
   margin: 0;
   margin-top: 10px;
 }
 
-@media (prefers-color-scheme: light) {
-  noscript p {
-    color: var(--special-red-color);
-  }
-}
-
 #aka {
-  background-color: var(--dark-color);
+  background-color: var(--aka-color);
   border-radius: 5px;
 }
 
@@ -291,24 +217,7 @@ noscript p {
   content: "\00a0";
 }
 
-@media (prefers-color-scheme: light) {
-  #aka {
-    background-color: rgb(227, 227, 227, 0.67);
-  }
-}
-
-del {
-  color: var(--some-light-gray-color);
-	text-decoration-color: rgb(255, 139, 139);
-}
-
 .italic {
-  color: var(--some-light-gray-color);
+  color: var(--italic-text-color);
   font-style: italic;
-}
-
-@media (prefers-color-scheme: light) {
-  .italic {
-    color: var(--more-gray-color);
-  }
 }
