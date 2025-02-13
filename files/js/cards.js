@@ -9,7 +9,7 @@ const cardTemplate = (card) => `
         ${card.title ? `<div>${card.title}</div>` : ""}
         ${card.link ? `
           <div class="link">
-            <span>${card.link.split('/')[2]}</span>
+            <span>${card.link.split("/")[2]}</span>
             ${card.link ? `<img id="blank" src="/files/images/newBlank.webp">` : ""}
           </div>` : ""}
       </div>
