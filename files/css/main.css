@@ -240,3 +240,8 @@ noscript p {
   color: var(--italic-text-color);
   font-style: italic;
 }
+
+.mini-icon {
+  height: 13px;
+  margin-bottom: -1px;
+}
