@@ -14,7 +14,3 @@ function calculateAge(birth) {
 
   return age;
 };
-
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById("yo").textContent = calculateAge("09.04.2008");
-});
