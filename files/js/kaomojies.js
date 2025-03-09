@@ -13,18 +13,14 @@ const kaomojiesList = [
 let kaomojiIdCache = null;
 
 function changeKaomoji() {
-  const htmlElement = document.getElementById("kaomoji");
-  let id, kaomoji;
-
   do {
     id = Math.floor(Math.random() * kaomojiesList.length);
-    kaomoji = kaomojiesList[id];
   } while (
-    kaomoji && id === kaomojiIdCache
+    id === kaomojiIdCache
   );
 
-  htmlElement.textContent = kaomoji;
-  kaomojiIdCache = kaomoji ? id : kaomojiIdCache;
+  document.getElementById("kaomoji").textContent = kaomojiesList[id];
+  kaomojiIdCache = id;
 };
 
 window.onload = () => changeKaomoji();

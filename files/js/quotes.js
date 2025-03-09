@@ -31,16 +31,12 @@ const quotesList = [
 let quoteIdCache = null;
 
 function changeQuote() {
-  const footer = document.getElementById("quote");
-  let id, quote;
-
   do {
     id = Math.floor(Math.random() * quotesList.length);
-    quote = quotesList[id];
   } while (
-    quote && id === quoteIdCache
+    id === quoteIdCache
   );
 
-  footer.textContent = `”${quote}”`;
-  quoteIdCache = quote ? id : quoteIdCache;
+  document.getElementById("quote").textContent = `”${quotesList[id]}”`;
+  quoteIdCache = id;
 };
