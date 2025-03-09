@@ -35,6 +35,24 @@ body {
   width: 335px;
 }
 
+.menu {
+  display: flex;
+  padding-bottom: 15px;
+  color: gray;
+}
+
+.menu-items {
+  display: flex;
+  margin-left: auto;
+  gap: 5px;
+  font-size: smaller;
+}
+
+.menu-items > a {
+  color: #62abff;
+  font-size: 120%;
+}
+
 h3 {
   margin-bottom: 7px;
 }
@@ -223,20 +241,7 @@ noscript p {
   font-style: italic;
 }
 
-.menu {
-  display: flex;
-  padding-bottom: 15px;
-  color: gray;
-}
-
-.menu-items {
-  display: flex;
-  margin-left: auto;
-  gap: 5px;
-  font-size: smaller;
-}
-
-.menu-items > a {
-  color: #62abff;
-  font-size: 120%;
+.mini-icon {
+  height: 13px;
+  margin-bottom: -1px;
 }
