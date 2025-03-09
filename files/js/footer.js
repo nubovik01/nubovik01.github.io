@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const html = `
     <span class="line"></span>
-    <p id="quote" onclick="changeQuote();" translate="no"></p>
     <p id="commit" translate="no"></p>
     <p class="copyrights" translate="no">
       Created by qwkrtezzz not w/ <3<br>
