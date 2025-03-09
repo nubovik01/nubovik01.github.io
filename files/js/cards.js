@@ -1,6 +1,8 @@
 // code by qwkrtezzz (https://github.com/nubovik01)
 // file created at 28 March 2024 10:33:59 PM (UTC+3)
 
+// cursed code xD, welcome to the hell of programming!
+
 const cardTemplate = (card) => `
   <div class="native" ${!card.translate ? `translate="no"` : ""}>
     ${card.link ? `<a href="${card.link}" target="_blank">` : ""}
@@ -14,7 +16,7 @@ const cardTemplate = (card) => `
           </div>` : ""}
       </div>
     ${card.link ? "</a>" : ""}
-    ${card.description ? `<p>${card.description}</p>` : ""}
+    ${card.description ? `<p ${card.icon ? "" : `fix="true"`}>${card.description}</p>` : ""}
   </div>
 `;
 

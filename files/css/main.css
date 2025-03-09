@@ -154,6 +154,10 @@ a {
   font-size: 93%;
 }
 
+.cards p[fix="true"] {
+  margin: 5px 3px 13px 0;
+}
+
 .line::before {
   content: "- - - - - - - - - - - - - - -";
 }
