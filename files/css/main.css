@@ -109,9 +109,9 @@ a {
 }
 
 /* @NOTE: fix size of buttons for iPhone SE 3rd generation */
-@media screen and (min-width:345px) and (max-width:375px) {
+@media screen and (min-width:345px) and (max-width:385px) {
   .buttons > a {
-    padding: 7.5px;
+    padding: 7px;
   }
 }
 
