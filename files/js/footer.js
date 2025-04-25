@@ -2,7 +2,7 @@
 // file created at 13 September 2024 21:02:55 PM (UTC+3)
 
 document.addEventListener("DOMContentLoaded", () => {
-  const footer = document.querySelector(".footer");
+  const footer = document.querySelector("footer");
   footer.innerHTML = `
     <span class="line"></span>
     <p id="commit" translate="no"></p>
