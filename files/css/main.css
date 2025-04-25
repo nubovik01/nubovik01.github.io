@@ -12,11 +12,11 @@
   --link-color: light-dark(#0077FF, #f5e503);
   --cards-link-color: light-dark(rgba(84, 84, 84, 0.723), gray);
   --warning-color: light-dark(#f5e503, #ff6262ed);
-  --cards-border-color: light-dark(rgb(227, 227, 227), rgb(41, 41, 41));
-  --cards-img-border-color: light-dark(rgb(227, 227, 227), rgb(31, 31, 31));
+  --cards-border-color: light-dark(rgb(209, 209, 209), rgb(41, 41, 41));
+  --cards-img-border-color: light-dark(rgb(209, 209, 209), rgb(31, 31, 31));
   --buttons-focus-color: light-dark(rgba(255, 255, 255, 0.2), rgba(84, 84, 84, 0.723));
   --buttons-hover-color: light-dark(rgba(146, 146, 146, 0.2), rgba(255, 255, 255, 0.2));
-  --aka-color: light-dark(rgb(227, 227, 227, 0.67), rgba(84, 84, 84, 0.723));
+  --aka-color: light-dark(rgb(209, 209, 209, 0.67), rgba(84, 84, 84, 0.723));
   --italic-text-color: light-dark(rgba(128, 128, 128, 0.808), rgb(204, 204, 204));
 }
 
