@@ -19,6 +19,7 @@
   --buttons-hover-color: light-dark(rgba(146, 146, 146, 0.2), rgba(255, 255, 255, 0.2));
   --aka-color: light-dark(rgb(209, 209, 209, 0.67), rgba(84, 84, 84, 0.723));
   --italic-text-color: light-dark(rgba(128, 128, 128, 0.808), rgb(204, 204, 204));
+  --menu-items: light-dark(#e10c16, #93ff93)
 }
 
 body {
@@ -50,7 +51,8 @@ body {
 }
 
 .menu-items > a {
-  color: #62abff;
+  /* color: #62abff; */
+  color: var(--menu-items);
   font-size: 120%;
 }
 
