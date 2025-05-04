@@ -9,7 +9,8 @@
   color-scheme: light dark;
   --text-color: light-dark(black, white);
   --background-color: light-dark(white, black);
-  --link-color: light-dark(#0077FF, #f5e503);
+  /* --link-color: light-dark(#0077FF, #f5e503); */
+  --link-color: light-dark(#0077FF, rgb(129, 255, 255));
   --cards-link-color: light-dark(rgba(84, 84, 84, 0.723), gray);
   --warning-color: light-dark(#f5e503, #ff6262ed);
   --cards-border-color: light-dark(rgb(209, 209, 209), rgb(41, 41, 41));
