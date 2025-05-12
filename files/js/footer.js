@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const html = `
     <span class="line"></span>
     <p id="commit" translate="no"></p>
+    <p>${screen.width}x${screen.height} (${window.innerWidth}x${window.innerHeight})</p>
     <p class="copyrights" translate="no">
       Created by qwkrtezzz not w/ <3<br>
       © qwkrtezzz, <span class="year">2021</span><br>
