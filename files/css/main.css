@@ -9,15 +9,17 @@
   color-scheme: light dark;
   --text-color: light-dark(black, white);
   --background-color: light-dark(white, black);
-  --link-color: light-dark(#0077FF, #f5e503);
+  /* --link-color: light-dark(#0077FF, #f5e503); */
+  --link-color: light-dark(#0077FF, rgb(129, 255, 255));
   --cards-link-color: light-dark(rgba(84, 84, 84, 0.723), gray);
   --warning-color: light-dark(#f5e503, #ff6262ed);
-  --cards-border-color: light-dark(rgb(227, 227, 227), rgb(41, 41, 41));
-  --cards-img-border-color: light-dark(rgb(227, 227, 227), rgb(31, 31, 31));
+  --cards-border-color: light-dark(rgb(209, 209, 209), rgb(41, 41, 41));
+  --cards-img-border-color: light-dark(rgb(209, 209, 209), rgb(31, 31, 31));
   --buttons-focus-color: light-dark(rgba(255, 255, 255, 0.2), rgba(84, 84, 84, 0.723));
   --buttons-hover-color: light-dark(rgba(146, 146, 146, 0.2), rgba(255, 255, 255, 0.2));
-  --aka-color: light-dark(rgb(227, 227, 227, 0.67), rgba(84, 84, 84, 0.723));
+  --aka-color: light-dark(rgb(209, 209, 209, 0.67), rgba(84, 84, 84, 0.723));
   --italic-text-color: light-dark(rgba(128, 128, 128, 0.808), rgb(204, 204, 204));
+  --menu-items: light-dark(#e10c16, #93ff93)
 }
 
 body {
@@ -49,7 +51,8 @@ body {
 }
 
 .menu-items > a {
-  color: #62abff;
+  /* color: #62abff; */
+  color: var(--menu-items);
   font-size: 120%;
 }
 
@@ -169,13 +172,13 @@ a {
   content: "- - - - - - - - - - - - - - -";
 }
 
-.footer {
+footer, .footer {
   color: rgba(128, 128, 128, 0.808);
   font-style: italic;
   margin-top: 2px;
 }
 
-.footer p {
+footer p, .footer p {
   margin: 0;
   font-size: 85%;
 }

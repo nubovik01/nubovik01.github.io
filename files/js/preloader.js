@@ -1,7 +1,7 @@
 // code by qwkrtezzz (https://github.com/nubovik01)
 // file created at 10 February 2025 06:14:31 PM (UTC+3)
  
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
   const preloader = document.createElement("div");
   preloader.id = "preloader";
 
@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
   document.body.insertBefore(preloader, document.body.firstChild);
 });
 
-window.addEventListener('load', function () {
-  const preloader = document.getElementById("preloader");
+window.addEventListener("load", function () {
+const preloader = document.getElementById("preloader");
   preloader.style.display = "none";
 });
