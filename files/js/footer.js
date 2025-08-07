@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <p id="commit" translate="no"></p>
     <p id="debug" style="display: none;" translate="no">
       ———————————————————<br>
+      You found an easter egg!<br>
       📐 ${screen.width}x${screen.height} (${window.innerWidth}x${window.innerHeight})<br>
       💻 ${navigator.userAgent}<br>
       ———————————————————
@@ -27,6 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const nowYear = new Date().getFullYear();
     if (element.textContent != nowYear) {
       element.innerText += `-${nowYear}`;
-    }
+    };
   });
 });
