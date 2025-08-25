@@ -20,6 +20,8 @@
   --aka-color: light-dark(rgb(209, 209, 209, 0.67), rgba(84, 84, 84, 0.723));
   --italic-text-color: light-dark(rgba(128, 128, 128, 0.808), rgb(204, 204, 204));
   --note-text-color: light-dark(rgba(128, 128, 128, 0.808), rgb(179, 179, 179));
+  --buttons-border-color: light-dark(rgb(209, 209, 209), rgba(255, 255, 255, 0.2));
+  --button-active-color: light-dark(rgb(209, 209, 209), white);
 }
 
 body {
@@ -83,7 +85,8 @@ a {
   cursor: grab;
   padding: 8px 1em;
   font-size: 94%;
-  border: 2px solid var(--text-color);
+  border: 2px solid var(--buttons-border-color);
+  border-radius: 6px;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -108,7 +111,7 @@ a {
 
 .buttons > a:active {
   color: var(--background-color);
-  background: var(--text-color);
+  background: var(--button-active-color);
 }
 
 /* @NOTE: fix size of buttons for iPhone SE 3rd generation (375x667px) */
