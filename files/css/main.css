@@ -120,6 +120,13 @@ a {
   }
 }
 
+/* @NOTE: fix size of buttons for 364-390px width */
+@media screen and (min-width:364px) and (max-width:390px) {
+  .buttons > a {
+    padding: 10px;
+  }
+} 
+
 .cards .native {
   margin: 10px;
 }
