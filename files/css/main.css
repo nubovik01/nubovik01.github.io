@@ -46,7 +46,6 @@ body {
 }
 
 .menu-items {
-  display: flex;
   margin-left: auto;
   gap: 5px;
   font-size: smaller;
