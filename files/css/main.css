@@ -19,6 +19,7 @@
   --buttons-hover-color: light-dark(rgba(146, 146, 146, 0.2), rgba(255, 255, 255, 0.2));
   --aka-color: light-dark(rgb(209, 209, 209, 0.67), rgba(84, 84, 84, 0.723));
   --italic-text-color: light-dark(rgba(128, 128, 128, 0.808), rgb(204, 204, 204));
+  --note-text-color: light-dark(rgba(128, 128, 128, 0.808), rgb(179, 179, 179));
 }
 
 body {
@@ -250,11 +251,15 @@ noscript p {
 }
 
 .italic {
-  color: var(--italic-text-color);
+  color: var(--note-text-color);
   font-style: italic;
 }
 
 .mini-icon {
   height: 13px;
   margin-bottom: -1px;
+}
+
+.note-text {
+  color: var(--note-text-color);
 }
