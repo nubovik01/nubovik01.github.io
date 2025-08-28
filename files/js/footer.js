@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </p>
   `;
 
-  document.getElementById("commit").onclick = () => {
+  document.getElementsByClassName("line")[0].onclick = () => {
     const debugElement = document.getElementById("debug");
     debugElement.style.display = debugElement.style.display === "none" ? "block" : "none";
   };

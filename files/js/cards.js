@@ -3,20 +3,21 @@
 
 // cursed code xD, welcome to the hell of programming!
 
-const cardTemplate = (card) => `
-  <div class="native" ${!card.translate ? `translate="no"` : ""}>
-    ${card.link ? `<a href="${card.link}" target="_blank">` : ""}
+const cardTemplate = ({translate, link, icon, title, description}) => `
+  <div class="native" ${!translate ? `translate="no"` : ""}>
+    ${link ? `<a href="${link}" target="_blank">` : ""}
       <div class="header" translate="no">
-        ${card.icon ? `<div><img alt="${card.title} Icon" src="${card.icon}"></div>` : ""}
-        ${card.title ? `<div>${card.title}</div>` : ""}
-        ${card.link ? `
+        ${icon ? `<div><img alt="${title} Icon" src="${icon}"></div>` : ""}
+        ${title ? `<span>${title}</span>` : ""}
+        ${link ? `
           <div class="link">
-            <span>${card.link.split("/")[2]}</span>
-            ${card.link ? `<img id="blank" src="/files/images/newBlank.webp">` : ""}
-          </div>` : ""}
+            <span>${link.split("/")[2]}</span>
+            <img id="blank" src="/files/images/newBlank.webp">
+          </div>
+        ` : ""}
       </div>
-    ${card.link ? "</a>" : ""}
-    ${card.description ? `<p ${card.icon ? "" : `fix="true"`}>${card.description}</p>` : ""}
+    ${link ? "</a>" : ""}
+    ${description ? `<p ${icon ? "" : `fix="true"`}>${description}</p>` : ""}
   </div>
 `;
 
