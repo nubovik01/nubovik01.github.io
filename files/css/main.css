@@ -152,7 +152,7 @@ a {
   margin-left: auto;
 }
 
-.cards #blank {
+.cards #symbol-icon {
   margin: 0 0 -3px -4px;
   width: 14px;
   height: 14px;
@@ -271,4 +271,9 @@ noscript p {
 
 .note-text {
   color: var(--note-text-color);
+}
+
+.currency-note {
+  color: var(--note-text-color);
+  font-size: 110%;
 }

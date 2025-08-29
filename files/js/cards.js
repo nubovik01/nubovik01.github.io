@@ -3,16 +3,17 @@
 
 // cursed code xD, welcome to the hell of programming!
 
-const cardTemplate = ({translate, link, icon, title, description}) => `
+const cardTemplate = ({translate, link, icon, title, description, copyData}) => `
   <div class="native" ${!translate ? `translate="no"` : ""}>
-    ${link ? `<a href="${link}" target="_blank">` : ""}
+    ${link || copyData ? `<a href="${link || "#copy"}" ${copyData ? "" : `target="_blank"`}>` : ""}
       <div class="header" translate="no">
         ${icon ? `<div><img alt="${title} Icon" src="${icon}"></div>` : ""}
         ${title ? `<span>${title}</span>` : ""}
-        ${link ? `
+        ${link || copyData ? `
           <div class="link">
-            <span>${link.split("/")[2]}</span>
-            <img id="blank" src="/files/images/newBlank.webp">
+            <span>${link?.split("/")[2] || ""}</span>
+            ${link ? `<img id="symbol-icon" src="/files/images/newBlank.webp">` : ""}
+            ${copyData ? `<img id="symbol-icon" src="/files/images/copy.png">` : ""}
           </div>
         ` : ""}
       </div>
@@ -27,6 +28,17 @@ function listCards(cardsList, className = "cards") {
   cardsList.forEach(card => {
     const element = document.createElement("div");
     element.innerHTML = cardTemplate(card);
+
+    const native = element.querySelector(".native");
+
+    if (card.copyData) {
+      native.addEventListener("click", () => {
+        navigator.clipboard.writeText(card.copyData).then(() => {
+          alert(`Successfully copied to clipboard! ${card.copyData}`);
+        });
+      });
+    };
+
     cards.prepend(element);
   });
 };
