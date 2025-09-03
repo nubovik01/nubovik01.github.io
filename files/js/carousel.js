@@ -3,11 +3,12 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
   const images = document.querySelectorAll(".slide img");
+  const slide = document.querySelector(".slide");
 
   let photoIndex = 0;
 
   function updateSlide() {
-    document.querySelector(".slide").style.transform = `translateX(-${photoIndex * 100}%)`;
+    slide.style.transform = `translateX(-${photoIndex * 100}%)`;
   };
 
   document.querySelector(".next-button").addEventListener("click", () => {
@@ -28,5 +29,30 @@ document.addEventListener("DOMContentLoaded", async () => {
     };
 
     updateSlide();
+  });
+
+  let startSwipeCoordinate = 0;
+  let endSwipeCoordinate = 0;
+
+  slide.addEventListener('touchstart', start => {
+    startSwipeCoordinate = start.touches[0].clientX;
+  });
+
+  slide.addEventListener('touchmove', move => {
+    endSwipeCoordinate = move.touches[0].clientX;
+  });
+
+  slide.addEventListener('touchend', () => {
+    const diff = startSwipeCoordinate - endSwipeCoordinate;
+
+    if (diff > 50) {
+      photoIndex = (photoIndex + 1) % images.length;
+
+      updateSlide();
+    } else if (diff < -50) {
+      photoIndex = (photoIndex - 1 + images.length) % images.length;
+
+      updateSlide();
+    };
   });
 });

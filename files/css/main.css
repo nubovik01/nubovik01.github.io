@@ -289,7 +289,7 @@ noscript p {
 .carousel > .slide {
   display: flex;
   height: 100%;
-  transition: transform 0.5s ease;
+  transition: transform 0.25s ease;
 }
 
 .carousel > .slide img {
