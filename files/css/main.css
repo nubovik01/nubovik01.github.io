@@ -304,8 +304,9 @@ noscript p {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  border: 2px solid var(--buttons-border-color);
   border: none;
   padding: 5px;
   cursor: pointer;
@@ -315,7 +316,12 @@ noscript p {
 }
 
 .carousel > a:hover {
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--buttons-hover-color);
+}
+
+.carousel > a:active {
+  color: var(--background-color);
+  background: var(--button-active-color);
 }
 
 .carousel > .previor-button {
