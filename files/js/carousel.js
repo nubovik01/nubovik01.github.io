@@ -34,15 +34,15 @@ document.addEventListener("DOMContentLoaded", async () => {
   let startSwipeCoordinate = 0;
   let endSwipeCoordinate = 0;
 
-  slide.addEventListener('touchstart', start => {
+  slide.addEventListener("touchstart", start => {
     startSwipeCoordinate = start.touches[0].clientX;
   });
 
-  slide.addEventListener('touchmove', move => {
+  slide.addEventListener("touchmove", move => {
     endSwipeCoordinate = move.touches[0].clientX;
   });
 
-  slide.addEventListener('touchend', () => {
+  slide.addEventListener("touchend", () => {
     const diff = startSwipeCoordinate - endSwipeCoordinate;
 
     if (diff > 50) {
