@@ -3,20 +3,22 @@
 
 // cursed code xD, welcome to the hell of programming!
 
-const cardTemplate = (card) => `
-  <div class="native" ${!card.translate ? `translate="no"` : ""}>
-    ${card.link ? `<a href="${card.link}" target="_blank">` : ""}
+const cardTemplate = ({translate, link, icon, title, description, copyData}) => `
+  <div class="native" ${!translate ? `translate="no"` : ""}>
+    ${link || copyData ? `<a href="${link || "#copy"}" ${copyData ? "" : `target="_blank"`}>` : ""}
       <div class="header" translate="no">
-        ${card.icon ? `<div><img alt="${card.title} Icon" src="${card.icon}"></div>` : ""}
-        ${card.title ? `<div>${card.title}</div>` : ""}
-        ${card.link ? `
+        ${icon ? `<div><img alt="${title} Icon" src="${icon}"></div>` : ""}
+        ${title ? `<span>${title}</span>` : ""}
+        ${link || copyData ? `
           <div class="link">
-            <span>${card.link.split("/")[2]}</span>
-            ${card.link ? `<img id="blank" src="/files/images/newBlank.webp">` : ""}
-          </div>` : ""}
+            <span>${link?.split("/")[2] || ""}</span>
+            ${link ? `<img id="symbol-icon" src="/files/images/newBlank.webp">` : ""}
+            ${copyData ? `<img id="symbol-icon" src="/files/images/copy.png">` : ""}
+          </div>
+        ` : ""}
       </div>
-    ${card.link ? "</a>" : ""}
-    ${card.description ? `<p ${card.icon ? "" : `fix="true"`}>${card.description}</p>` : ""}
+    ${link ? "</a>" : ""}
+    ${description ? `<p ${icon ? "" : `fix="true"`}>${description}</p>` : ""}
   </div>
 `;
 
@@ -26,6 +28,17 @@ function listCards(cardsList, className = "cards") {
   cardsList.forEach(card => {
     const element = document.createElement("div");
     element.innerHTML = cardTemplate(card);
+
+    const native = element.querySelector(".native");
+
+    if (card.copyData) {
+      native.addEventListener("click", () => {
+        navigator.clipboard.writeText(card.copyData).then(() => {
+          alert(`Successfully copied to clipboard! ${card.copyData}`);
+        });
+      });
+    };
+
     cards.prepend(element);
   });
 };

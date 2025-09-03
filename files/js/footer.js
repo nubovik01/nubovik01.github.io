@@ -15,11 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
     </p>
     <p class="copyrights" translate="no">
       Created by qwkrtezzz not w/ <3<br>
+      hyperbola[at]kittyy[dot]ru<br>
       © qwkrtezzz, <span class="year">2021</span><br>
     </p>
   `;
 
-  document.getElementById("commit").onclick = () => {
+  document.getElementsByClassName("line")[0].onclick = () => {
     const debugElement = document.getElementById("debug");
     debugElement.style.display = debugElement.style.display === "none" ? "block" : "none";
   };
