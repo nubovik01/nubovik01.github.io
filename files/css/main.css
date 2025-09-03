@@ -87,8 +87,6 @@ a {
   border: 2px solid var(--buttons-border-color);
   border-radius: 6px;
   user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
   margin: 5px 0 0 5px;
   flex: 1 0 calc(25% - 32px);
   text-align: center;
@@ -142,8 +140,6 @@ a {
   align-items: center;
   font-size: 95%;
   user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
   color: var(--text-color);
 }
 
