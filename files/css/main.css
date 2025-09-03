@@ -308,8 +308,8 @@ noscript p {
   background-color: var(--background-color);
   border: 2px solid var(--buttons-border-color);
   border: none;
-  padding: 5px;
-  cursor: pointer;
+  padding: 8px;
+  cursor: grab;
   border-radius: 6px;
   font-size: 20px;
   user-select: none;

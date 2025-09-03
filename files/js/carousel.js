@@ -45,11 +45,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   slide.addEventListener("touchend", () => {
     const diff = startSwipeCoordinate - endSwipeCoordinate;
 
-    if (diff > 50) {
+    if (diff > 50) { // next photo
       photoIndex = (photoIndex + 1) % images.length;
 
       updateSlide();
-    } else if (diff < -50) {
+    } else if (diff < -50) { // previor photo
       photoIndex = (photoIndex - 1 + images.length) % images.length;
 
       updateSlide();
