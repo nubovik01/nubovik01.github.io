@@ -87,6 +87,7 @@ a {
   border: 2px solid var(--buttons-border-color);
   border-radius: 6px;
   user-select: none;
+  -webkit-user-select: none;
   margin: 5px 0 0 5px;
   flex: 1 0 calc(25% - 32px);
   text-align: center;
@@ -140,6 +141,7 @@ a {
   align-items: center;
   font-size: 95%;
   user-select: none;
+  -webkit-user-select: none;
   color: var(--text-color);
 }
 
@@ -278,6 +280,8 @@ noscript p {
 .carousel {
   overflow: hidden;
   position: relative;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .carousel > .slide {
@@ -304,7 +308,6 @@ noscript p {
   cursor: grab;
   border-radius: 6px;
   font-size: 20px;
-  user-select: none;
 }
 
 .carousel > a:hover {
