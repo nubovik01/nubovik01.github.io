@@ -36,11 +36,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   slide.addEventListener("touchstart", start => {
     startSwipeCoordinate = start.touches[0].clientX;
-  });
+  }, { passive: true });
 
   slide.addEventListener("touchmove", move => {
     endSwipeCoordinate = move.touches[0].clientX;
-  });
+  }, { passive: true });
 
   slide.addEventListener("touchend", () => {
     const diff = startSwipeCoordinate - endSwipeCoordinate;
