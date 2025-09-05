@@ -140,8 +140,6 @@ a {
   display: flex;
   align-items: center;
   font-size: 95%;
-  user-select: none;
-  -webkit-user-select: none;
   color: var(--text-color);
 }
 
