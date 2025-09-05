@@ -12,8 +12,8 @@ const cardTemplate = ({translate, link, icon, title, description, copyData}) => 
         ${link || copyData ? `
           <div class="link">
             <span>${link?.split("/")[2] || ""}</span>
-            ${link ? `<img id="symbol-icon" src="/files/images/newBlank.webp">` : ""}
-            ${copyData ? `<img id="symbol-icon" src="/files/images/copy.png">` : ""}
+            ${link ? `<img id="symbol-icon" src="/files/images/newBlank.webp" alt="new">` : ""}
+            ${copyData ? `<img id="symbol-icon" src="/files/images/copy.png" alt="copy">` : ""}
           </div>
         ` : ""}
       </div>
