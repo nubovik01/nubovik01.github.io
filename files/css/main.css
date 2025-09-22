@@ -112,8 +112,8 @@ a {
   background: var(--button-active-color);
 }
 
-/* @NOTE: fix size of buttons for iPhone SE 3rd generation (375x667px) */
-@media screen and (min-width:345px) and (max-width:385px) {
+/* @NOTE: fix size of buttons for too small displays, ex. iPhone SE 3rd generation (375x667px) */
+@media screen and (min-width:0px) and (max-width:385px) {
   .buttons > a {
     padding: 7px;
   }
