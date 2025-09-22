@@ -30,7 +30,6 @@
   <script src="./files/js/quotes.js"></script>
   <script src="./files/js/footer.js"></script>
   <script src="./files/js/age.js"></script>
-  <script src="./files/js/kaomojies.js"></script>
   <script src="./files/js/additionalButtons.js"></script>
   <script src="./files/js/carousel.js"></script>
   <script src="./files/js/sha.js"></script>
@@ -39,56 +38,56 @@
 
 <body>
   <div class="root" style="display: none !important;">
-    <div class="menu">
-      <span id="kaomoji" onclick="changeKaomoji()">@_@</span>
-      <div class="menu-items">
-        <a href="/">main</a> /
-        <a href="/donate">donate</a> /
-        <a href="https://t.me/nbvkxd">blog</a>
-      </div>
-    </div>
     <div class="heading">
       <h3>
-        ✌️ yoo! i'm nikita! <span class="note-text">(he/him)</span>
+        hi! i'm nikita! <span class="note-text">(he/him)</span>
       </h3>
+
       <p>
         <span id="aka" translate="no">AKA</span> dempix, nubovik, <u>qwkrtezzz</u>, etc...
       </p>
+
       <p>
         <span id="yo">13</span> y.o, fullstack middle javascript
         <img class="mini-icon" src="./files/images/icons/JavaScript.webp" alt="javascript icon">
         developer from st. petersburg, russia.
       </p>
-      <p>
-        <div class="carousel">
-          <div class="slide">
-            <img src="./files/images/selfies/four.webp" alt="me with book">
-            <img src="./files/images/selfies/first.webp" alt="selfie">
-            <img src="./files/images/selfies/three.webp" alt="i'm cute">
-            <img src="./files/images/selfies/two.webp" alt="at the police">
-          </div>
-        <a href="#" class="previor-button">&#10094;</a>
-        <a href="#" class="next-button">&#10095;</a>
+
+      <div class="carousel">
+        <div class="slide">
+          <img src="./files/images/selfies/four.webp" alt="me with book">
+          <img src="./files/images/selfies/first.webp" alt="selfie">
+          <img src="./files/images/selfies/three.webp" alt="i'm cute">
+          <img src="./files/images/selfies/two.webp" alt="at the police:3">
         </div>
-      </p>
+        <a class="previor-button">&#10094;</a>
+        <a class="next-button">&#10095;</a>
+      </div>
+
       <p class="italic" id="quote" onclick="changeQuote();" translate="no">
-        ://: 2:11. RUN AWAY.
+        :/: 2:11. RUN AWAY.
       </p>
     </div>
+
     <div class="buttons" translate="no">
-      <a href="?r=tg">telegram</a>
+      <a href="https://t.me/nevermore11k">telegram</a>
+      <a href="https://t.me/nbvkxd">blog</a>
       <a href="?r=gh">github</a>
       <a href="?r=wktm">wakatime</a>
-      <a href="?r=inst">inst</a>
       <a href="?r=mt">monkeytype</a>
-      <a href="?r=ymuz">y.music</a>
-      <a href="?r=faq">faq</a>
-      <a href="#" id="toggleAdditionalButtons">more...</a>
+      <a href="/donate">donate</a>
+      <a href="https://t.me/galaryteez">selfies</a>
+      <a id="toggleAdditionalButtons">more...</a>
     </div>
+
     <div class="buttons" id="moreButtons" translate="no" style="display: none;">
+      <a href="?r=ymuz">y.music</a>
       <a href="?r=tt">tiktok</a>
+      <a href="?r=faq">faq</a>
     </div>
+
     <div class="cards"></div>
+
     <footer></footer>
   </div>
 </body>
@@ -127,7 +126,9 @@
       link: "https://t.me/retorobot/?start=from-kittyydotru",
       description: `
         Telegram bot for <u>anonymous</u> rating your friends and acquaintances
-        on a ten-point scale. No ads and other shit. Fully free.
+        on a ten-point scale. No ads and other shit. Fully free.<br><br>
+
+        <i>March 9, 2025: Temporaily unavailable. <a href="https://t.me/retoroto/15">More...</a></i>
       `,
       translate: true
     },

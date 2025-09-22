@@ -174,7 +174,7 @@ a {
 }
 
 .line::before {
-  content: "- - - - - - - - - - - - - - -";
+  content: "- - - - - - - - - - - - -";
 }
 
 footer, .footer {
@@ -276,6 +276,7 @@ noscript p {
 
 /* beta */
 .carousel {
+  margin-top: 10px;
   overflow: hidden;
   position: relative;
   user-select: none;
