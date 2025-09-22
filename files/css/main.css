@@ -82,7 +82,7 @@ a {
   color: var(--text-color);
   background-color: var(--background-color);
   cursor: grab;
-  padding: 8px 1em;
+  padding: 8px 10px;
   font-size: 94%;
   border: 2px solid var(--buttons-border-color);
   border-radius: 6px;
