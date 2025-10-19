@@ -16,5 +16,8 @@ window.addEventListener("load", function () {
   const preloader = document.getElementById("preloader");
   preloader.style.display = "none";
 
-  document.getElementsByClassName("root")[0].style.display = "";
+  const generalElement = document.getElementsByClassName("root")[0]
+    || document.getElementsByClassName("container")[0];
+
+  generalElement.style.display = "";
 });
