@@ -75,7 +75,6 @@ a {
 }
 
 .buttons {
-  margin-top: 2px;
   display: flex;
   flex-wrap: wrap;
   margin-left: -5px;
@@ -183,7 +182,6 @@ a {
 footer, .footer {
   color: rgba(128, 128, 128, 0.808);
   font-style: italic;
-  margin-top: 2px;
 }
 
 footer p, .footer p {
@@ -277,7 +275,6 @@ noscript p {
   font-size: 110%;
 }
 
-/* beta */
 .carousel {
   margin-top: 10px;
   overflow: hidden;
@@ -327,4 +324,20 @@ noscript p {
 
 .carousel > .next-button {
   right: 10px;
+}
+
+.banners {
+  margin-top: 10px;
+  margin-left: 1px;
+}
+
+.banners img {
+  width: calc(25% - 5.36px);
+  max-height: 31px;
+  max-width: 88px;
+  transition: transform 0.2s ease;
+}
+
+.banners img:hover {
+  transform: scale(1.12);
 }
