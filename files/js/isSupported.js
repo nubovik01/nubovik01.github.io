@@ -4,7 +4,7 @@ if (!lightDarkSupport) {
   const goUpdate = confirm("bruh update your browser rn.");
 
   if (goUpdate) {
-    window.location.replace("./badbrowser.html");
+    window.location.href = "./badbrowser.html";
   } else {
     alert("you're cringe.");
   };
