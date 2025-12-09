@@ -338,6 +338,13 @@ noscript p {
   transition: transform 0.2s ease;
 }
 
+/* @NOTE: only for browsers on Webkit (e.g. Safari iOS/macOS, etc...)*/
+@supports (-webkit-appearance: none) {
+  .banners img {
+    max-width: 77.64px;
+  }
+}
+
 .banners img:hover {
   transform: scale(1.12);
 }
