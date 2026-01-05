@@ -24,6 +24,29 @@
   --button-active-color: light-dark(rgb(209, 209, 209), white);
 }
 
+.no-smoking {
+  background-image: url("/files/images/no-smoking.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-attachment: fixed;
+  justify-content: left;
+  margin-left: 100px;
+}
+
+@media screen and (min-width:0px) and (max-width:1210px) {
+  .no-smoking {
+    background-image: none;
+    margin-left: 0;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width:1350px) {
+  .no-smoking {
+    zoom: 1.25;
+  }
+}
+
 body {
   background-color: var(--background-color);
   color: var(--text-color);
