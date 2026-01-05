@@ -13,7 +13,7 @@ const cardTemplate = ({translate, link, icon, title, description, copyData}) => 
           <div class="link">
             <span>${link?.split("/")[2] || ""}</span>
             ${link ? `<img id="symbol-icon" src="/files/images/newBlank.webp" alt="new">` : ""}
-            ${copyData ? `<img id="symbol-icon" src="/files/images/copy.png" alt="copy">` : ""}
+            ${copyData ? `<img id="symbol-icon" src="/files/images/copy.webp" alt="copy">` : ""}
           </div>
         ` : ""}
       </div>
