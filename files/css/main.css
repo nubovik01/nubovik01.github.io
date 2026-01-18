@@ -156,7 +156,7 @@ a {
 }
 
 .cards > div {
-  border: 0.16em solid var(--cards-border-color);
+  border: 0.13em solid var(--cards-border-color);
   border-radius: 8px;
   margin-top: 10px;
 }
@@ -185,7 +185,7 @@ a {
   height: 31px;
   margin-right: 8px;
   margin-bottom: -3px;
-  border: 0.15em solid var(--cards-img-border-color);
+  border: 0.13em solid var(--cards-img-border-color);
   border-radius: 7px;
 }
 
