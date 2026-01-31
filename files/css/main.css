@@ -41,12 +41,6 @@
   }
 }
 
-@media screen and (min-width:1350px) {
-  .no-smoking {
-    zoom: 1.25;
-  }
-}
-
 body {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -55,6 +49,12 @@ body {
   display: flex;
   justify-content: center;
   height: 100%;
+}
+
+@media screen and (min-width:1350px) {
+  body {
+    zoom: 1.25;
+  }
 }
 
 .root, .container {
