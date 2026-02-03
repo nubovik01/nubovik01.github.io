@@ -364,7 +364,7 @@ noscript p {
 /* @NOTE: only for browsers on Webkit (e.g. Safari iOS/macOS, etc...)*/
 @supports (-webkit-appearance: none) {
   .banners img {
-    max-width: 77.64px;
+    max-width: 77.62px;
   }
 }
 
