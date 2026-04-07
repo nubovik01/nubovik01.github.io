@@ -398,5 +398,4 @@ noscript p {
 
 .timer span:hover {
   border-color: var(--link-color);
-  color: var(--link-color);
 }
