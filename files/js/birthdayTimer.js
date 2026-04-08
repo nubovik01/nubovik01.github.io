@@ -3,23 +3,26 @@
 
 function updateBirthdayTimer() {
   const now = new Date();
-  let birthday = new Date(Date.UTC(now.getFullYear(), 3, 9));
-  birthday.setUTCHours(birthday.getUTCHours() - 3);
+  const moscowTime = new Date(now.toLocaleString("en-US", { timeZone: "Europe/Moscow" }));
 
-  if (now > birthday) birthday.setUTCFullYear(birthday.getUTCFullYear() + 1);
+  let birthday = new Date(moscowTime.getFullYear(), 3, 9);
 
-  if (now.getUTCDate() + 1 === birthday.getUTCDate() && now.getUTCMonth() === birthday.getUTCMonth()) {
-    document.getElementById("birthday-timer").innerHTML = "<span>right now! 🎉🥳</span>";
-    return;
+  if (moscowTime > birthday) birthday.setFullYear(birthday.getFullYear() + 1);
+
+  if (
+    moscowTime.getDate() === birthday.getDate() && moscowTime.getMonth() === birthday.getMonth()
+  ) {
+    return document.getElementById("birthday-timer").innerHTML = "<span>right now! 🎉🥳</span>";
   };
 
-  const diff = birthday - now;
+  const diff = birthday - moscowTime;
+
   const birthdayDays = Math.floor(diff / 86400000);
   const birthdayHours = Math.floor((diff / 3600000) % 24);
   const birthdayMinutes = Math.floor((diff / 60000) % 60);
   const birthdaySeconds = Math.floor((diff / 1000) % 60);
 
-  let parts = [];
+  const parts = [];
   if (birthdayDays) parts.push(`<span>${birthdayDays}d</span>`);
   if (birthdayHours) parts.push(`<span>${birthdayHours}h</span>`);
   if (birthdayMinutes) parts.push(`<span>${birthdayMinutes}m</span>`);
