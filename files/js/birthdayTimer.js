@@ -8,7 +8,7 @@ function updateBirthdayTimer() {
 
   if (now > birthday) birthday.setUTCFullYear(birthday.getUTCFullYear() + 1);
 
-  if (now.getUTCDate() === birthday.getUTCDate() && now.getUTCMonth() === birthday.getUTCMonth()) {
+  if (now.getUTCDate() + 1 === birthday.getUTCDate() && now.getUTCMonth() === birthday.getUTCMonth()) {
     document.getElementById("birthday-timer").innerHTML = "<span>right now! 🎉🥳</span>";
     return;
   };
