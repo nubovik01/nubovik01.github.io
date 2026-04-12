@@ -4,7 +4,7 @@
 function calculateAge(birth) {
   const [day, month, year] = birth.split(".").map(Number);
 
-  const today = new Date();
+  const today = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Moscow" }));
 
   let age = today.getFullYear() - year;
 
