@@ -24,7 +24,7 @@
   <link href="../files/css/preloader.css" rel="stylesheet">
   <link href="../files/css/main.css" rel="stylesheet">
   <script src="../files/js/birthdayTimer.js"></script>
-  <script src="../files/js/carousel.js"></script>
+  <script src="../files/js/age.js"></script>
   <style>
     body {
       zoom: 2;
@@ -32,6 +32,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    .container {
+      width: 100%;
     }
 
     .heading {
@@ -44,6 +48,7 @@
 
     .heading p:last-of-type {
       font-size: 130%;
+      line-height: 1.5;
     }
 
     /* @NOTE: cursed adaptation for mobile devices */
@@ -106,10 +111,14 @@
 <body>
   <div class="container" style="display: none !important;">
     <div class="heading">
-      <p>hi! i'm nikita! >_< <span class="note-text">(he/him)</span></p>
+      <p>yo! i'm nikita and i'm <span id="yo"></span> y.o now!</p>
       <p>my birthday in: <span id="birthday-timer" class="timer"></span></p>
     </div>
   </div>
+
+  <script>
+    document.getElementById("yo").textContent = calculateAge("09.04.2008");
+  </script>
 </body>
 
 </html>

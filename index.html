@@ -35,82 +35,113 @@
   <script src="./files/js/sha.js"></script>
   <script src="./files/js/isSupported.js"></script>
   <script src="./files/js/birthdayTimer.js"></script>
+  <script src="./files/js/alerts.js"></script>
+  <script src="./files/js/freeze.js"></script>
+  <!-- <script src="./files/js/throughts.js"></script> -->
   <link rel="icon" type="image/x-icon" href="./files/images/omyum.ico">
+  <style>
+    @media screen and (min-width: 900px) {
+      .container {
+        display: grid;
+        grid-template-columns: 360px 336px;
+        column-gap: 60px;
+        width: auto;
+      }
+
+      .cards > div:first-child {
+        margin-top: 0;
+      }
+    }
+
+    @media screen and (max-width: 899px) {
+      .heading-projects {
+        display: none !important;
+      }
+    }
+  </style>
 </head>
 
-<body class="no-smoking">
+<body>
   <div class="container" style="display: none !important;">
-    <div class="heading">
-      <p>hi! i'm nikita! <span class="note-text">(he/him)</span></p>
+    <div>
+      <div class="heading">
+        <p>hi! i'm nikita! <span class="note-text">(he/him)</span></p>
 
-      <p><span id="aka" translate="no">AKA</span> dempix, nubovik, <u>qwkrtezzz</u>, etc...</p>
+        <p><span id="aka" translate="no">AKA</span> dempix, nubovik, <u>qwkrtezzz</u>, etc...</p>
 
-      <p>
-        <span id="yo">13</span> y.o, fullstack middle javascript
-        <img class="mini-icon" src="./files/images/icons/JavaScript.webp" alt="javascript icon">
-        developer from st. petersburg, russia.
-      </p>
+        <p>
+          <span id="yo">13</span> y.o, fullstack middle javascript
+          <img class="mini-icon" src="./files/images/icons/JavaScript.webp" alt="javascript icon">
+          developer from st. petersburg, russia.
+        </p>
 
-      <p>🙃 <i>my birthday in: <span id="birthday-timer" class="timer"></span></i></p>
+        <p>🙃 <i>my birthday in: <span id="birthday-timer" class="timer"></span></i></p>
 
-      <p>— privileged member of <a href="https://t.me/+nycLeWYRWv5hNDYy">femboy's lounge</a></p>
+        <p>— privileged member of <a href="https://t.me/+nycLeWYRWv5hNDYy">femboy's lounge</a></p>
 
-      <p>— writing something on <a href="https://t.me/theanarchywall">the anarchy wall</a></p>
+        <p>— writing something on <a href="https://t.me/theanarchywall">the anarchy wall</a></p>
 
-      <p>— doelsquad member: <a href="https://github.com/doelsquad">github.com/doelsquad</a></p>
+        <p>— doelsquad member: <a href="https://github.com/doelsquad">github.com/doelsquad</a></p>
 
-      <p>— moderator on <a href="https://r167.meowfox.net/posts">r167</a> (content may be nsfw)</p>
+        <p>— moderator on <a href="https://r167.meowfox.net/posts">r167</a> (content may be nsfw)</p>
 
-      <p id="bgd-blog">— admin of <a href="https://t.me/bogdan_petrenko">bogdan petrenko's blog</a></p>
-      <script>
-        document.getElementById("bgd-blog").onclick = function() {
-          document.getElementById("bogdan-banner").style.display = "block";
-        };
-      </script>
+        <p id="bgd-blog">— admin of <a href="https://t.me/bogdan_petrenko">bogdan petrenko's blog</a></p>
+        <script>
+          document.getElementById("bgd-blog").onclick = function () {
+            document.getElementById("bogdan-banner").style.display = "block";
+          };
+        </script>
 
-      <div class="carousel">
-        <div class="slide">
-          <img src="./files/images/selfies/four.webp" alt="me with book"> <!-- tokyo ghoul -->
-          <img src="./files/images/selfies/first.webp" alt="selfie">
-          <img src="./files/images/selfies/three.webp" alt="i'm cute">
-          <img src="./files/images/selfies/two.webp" alt="at the police:3">
+        <div class="carousel">
+          <div class="slide">
+            <img src="./files/images/selfies/four.webp" alt="me with book"> <!-- tokyo ghoul -->
+            <img src="./files/images/selfies/first.webp" alt="selfie">
+            <img src="./files/images/selfies/three.webp" alt="i'm cute">
+            <img src="./files/images/selfies/two.webp" alt="at the police:3">
+          </div>
+          <a class="previor-button">&#10094;</a>
+          <a class="next-button">&#10095;</a>
         </div>
-        <a class="previor-button">&#10094;</a>
-        <a class="next-button">&#10095;</a>
+
+        <a href="https://t.me/razrab2"><img src="./files/images/rldv1.gif" width="100%" style="display: none;" id="bogdan-banner"></a>
+
+        <p class="italic" id="quote" onclick="changeQuote();" translate="no"></p>
       </div>
 
-      <a href="https://t.me/razrab2"><img src="./files/images/rldv1.gif" width="100%" style="display: none;" id="bogdan-banner"></a>
+      <div class="buttons" translate="no">
+        <a href="https://t.me/teez2157">telegram</a>
+        <a href="https://t.me/nbvkxd">blog</a>
+        <a href="/donate">donate</a>
+        <a href="?r=wktm">wakatime</a>
+        <a href="?r=inst">inst</a>
+        <a href="?r=gh">github</a>
+        <a href="?r=mt">monkeytype</a>
+        <a id="toggleAdditionalButtons">more...</a>
+      </div>
 
-      <p class="italic" id="quote" onclick="changeQuote();" translate="no"></p>
+      <div class="buttons" id="moreButtons" translate="no" style="display: none;">
+        <a href="?r=ymuz">y.music</a>
+        <a href="?r=tt">tiktok</a>
+        <a href="?r=faq">faq</a>
+        <a href="https://t.me/galaryteez">photos</a>
+      </div>
     </div>
 
-    <div class="buttons" translate="no">
-      <a href="https://t.me/teez2157">telegram</a>
-      <a href="https://t.me/nbvkxd">blog</a>
-      <a href="/donate">donate</a>
-      <a href="?r=wktm">wakatime</a>
-      <a href="?r=inst">inst</a>
-      <a href="?r=gh">github</a>
-      <a href="?r=mt">monkeytype</a>
-      <a id="toggleAdditionalButtons">more...</a>
-    </div>
+    <div>
+      <div class="heading-projects">
+        <p>projects & commercial activity</p>
+      </div>
 
-    <div class="buttons" id="moreButtons" translate="no" style="display: none;">
-      <a href="?r=ymuz">y.music</a>
-      <a href="?r=tt">tiktok</a>
-      <a href="?r=faq">faq</a>
-      <a href="https://t.me/galaryteez">photos</a>
-    </div>
+      <div class="cards"></div>
 
-    <div class="cards"></div>
-
-    <div class="banners">
-      <a href="https://kittyy.ru"><img src="./files/images/banners/teez.webp"></a>
-      <a href="https://vladthk.github.io"><img src="./files/images/banners/thk.webp"></a>
-      <a href="https://1428stef.github.io/WikiHachi"><img src="./files/images/banners/1428.webp"></a>
-      <a href="https://femboy.page"><img src="./files/images/banners/devilreef.png"></a>
-      <a href="https://firefox.com"><img src="./files/images/banners/firefox.gif"></a>
-      <a href="https://t.me/teez2157"><img src="./files/images/banners/your-ad-here.png"></a>
+      <div class="banners">
+        <a href="https://kittyy.ru"><img src="./files/images/banners/teez.webp"></a>
+        <a href="https://vladthk.github.io"><img src="./files/images/banners/thk.webp"></a>
+        <a href="https://1428stef.github.io/WikiHachi"><img src="./files/images/banners/1428.webp"></a>
+        <a href="https://femboy.page"><img src="./files/images/banners/devilreef.png"></a>
+        <a href="https://firefox.com"><img src="./files/images/banners/firefox.gif"></a>
+        <a href="https://t.me/teez2157"><img src="./files/images/banners/your-ad-here.png"></a>
+      </div>
     </div>
 
     <footer></footer>
@@ -177,6 +208,8 @@
       translate: true
     }
   ]);
+
+  // showAlert({ text: "yooo!", duration: 10, delay: 2 });
 </script>
 
 </html>
