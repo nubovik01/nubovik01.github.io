@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>image splitter</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: #111111;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .container {
+      width: min(1200px, 92%);
+      margin: 0 auto;
+    }
+
+    /* header */
+    .header {
+      border-bottom: 1px solid #e9e9e9;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 16px 0;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .upload,
+    select,
+    button {
+      border: 2px solid #111;
+      background: #fff;
+      color: #111;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      font: inherit;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .upload {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .upload input {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    button {
+      background: #111;
+      color: #fff;
+    }
+
+    button:hover {
+      background: #fff;
+      color: #111;
+    }
+
+    .upload:hover,
+    select:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    /* hero */
+    .hero {
+      padding: 40px 0 20px;
+    }
+
+    .hero-box {
+      border: 1px solid #111;
+      border-radius: 6px;
+      padding: 26px;
+    }
+
+    .hero-box h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.1;
+    }
+
+    .hero-box p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    /* preview */
+    .preview {
+      padding: 20px 0 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      border: 1px solid #111;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .card canvas {
+      width: 100%;
+      display: block;
+    }
+
+    /* empty */
+    .empty {
+      padding: 60px 20px;
+      border: 1px dashed #111;
+      border-radius: 6px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* footer */
+    .footer {
+      border-top: 1px solid #e9e9e9;
+      padding: 18px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .controls {
+        width: 100%;
+      }
+
+      .upload,
+      select,
+      button {
+        width: 100%;
+      }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+
+      <div class="logo">image splitter</div>
+
+      <div class="controls">
+
+        <label class="upload">
+          upload
+          <input type="file" id="imageInput" accept="image/*">
+        </label>
+
+        <select id="splitCount">
+          <option value="2">2</option>
+          <option value="4" selected>4</option>
+          <option value="9">9</option>
+          <option value="16">16</option>
+        </select>
+
+        <button id="downloadBtn">download</button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-box">
+        <h1>split image into parts</h1>
+        <p>upload image → choose parts → download slices</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <div class="empty" id="emptyText">
+      no image yet
+    </div>
+
+    <div class="preview" id="preview"></div>
+
+  </div>
+
+  <footer class="footer">
+    vibecoded by <a href="https://nbvk.kittyy.ru">qwkrtezzz</a>
+  </footer>
+
+  <script>
+    const imageInput = document.getElementById("imageInput");
+    const splitCount = document.getElementById("splitCount");
+    const preview = document.getElementById("preview");
+    const emptyText = document.getElementById("emptyText");
+    const downloadBtn = document.getElementById("downloadBtn");
+
+    let canvases = [];
+
+    imageInput.addEventListener("change", handleImage);
+    splitCount.addEventListener("change", handleImage);
+
+    function handleImage() {
+      const file = imageInput.files[0];
+      if (!file) return;
+
+      const img = new Image();
+      img.src = URL.createObjectURL(file);
+
+      img.onload = () => split(img);
+    }
+
+    function split(img) {
+      preview.innerHTML = "";
+      canvases = [];
+
+      emptyText.classList.add("hidden");
+
+      const parts = Number(splitCount.value);
+      const grid = Math.sqrt(parts);
+
+      const w = img.width / grid;
+      const h = img.height / grid;
+
+      for (let y = 0; y < grid; y++) {
+        for (let x = 0; x < grid; x++) {
+
+          const card = document.createElement("div");
+          card.className = "card";
+
+          const canvas = document.createElement("canvas");
+          const ctx = canvas.getContext("2d");
+
+          canvas.width = w;
+          canvas.height = h;
+
+          ctx.drawImage(
+            img,
+            x * w,
+            y * h,
+            w,
+            h,
+            0,
+            0,
+            w,
+            h
+          );
+
+          card.appendChild(canvas);
+          preview.appendChild(card);
+
+          canvases.push(canvas);
+        }
+      }
+    }
+
+    downloadBtn.addEventListener("click", async () => {
+      if (!canvases.length) return;
+
+      for (let i = 0; i < canvases.length; i++) {
+        const a = document.createElement("a");
+        a.href = canvases[i].toDataURL("image/png");
+        a.download = `part-${i + 1}.png`;
+
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+
+        await new Promise(r => setTimeout(r, 120));
+      }
+    });
+  </script>
+
+</body>
+</html>
