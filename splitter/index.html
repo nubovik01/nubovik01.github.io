@@ -6,14 +6,12 @@
   <title>image splitter</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      background: #ffffff;
-      color: #111111;
+      background: #fff;
+      color: #111;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
@@ -22,10 +20,7 @@
       margin: 0 auto;
     }
 
-    /* header */
-    .header {
-      border-bottom: 1px solid #e9e9e9;
-    }
+    .header { border-bottom: 1px solid #e9e9e9; }
 
     .header-inner {
       display: flex;
@@ -36,10 +31,7 @@
       padding: 16px 0;
     }
 
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-    }
+    .logo { font-size: 22px; font-weight: 800; }
 
     .controls {
       display: flex;
@@ -58,13 +50,9 @@
       font-weight: 600;
       font: inherit;
       cursor: pointer;
-      transition: 0.2s;
     }
 
-    .upload {
-      position: relative;
-      overflow: hidden;
-    }
+    .upload { position: relative; overflow: hidden; }
 
     .upload input {
       position: absolute;
@@ -89,10 +77,7 @@
       color: #fff;
     }
 
-    /* hero */
-    .hero {
-      padding: 40px 0 20px;
-    }
+    .hero { padding: 40px 0 20px; }
 
     .hero-box {
       border: 1px solid #111;
@@ -100,19 +85,6 @@
       padding: 26px;
     }
 
-    .hero-box h1 {
-      margin: 0 0 10px;
-      font-size: clamp(28px, 4vw, 40px);
-      line-height: 1.1;
-    }
-
-    .hero-box p {
-      margin: 0;
-      font-size: 18px;
-      line-height: 1.5;
-    }
-
-    /* preview */
     .preview {
       padding: 20px 0 60px;
       display: grid;
@@ -132,7 +104,6 @@
       display: block;
     }
 
-    /* empty */
     .empty {
       padding: 60px 20px;
       border: 1px dashed #111;
@@ -141,171 +112,222 @@
       margin-top: 20px;
     }
 
-    .hidden {
-      display: none;
-    }
-
-    /* footer */
-    .footer {
-      border-top: 1px solid #e9e9e9;
-      padding: 18px 0;
-      text-align: center;
-      font-size: 14px;
-    }
+    .hidden { display: none; }
 
     @media (max-width: 700px) {
-      .controls {
-        width: 100%;
-      }
-
-      .upload,
-      select,
-      button {
-        width: 100%;
-      }
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-      font-weight: 600;
+      .controls { width: 100%; }
+      .upload, select, button { width: 100%; }
     }
   </style>
 </head>
 
 <body>
 
-  <header class="header">
-    <div class="container header-inner">
+<header class="header">
+  <div class="container header-inner">
 
-      <div class="logo">image splitter</div>
+    <div class="logo">image tool</div>
 
-      <div class="controls">
+    <div class="controls">
 
-        <label class="upload">
-          upload
-          <input type="file" id="imageInput" accept="image/*">
-        </label>
+      <label class="upload">
+        upload
+        <input type="file" id="imageInput" accept="image/*">
+      </label>
 
-        <select id="splitCount">
-          <option value="2">2</option>
-          <option value="4" selected>4</option>
-          <option value="9">9</option>
-          <option value="16">16</option>
-        </select>
+      <select id="mode">
+        <option value="split">split grid</option>
+        <option value="tile">tile grid</option>
+        <option value="resize">resize only</option>
+      </select>
 
-        <button id="downloadBtn">download</button>
+      <select id="splitCount">
+        <option value="2">x2</option>
+        <option value="4" selected>x4</option>
+        <option value="9">x9</option>
+        <option value="16">x16</option>
+      </select>
 
-      </div>
+      <select id="tileSize">
+        <option value="8">8x8</option>
+        <option value="16">16x16</option>
+        <option value="32">32x32</option>
+        <option value="64">64x64</option>
+        <option value="100" selected>100x100</option>
+        <option value="128">128x128</option>
+        <option value="256">256x256</option>
+        <option value="512">512x512</option>
+        <option value="1024">1024x1024</option>
+      </select>
+
+      <button id="downloadBtn">download</button>
 
     </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <div class="hero-box">
-        <h1>split image into parts</h1>
-        <p>upload image → choose parts → download slices</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="container">
-
-    <div class="empty" id="emptyText">
-      no image yet
-    </div>
-
-    <div class="preview" id="preview"></div>
 
   </div>
+</header>
 
-  <footer class="footer">
-    vibecoded by <a href="https://nbvk.kittyy.ru">qwkrtezzz</a>
-  </footer>
+<section class="hero">
+  <div class="container">
+    <div class="hero-box">
+      <h1>image processor</h1>
+      <p>split / tile / resize</p>
+    </div>
+  </div>
+</section>
 
-  <script>
-    const imageInput = document.getElementById("imageInput");
-    const splitCount = document.getElementById("splitCount");
-    const preview = document.getElementById("preview");
-    const emptyText = document.getElementById("emptyText");
-    const downloadBtn = document.getElementById("downloadBtn");
+<div class="container">
 
-    let canvases = [];
+  <div class="empty" id="emptyText">no image yet</div>
+  <div class="preview" id="preview"></div>
 
-    imageInput.addEventListener("change", handleImage);
-    splitCount.addEventListener("change", handleImage);
+</div>
 
-    function handleImage() {
-      const file = imageInput.files[0];
-      if (!file) return;
+<script>
+  const imageInput = document.getElementById("imageInput");
+  const mode = document.getElementById("mode");
+  const splitCount = document.getElementById("splitCount");
+  const tileSizeSelect = document.getElementById("tileSize");
+  const preview = document.getElementById("preview");
+  const emptyText = document.getElementById("emptyText");
+  const downloadBtn = document.getElementById("downloadBtn");
 
-      const img = new Image();
-      img.src = URL.createObjectURL(file);
+  let canvases = [];
+  let currentImg = null;
 
-      img.onload = () => split(img);
-    }
+  imageInput.addEventListener("change", handleImage);
+  mode.addEventListener("change", () => currentImg && split(currentImg));
+  splitCount.addEventListener("change", () => currentImg && split(currentImg));
+  tileSizeSelect.addEventListener("change", () => currentImg && split(currentImg));
 
-    function split(img) {
-      preview.innerHTML = "";
-      canvases = [];
+  function handleImage() {
+    const file = imageInput.files[0];
+    if (!file) return;
 
-      emptyText.classList.add("hidden");
+    const img = new Image();
+    img.src = URL.createObjectURL(file);
 
+    img.onload = () => {
+      currentImg = img;
+      split(img);
+    };
+  }
+
+  function split(img) {
+    preview.innerHTML = "";
+    canvases = [];
+    emptyText.classList.add("hidden");
+
+    const m = mode.value;
+
+    // 1) SPLIT GRID
+    if (m === "split") {
       const parts = Number(splitCount.value);
       const grid = Math.sqrt(parts);
 
-      const w = img.width / grid;
-      const h = img.height / grid;
+      const cellW = img.width / grid;
+      const cellH = img.height / grid;
+
+      const tileSize = Number(tileSizeSelect.value);
 
       for (let y = 0; y < grid; y++) {
         for (let x = 0; x < grid; x++) {
 
-          const card = document.createElement("div");
-          card.className = "card";
-
           const canvas = document.createElement("canvas");
           const ctx = canvas.getContext("2d");
 
-          canvas.width = w;
-          canvas.height = h;
+          canvas.width = tileSize;
+          canvas.height = tileSize;
 
           ctx.drawImage(
             img,
-            x * w,
-            y * h,
-            w,
-            h,
-            0,
-            0,
-            w,
-            h
+            x * cellW, y * cellH, cellW, cellH,
+            0, 0, tileSize, tileSize
           );
 
-          card.appendChild(canvas);
-          preview.appendChild(card);
-
-          canvases.push(canvas);
+          add(canvas);
         }
       }
     }
 
-    downloadBtn.addEventListener("click", async () => {
-      if (!canvases.length) return;
+    // 2) TILE GRID (fixed chunks)
+    if (m === "tile") {
+      const tileSize = Number(tileSizeSelect.value);
 
-      for (let i = 0; i < canvases.length; i++) {
-        const a = document.createElement("a");
-        a.href = canvases[i].toDataURL("image/png");
-        a.download = `part-${i + 1}.png`;
+      const cols = Math.ceil(img.width / tileSize);
+      const rows = Math.ceil(img.height / tileSize);
 
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
+      for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
 
-        await new Promise(r => setTimeout(r, 120));
+          const sx = x * tileSize;
+          const sy = y * tileSize;
+
+          const sw = Math.min(tileSize, img.width - sx);
+          const sh = Math.min(tileSize, img.height - sy);
+
+          const canvas = document.createElement("canvas");
+          const ctx = canvas.getContext("2d");
+
+          canvas.width = tileSize;
+          canvas.height = tileSize;
+
+          ctx.drawImage(
+            img,
+            sx, sy, sw, sh,
+            0, 0, tileSize, tileSize
+          );
+
+          add(canvas);
+        }
       }
-    });
-  </script>
+    }
+
+    // 3) RESIZE ONLY (1 image)
+    if (m === "resize") {
+      const tileSize = Number(tileSizeSelect.value);
+
+      const canvas = document.createElement("canvas");
+      const ctx = canvas.getContext("2d");
+
+      canvas.width = tileSize;
+      canvas.height = tileSize;
+
+      ctx.drawImage(
+        img,
+        0, 0, img.width, img.height,
+        0, 0, tileSize, tileSize
+      );
+
+      add(canvas);
+    }
+  }
+
+  function add(canvas) {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.appendChild(canvas);
+
+    preview.appendChild(card);
+    canvases.push(canvas);
+  }
+
+  downloadBtn.addEventListener("click", async () => {
+    if (!canvases.length) return;
+
+    for (let i = 0; i < canvases.length; i++) {
+      const a = document.createElement("a");
+      a.href = canvases[i].toDataURL("image/png");
+      a.download = `output-${i + 1}.png`;
+
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
+      await new Promise(r => setTimeout(r, 60));
+    }
+  });
+</script>
 
 </body>
 </html>
