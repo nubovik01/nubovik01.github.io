@@ -502,3 +502,21 @@ noscript p {
   85% { opacity: 1; }
   100% { transform: translateY(-120px); opacity: 0; }
 }
+
+.desktop-footer {
+  display: none;
+}
+
+.mobile-footer {
+  display: block;
+}
+
+@media screen and (min-width: 900px) {
+  .desktop-footer {
+    display: block;
+  }
+
+  .mobile-footer {
+    display: none;
+  }
+}
