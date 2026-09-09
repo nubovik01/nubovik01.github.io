@@ -527,18 +527,19 @@ noscript p {
 .list > div {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .list > div img {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 6px;
   border: 1px solid light-dark(#E3E1DA, #23252B);
 }
 
 .list > div .name {
   font-weight: 600;
+  font-size: 105%;
 }
 
 .list > div .link {
