@@ -26,7 +26,16 @@ function makeList(elementName, list) {
 
       link.className = "link";
       link.href = object.link;
-      link.textContent = "open";
+
+      link.appendChild(document.createTextNode(
+        object.link.replace(/^https?:\/\//, "").split("/")[0]
+      ));
+
+      const symbol = document.createElement("img");
+      symbol.id = "symbol-icon";
+      symbol.src = "/files/images/newBlank.webp";
+      symbol.alt = "new";
+      link.appendChild(symbol);
 
       head.appendChild(link);
     };

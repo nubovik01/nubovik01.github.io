@@ -185,8 +185,15 @@ a:hover {
 
 .cards #symbol-icon {
   margin: 0 0 -3px -4px;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
+  border: none;
+}
+
+.list #symbol-icon {
+  margin: 0 0 -3px 4px;
+  width: 16px;
+  height: 16px;
   border: none;
 }
 
