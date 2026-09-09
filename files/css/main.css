@@ -526,48 +526,48 @@ noscript p {
   margin-bottom: 10px;
 }
 
-.project {
+.list {
   padding-top: 8px;
   padding-bottom: 6px;
   border-top: 1px solid light-dark(#E3E1DA, #23252B);
 }
 
-.project:first-child {
+.list:first-child {
   border-top: none;
   padding-top: 0;
 }
 
-.project:last-child {
+.list:last-child {
   padding-bottom: 2px;
 }
 
-.project-head {
+.list > div {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.project-head img {
+.list > div img {
   width: 24px;
   height: 24px;
   border-radius: 6px;
   border: 1px solid light-dark(#E3E1DA, #23252B);
 }
 
-.project-head .name {
+.list > div .name {
   font-weight: 600;
 }
 
-.project-head .link {
+.list > div .link {
   margin-left: auto;
   color: light-dark(#767A82, #8B8E96);
 }
 
-.project p {
+.list p {
   margin-top: 6px;
 }
 
-.project .status {
+.list .status {
   color: var(--italic-text-color);
   font-style: italic;
 }

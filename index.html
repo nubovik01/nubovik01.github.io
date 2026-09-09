@@ -38,6 +38,7 @@
   <script src="./files/js/birthdayTimer.js"></script>
   <script src="./files/js/alerts.js"></script>
   <script src="./files/js/freeze.js"></script>
+  <script src="./files/js/list.js"></script>
   <!-- <script src="./files/js/throughts.js"></script> -->
   <link rel="icon" type="image/x-icon" href="./files/images/omyum.ico">
   <style>
@@ -283,56 +284,7 @@
     }
   ];
 
-  const wrap = document.getElementById("projects");
-  projects.forEach(function (project) {
-    const row = document.createElement("div");
-    row.className = "project";
-
-    const head = document.createElement("div");
-    head.className = "project-head";
-
-    if (project.icon) {
-      const image = document.createElement("img");
-      image.src = project.icon; image.alt = "";
-      head.appendChild(image);
-    };
-
-    const name = document.createElement("span");
-    name.className = "name";
-    name.textContent = project.title;
-    head.appendChild(name);
-
-    if (project.link) {
-      const link = document.createElement("a");
-
-      link.className = "link";
-      link.href = project.link;
-      link.textContent = "open";
-
-      head.appendChild(link);
-    };
-
-    row.appendChild(head);
-
-    if (project.description) {
-      const description = document.createElement("p");
-
-      description.textContent = project.description;
-
-      row.appendChild(description);
-    };
-
-    if (project.status) {
-      const status = document.createElement("p");
-
-      status.className = "status";
-      status.textContent = project.status;
-
-      row.appendChild(status);
-    };
-
-    wrap.appendChild(row);
-  });
+  makeList("projects", projects);
 </script>
 
 </html>
