@@ -106,13 +106,30 @@
           </div>
         </div>
 
-        <div class="sheet-traits">
-          <a href="https://t.me/+nycLeWYRWv5hNDYy">femboy's lounge</a>
-          <a href="https://t.me/theanarchywall">the anarchy wall</a>
-          <a href="https://github.com/doelsquad">doelsquad</a>
-          <a href="https://r167.meowfox.net/posts">r167 mod</a>
-          <a href="https://t.me/bogdan_petrenko">bogdan petrenko's blog</a>
-        </div>
+        <div class="sheet-log">
+  <div class="log-row">
+    <span class="log-hash">a1f9c2</span>
+    <span class="log-msg">privileged member of <a href="https://t.me/+nycLeWYRWv5hNDYy">femboy's lounge</a></span>
+  </div>
+  <div class="log-row">
+    <span class="log-hash">7be041</span>
+    <span class="log-msg">writing something on <a href="https://t.me/theanarchywall">the anarchy wall</a></span>
+  </div>
+  <div class="log-row">
+    <span class="log-hash">3d02ee</span>
+    <span class="log-msg">doelsquad member: <a href="https://github.com/doelsquad">github.com/doelsquad</a></span>
+  </div>
+  <div class="log-row">
+    <span class="log-hash">f56a10</span>
+    <span class="log-msg">moderator on <a href="https://r167.meowfox.net/posts">r167</a> (content may be nsfw)</span>
+  </div>
+  <div class="log-row">
+    <span class="log-hash">9c7b84</span>
+    <span class="log-msg">admin of <a href="https://t.me/bogdan_petrenko">bogdan petrenko's blog</a></span>
+  </div>
+</div>
+
+        <span class="italic" id="quote" onclick="changeQuote();" translate="no"></span>
 
         <div class="buttons" translate="no">
           <a href="https://t.me/teez2157">telegram</a>
@@ -131,7 +148,6 @@
           <a href="?r=faq">faq</a>
           <a href="https://t.me/galaryteez">photos</a>
         </div>
-
       </div>
 
       <footer class="desktop-footer"></footer>
@@ -241,6 +257,12 @@
       image.src = photos[index];
     });
   })();
+</script>
+
+<script>
+  document.querySelectorAll(".log-hash").forEach(function (element) {
+    element.textContent = Math.random().toString(16).slice(2, 8);
+  });
 </script>
 
 </html>

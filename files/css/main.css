@@ -668,24 +668,24 @@ noscript p {
   font-size: 92%;
 }
 
-.sheet-traits {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+.sheet-log {
   margin-bottom: 16px;
 }
 
-.sheet-traits > a {
-  color: var(--text-color);
-  border: 1px solid var(--cards-border-color);
-  border-radius: 5px;
-  padding: 4px 8px;
-  font-size: 85%;
-  transition: border-color 0.2s ease, color 0.2s ease;
+.log-row {
+  display: flex;
+  gap: 10px;
+  padding: 4px 0;
+  font-size: 90%;
+  line-height: 1.5;
 }
 
-.trait:hover {
-  border-color: var(--link-color);
-  color: var(--link-color);
-  text-decoration: none;
+.log-hash {
+  color: var(--note-text-color);
+  opacity: 0.6;
+  flex: 0 0 auto;
+}
+
+.log-msg {
+  color: var(--text-color);
 }
