@@ -207,6 +207,7 @@ a:hover {
 .cards p {
   margin: 5px 3px 13px 2px;
   font-size: 93%;
+  color: light-dark(rgba(98, 98, 98, 0.8), rgb(200, 200, 200));
 }
 
 .cards p[fix="true"] {
