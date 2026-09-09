@@ -31,7 +31,6 @@
   <script src="./files/js/footer.js"></script>
   <script src="./files/js/age.js"></script>
   <script src="./files/js/additionalButtons.js"></script>
-  <script src="./files/js/carousel.js"></script>
   <script src="./files/js/sha.js"></script>
   <script src="./files/js/isSupported.js"></script>
   <script src="./files/js/birthdayTimer.js"></script>
@@ -48,7 +47,7 @@
         width: auto;
       }
 
-      .cards>div:first-child {
+      .cards > div:first-child {
         margin-top: 0;
       }
     }
@@ -73,32 +72,47 @@
   <div class="container" style="display: none !important;">
     <div>
       <div class="heading">
-        <p>hi! i'm nikita! <span class="note-text">(he/him)</span></p>
+        <div>
+          <div class="avatar">
+            <img id="avatar" src="./files/images/selfies/first.webp" alt="my selfie">
+            <button id="update-avatar" aria-label="next photo">↻</button>
+          </div>
+          <div class="passport">
+            <p class="sheet-name">Nikita <span class="note-text">(he/him)</span></p>
+            <p class="sheet-aka">AKA nubovik, <u>qwkrtezzz</u>...</p>
+          </div>
+        </div>
 
-        <p><span id="aka" translate="no">AKA</span> dempix, nubovik, <u>qwkrtezzz</u>, etc...</p>
+        <div class="sheet-stats">
+          <div>
+            <span class="stat-label">age</span>
+            <span class="stat-fill"></span>
+            <span class="stat-value" id="yo"></span>
+          </div>
+          <div>
+            <span class="stat-label">role</span>
+            <span class="stat-fill"></span>
+            <span class="stat-value">javascript developer</span>
+          </div>
+          <div>
+            <span class="stat-label">based</span>
+            <span class="stat-fill"></span>
+            <span class="stat-value">russia</span>
+          </div>
+          <div>
+            <span class="stat-label">birthday in</span>
+            <span class="stat-fill"></span>
+            <span class="stat-value" id="birthday-timer"></span>
+          </div>
+        </div>
 
-        <p>
-          <span id="yo">13</span> y.o, javascript
-          <img class="mini-icon" src="./files/images/icons/JavaScript.webp" alt="javascript icon">
-          developer from russia.
-        </p>
-
-        <p>🙃 <i>my birthday in: <span id="birthday-timer" class="timer"></span></i></p>
-
-        <p>— privileged member of <a href="https://t.me/+nycLeWYRWv5hNDYy">femboy's lounge</a></p>
-
-        <p>— writing something on <a href="https://t.me/theanarchywall">the anarchy wall</a></p>
-
-        <p>— doelsquad member: <a href="https://github.com/doelsquad">github.com/doelsquad</a></p>
-
-        <p>— moderator on <a href="https://r167.meowfox.net/posts">r167</a> (content may be nsfw)</p>
-
-        <p id="bgd-blog">— admin of <a href="https://t.me/bogdan_petrenko">bogdan petrenko's blog</a></p>
-        <script>
-          document.getElementById("bgd-blog").onclick = function () {
-            document.getElementById("bogdan-banner").style.display = "block";
-          };
-        </script>
+        <div class="sheet-traits">
+          <a href="https://t.me/+nycLeWYRWv5hNDYy">femboy's lounge</a>
+          <a href="https://t.me/theanarchywall">the anarchy wall</a>
+          <a href="https://github.com/doelsquad">doelsquad</a>
+          <a href="https://r167.meowfox.net/posts">r167 mod</a>
+          <a href="https://t.me/bogdan_petrenko">bogdan petrenko's blog</a>
+        </div>
 
         <div class="buttons" translate="no">
           <a href="https://t.me/teez2157">telegram</a>
@@ -118,20 +132,6 @@
           <a href="https://t.me/galaryteez">photos</a>
         </div>
 
-        <div class="carousel">
-          <div class="slide">
-            <img src="./files/images/selfies/four.webp" alt="me with book"> <!-- tokyo ghoul -->
-            <img src="./files/images/selfies/first.webp" alt="selfie">
-            <img src="./files/images/selfies/three.webp" alt="i'm cute">
-            <img src="./files/images/selfies/two.webp" alt="at the police:3">
-          </div>
-          <a class="previor-button">&#10094;</a>
-          <a class="next-button">&#10095;</a>
-        </div>
-
-        <a href="https://t.me/razrab2"><video autoplay src="./files/videos/rldv1.mp4" width="100%" style="display: none;" id="bogdan-banner"></a>
-
-        <!-- <p class="italic" id="quote" onclick="changeQuote();" translate="no"></p> -->
       </div>
 
       <footer class="desktop-footer"></footer>
@@ -159,6 +159,8 @@
 </body>
 
 <script>
+  document.getElementById("yo").textContent = calculateAge("09.04.2008");
+
   showAlert({
     text: "Welcome back after what happened! <a href='https://t.me/teezdev/227'>https://t.me/teezdev/227</a>",
     duration: 10,
@@ -218,6 +220,27 @@
   ];
 
   makeList("projects", projects);
+</script>
+
+<script>
+  (function () {
+    const photos = [
+      "./files/images/selfies/first.webp",
+      "./files/images/selfies/two.webp",
+      "./files/images/selfies/three.webp",
+      "./files/images/selfies/four.webp"
+    ];
+
+    let index = 0;
+    const image = document.getElementById("avatar");
+
+    const updateButton = document.getElementById("update-avatar");
+    
+    updateButton.addEventListener("click", function () {
+      index = (index + 1) % photos.length;
+      image.src = photos[index];
+    });
+  })();
 </script>
 
 </html>
