@@ -370,7 +370,7 @@ noscript p {
 }
 
 .banners {
-  margin-top: 10px;
+  margin-top: 14px;
   margin-left: 1px;
 }
 
@@ -542,7 +542,7 @@ noscript p {
 
 .list:first-child {
   border-top: none;
-  padding-top: 0;
+  padding-top: 8px;
 }
 
 .list:last-child {
@@ -639,11 +639,11 @@ noscript p {
   margin-top: 3px;
 }
 
-.sheet-stats {
+.sheet-statistic {
   margin: 10px 0 14px;
 }
 
-.sheet-stats > div {
+.sheet-statistic > div {
   display: flex;
   align-items: baseline;
   gap: 6px;
@@ -669,7 +669,7 @@ noscript p {
 }
 
 .sheet-log {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .log-row {
@@ -686,6 +686,6 @@ noscript p {
   flex: 0 0 auto;
 }
 
-.log-msg {
+.log-message {
   color: var(--text-color);
 }

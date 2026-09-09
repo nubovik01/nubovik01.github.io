@@ -74,7 +74,7 @@
       <div class="heading">
         <div>
           <div class="avatar">
-            <img id="avatar" src="./files/images/selfies/first.webp" alt="my selfie">
+            <img id="avatar" src="./files/images/selfies/four.webp" alt="my selfie">
             <button id="update-avatar" aria-label="next photo">↻</button>
           </div>
           <div class="passport">
@@ -83,7 +83,7 @@
           </div>
         </div>
 
-        <div class="sheet-stats">
+        <div class="sheet-statistic">
           <div>
             <span class="stat-label">age</span>
             <span class="stat-fill"></span>
@@ -105,31 +105,31 @@
             <span class="stat-value" id="birthday-timer"></span>
           </div>
         </div>
+          
+          <div class="sheet-log">
+            <div class="log-row">
+              <span class="log-hash">a1f9c2</span>
+              <span class="log-message">privileged member of <a href="https://t.me/+nycLeWYRWv5hNDYy">femboy's lounge</a></span>
+            </div>
+            <div class="log-row">
+              <span class="log-hash">7be041</span>
+              <span class="log-message">writing something on <a href="https://t.me/theanarchywall">the anarchy wall</a></span>
+            </div>
+            <div class="log-row">
+              <span class="log-hash">3d02ee</span>
+              <span class="log-message">doelsquad member: <a href="https://github.com/doelsquad">github.com/doelsquad</a></span>
+            </div>
+            <div class="log-row">
+              <span class="log-hash">f56a10</span>
+              <span class="log-message">moderator on <a href="https://r167.meowfox.net/posts">r167</a> (content may be nsfw)</span>
+            </div>
+            <div class="log-row">
+              <span class="log-hash">9c7b84</span>
+              <span class="log-message">admin of <a href="https://t.me/bogdan_petrenko">bogdan petrenko's blog</a></span>
+            </div>
+          </div>
 
-        <div class="sheet-log">
-  <div class="log-row">
-    <span class="log-hash">a1f9c2</span>
-    <span class="log-msg">privileged member of <a href="https://t.me/+nycLeWYRWv5hNDYy">femboy's lounge</a></span>
-  </div>
-  <div class="log-row">
-    <span class="log-hash">7be041</span>
-    <span class="log-msg">writing something on <a href="https://t.me/theanarchywall">the anarchy wall</a></span>
-  </div>
-  <div class="log-row">
-    <span class="log-hash">3d02ee</span>
-    <span class="log-msg">doelsquad member: <a href="https://github.com/doelsquad">github.com/doelsquad</a></span>
-  </div>
-  <div class="log-row">
-    <span class="log-hash">f56a10</span>
-    <span class="log-msg">moderator on <a href="https://r167.meowfox.net/posts">r167</a> (content may be nsfw)</span>
-  </div>
-  <div class="log-row">
-    <span class="log-hash">9c7b84</span>
-    <span class="log-msg">admin of <a href="https://t.me/bogdan_petrenko">bogdan petrenko's blog</a></span>
-  </div>
-</div>
-
-        <span class="italic" id="quote" onclick="changeQuote();" translate="no"></span>
+        <!-- <span class="italic" id="quote" onclick="changeQuote();" translate="no"></span> -->
 
         <div class="buttons" translate="no">
           <a href="https://t.me/teez2157">telegram</a>
@@ -176,12 +176,6 @@
 
 <script>
   document.getElementById("yo").textContent = calculateAge("09.04.2008");
-
-  showAlert({
-    text: "Welcome back after what happened! <a href='https://t.me/teezdev/227'>https://t.me/teezdev/227</a>",
-    duration: 10,
-    delay: 1
-  });
 </script>
 
 <script>
@@ -262,6 +256,14 @@
 <script>
   document.querySelectorAll(".log-hash").forEach(function (element) {
     element.textContent = Math.random().toString(16).slice(2, 8);
+  });
+</script>
+
+<script>
+  showAlert({
+    text: "Welcome back after what happened! <a href='https://t.me/teezdev/227'>https://t.me/teezdev/227</a>",
+    duration: 10,
+    delay: 1
   });
 </script>
 
