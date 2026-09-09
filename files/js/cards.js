@@ -8,7 +8,7 @@ const cardTemplate = ({translate, link, icon, title, description, copyData}) => 
     ${link || copyData ? `<a href="${link || "#copy"}" ${copyData ? "" : `target="_blank"`}>` : ""}
       <div class="header" translate="no">
         ${icon ? `<div><img alt="${title} Icon" src="${icon}"></div>` : ""}
-        ${title ? `<span>${title}</span>` : ""}
+        ${title ? `<span id="title">${title}</span>` : ""}
         ${link || copyData ? `
           <div class="link">
             <span>${link?.split("/")[2] || ""}</span>
