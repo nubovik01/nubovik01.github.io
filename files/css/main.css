@@ -681,6 +681,7 @@ noscript p {
   color: var(--note-text-color);
   opacity: 0.6;
   font-size: 90%;
+  margin-top: 0.9px;
 }
 
 .buttons-panel > a > span:last-child {
