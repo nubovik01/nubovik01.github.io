@@ -175,6 +175,7 @@ a:hover {
 .cards .link {
   color: var(--cards-link-color);
   margin-left: auto;
+  margin-top: -3px;
 }
 
 .cards #symbol-icon {
