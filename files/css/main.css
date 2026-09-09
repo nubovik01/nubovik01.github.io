@@ -222,7 +222,6 @@ a:hover {
 footer, .footer {
   color: rgba(128, 128, 128, 0.808);
   font-style: italic;
-  padding-top: 10px;
 }
 
 footer p, .footer p {
@@ -370,7 +369,7 @@ noscript p {
 }
 
 .banners {
-  margin-top: 14px;
+  margin-top: 10px;
   margin-left: 1px;
 }
 
@@ -511,32 +510,14 @@ noscript p {
   100% { transform: translateY(-120px); opacity: 0; }
 }
 
-.desktop-footer {
-  display: none;
-}
-
-.mobile-footer {
-  display: block;
-}
-
-@media screen and (min-width: 900px) {
-  .desktop-footer {
-    display: block;
-  }
-
-  .mobile-footer {
-    display: none;
-  }
-}
-
 #projects {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .list {
-  padding-top: 8px;
-  padding-bottom: 6px;
+  padding-top: 10px;
+  padding-bottom: 8px;
   border-top: 1px solid light-dark(#E3E1DA, #292a2f);
 }
 
@@ -584,7 +565,6 @@ noscript p {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 14px;
 }
 
 .avatar {
@@ -597,8 +577,7 @@ noscript p {
 .avatar img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
+  border-radius: 12px;
   border: 1px solid var(--cards-border-color);
   display: block;
 }
@@ -608,8 +587,8 @@ noscript p {
   position: absolute;
   bottom: -6px;
   right: -6px;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -617,7 +596,7 @@ noscript p {
   border: 1px solid var(--buttons-border-color);
   border-radius: 50%;
   cursor: pointer;
-  font-size: 11px;
+  font-size: 1.5em;
   color: var(--text-color);
   transition: background 0.2s ease, transform 0.2s ease;
 }
@@ -628,19 +607,12 @@ noscript p {
 }
 
 .sheet-id .sheet-name {
-  font-size: 115%;
   font-weight: bold;
   margin: 0;
 }
 
-.sheet-id .sheet-aka {
-  color: var(--note-text-color);
-  font-size: 90%;
-  margin-top: 3px;
-}
-
 .sheet-statistic {
-  margin: 10px 0 14px;
+  margin: 10px 0 10px;
 }
 
 .sheet-statistic > div {
@@ -650,7 +622,7 @@ noscript p {
   padding: 4px 0;
 }
 
-.stat-label {
+.sheet-statistic > div > span:first-child {
   color: var(--note-text-color);
   white-space: nowrap;
   font-size: 92%;
@@ -659,20 +631,20 @@ noscript p {
 .stat-fill {
   flex: 1;
   min-width: 10px;
-  border-bottom: 1px dotted var(--cards-border-color);
+  border-bottom: 1.5px dotted gray;
   margin-bottom: 3px;
 }
 
-.stat-value {
+.sheet-statistic > div > span:last-child {
   white-space: nowrap;
   font-size: 92%;
 }
 
 .sheet-log {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
-.log-row {
+.sheet-log > div {
   display: flex;
   gap: 10px;
   padding: 4px 0;
@@ -680,12 +652,12 @@ noscript p {
   line-height: 1.5;
 }
 
-.log-hash {
+.sheet-log > div > span:first-child {
   color: var(--note-text-color);
   opacity: 0.6;
   flex: 0 0 auto;
 }
 
-.log-message {
+.sheet-log > div > span:last-child {
   color: var(--text-color);
 }
