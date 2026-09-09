@@ -364,7 +364,6 @@ noscript p {
 
 .banners {
   margin-top: 10px;
-  margin-left: 1px;
 }
 
 .banners img {
@@ -506,7 +505,6 @@ noscript p {
 
 #projects {
   margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .list {
@@ -629,10 +627,6 @@ noscript p {
   margin-bottom: 3px;
 }
 
-.commits {
-  margin-bottom: 8px;
-}
-
 .commits > div {
   display: flex;
   gap: 10px;
@@ -649,4 +643,53 @@ noscript p {
 
 .commits > div > span:last-child {
   color: var(--text-color);
+}
+
+.buttons-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--cards-border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 12px 0 6px;
+}
+
+.buttons-panel a {
+  display: flex;
+  gap: 8px;
+  padding: 11px 14px;
+  color: var(--text-color);
+  font-size: 92%;
+  border-bottom: 1px solid var(--cards-border-color);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.buttons-panel a:nth-child(odd) {
+  border-right: 1px solid var(--cards-border-color);
+}
+
+.buttons-panel a:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+.buttons-panel a:active {
+  background: var(--button-active-color);
+}
+
+.buttons-panel > a > span:first-child {
+  color: var(--note-text-color);
+  opacity: 0.6;
+  font-size: 90%;
+}
+
+.buttons-panel > a > span:last-child {
+  margin-left: auto;
+  color: var(--note-text-color);
+  opacity: 0.5;
+  transition: transform 0.15s ease, opacity 0.15s ease, color 0.15s ease;
+}
+
+.buttons-panel > a:hover > span:last-child {
+  transform: translateX(2px);
+  color: var(--link-color);
 }
