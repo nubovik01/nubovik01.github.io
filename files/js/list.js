@@ -18,7 +18,7 @@ function makeList(elementName, list) {
 
     const name = document.createElement("span");
     name.className = "name";
-    name.textContent = object.title;
+    name.innerHTML = object.title;
     head.appendChild(name);
 
     if (object.link) {
@@ -45,7 +45,7 @@ function makeList(elementName, list) {
     if (object.description) {
       const description = document.createElement("p");
 
-      description.textContent = object.description;
+      description.innerHTML = object.description;
 
       row.appendChild(description);
     };
@@ -54,7 +54,7 @@ function makeList(elementName, list) {
       const status = document.createElement("p");
 
       status.className = "status";
-      status.textContent = object.status;
+      status.innerHTML = object.status;
 
       row.appendChild(status);
     };
