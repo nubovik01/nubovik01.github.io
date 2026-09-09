@@ -55,12 +55,6 @@ body {
   height: 100%;
 }
 
-@media screen and (min-width:1350px) {
-  body {
-    zoom: 1.25;
-  }
-}
-
 .root, .container {
   margin: 25px 15px 25px 15px;
   width: 335px;
@@ -564,22 +558,21 @@ noscript p {
 .heading > div:first-child {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 .avatar {
   position: relative;
   width: 64px;
   height: 64px;
-  flex: 0 0 auto;
 }
 
 .avatar img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: 12px;
   border: 1px solid var(--cards-border-color);
-  display: block;
 }
 
 .avatar button {
@@ -611,40 +604,35 @@ noscript p {
   margin: 0;
 }
 
-.sheet-statistic {
+.bio {
   margin: 10px 0 10px;
 }
 
-.sheet-statistic > div {
+.bio > div {
   display: flex;
   align-items: baseline;
   gap: 6px;
   padding: 4px 0;
 }
 
-.sheet-statistic > div > span:first-child {
+.bio > div > span:first-child {
   color: var(--note-text-color);
   white-space: nowrap;
   font-size: 92%;
 }
 
-.stat-fill {
+.bio-fill {
   flex: 1;
   min-width: 10px;
   border-bottom: 1.5px dotted gray;
   margin-bottom: 3px;
 }
 
-.sheet-statistic > div > span:last-child {
-  white-space: nowrap;
-  font-size: 92%;
+.commits {
+  margin-bottom: 8px;
 }
 
-.sheet-log {
-  margin-bottom: 10px;
-}
-
-.sheet-log > div {
+.commits > div {
   display: flex;
   gap: 10px;
   padding: 4px 0;
@@ -652,12 +640,12 @@ noscript p {
   line-height: 1.5;
 }
 
-.sheet-log > div > span:first-child {
+.commits > div > span:first-child {
   color: var(--note-text-color);
   opacity: 0.6;
   flex: 0 0 auto;
 }
 
-.sheet-log > div > span:last-child {
+.commits > div > span:last-child {
   color: var(--text-color);
 }
