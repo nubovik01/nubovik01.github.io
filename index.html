@@ -59,6 +59,14 @@
         display: none !important;
       }
     }
+
+    .line::before {
+      content: "";
+    }
+
+    video {
+      padding-bottom: 10px;
+    }
   </style>
 </head>
 
@@ -93,6 +101,24 @@
           };
         </script>
 
+        <div class="buttons" translate="no">
+          <a href="https://t.me/teez2157">telegram</a>
+          <a href="https://t.me/nbvkxd">blog</a>
+          <a href="/donate">donate</a>
+          <a href="?r=wktm">wakatime</a>
+          <a href="?r=inst">inst</a>
+          <a href="?r=gh">github</a>
+          <a href="?r=mt">monkeytype</a>
+          <a id="toggleAdditionalButtons">more...</a>
+        </div>
+
+        <div class="buttons" id="moreButtons" translate="no" style="display: none;">
+          <a href="?r=ymuz">y.music</a>
+          <a href="?r=tt">tiktok</a>
+          <a href="?r=faq">faq</a>
+          <a href="https://t.me/galaryteez">photos</a>
+        </div>
+
         <div class="carousel">
           <div class="slide">
             <img src="./files/images/selfies/four.webp" alt="me with book"> <!-- tokyo ghoul -->
@@ -104,31 +130,9 @@
           <a class="next-button">&#10095;</a>
         </div>
 
-        <a href="https://t.me/razrab2"><img src="./files/images/rldv1.mp4" width="100%" style="display: none;"
-            id="bogdan-banner"></a>
+        <a href="https://t.me/razrab2"><video autoplay src="./files/images/rldv1.mp4" width="100%" style="display: none;" id="bogdan-banner"></a>
 
-        <p class="italic" id="quote" onclick="changeQuote();" translate="no"></p>
-      </div>
-
-      <div class="buttons" translate="no">
-        <a href="https://t.me/teez2157">telegram</a>
-        <a href="https://t.me/nbvkxd">blog</a>
-        <a href="/donate">donate</a>
-        <a href="?r=wktm">wakatime</a>
-        <a href="?r=inst">inst</a>
-        <a href="?r=gh">github</a>
-        <a href="?r=mt">monkeytype</a>
-        <a id="toggleAdditionalButtons">more...</a>
-      </div>
-
-      <a href="https://t.me/razrab2"><video autoplay src="./files/images/rldv1.mp4" width="100%" style="display: none;"
-          id="bogdan-banner"></a>
-
-      <div class="buttons" id="moreButtons" translate="no" style="display: none;">
-        <a href="?r=ymuz">y.music</a>
-        <a href="?r=tt">tiktok</a>
-        <a href="?r=faq">faq</a>
-        <a href="https://t.me/galaryteez">photos</a>
+        <!-- <p class="italic" id="quote" onclick="changeQuote();" translate="no"></p> -->
       </div>
 
       <footer class="desktop-footer"></footer>
