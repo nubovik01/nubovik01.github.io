@@ -674,6 +674,7 @@ noscript p {
 
 .buttons-panel a:active {
   background: var(--button-active-color);
+  color: var(--background-color);
 }
 
 .buttons-panel > a > span:first-child {
