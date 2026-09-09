@@ -26,11 +26,9 @@
   <script src="./files/js/redirecter.js"></script>
   <link href="./files/css/main.css" rel="stylesheet">
   <script src="./files/js/title.js"></script>
-  <script src="./files/js/cards.js"></script>
   <script src="./files/js/quotes.js"></script>
   <script src="./files/js/footer.js"></script>
   <script src="./files/js/age.js"></script>
-  <script src="./files/js/additionalButtons.js"></script>
   <script src="./files/js/sha.js"></script>
   <script src="./files/js/isSupported.js"></script>
   <script src="./files/js/birthdayTimer.js"></script>
@@ -50,6 +48,16 @@
     .heading p:first-child {
       font-size: 1.2em;
       font-weight: bold;
+    }
+
+    .banners {
+      margin-bottom: 6px;
+    }
+
+    #quote {
+      display: block;
+      margin-top: 10px;
+      font-size: 85%;
     }
   </style>
 </head>
@@ -103,8 +111,6 @@
       <div><span>9c7b84</span> <span>admin of <a href="https://t.me/bogdan_petrenko">bogdan petrenko's blog</a></span></div>
     </div>
 
-    <!-- <span class="italic" id="quote" onclick="changeQuote();" translate="no"></span> -->
-
     <div class="buttons-panel" translate="no">
       <a href="https://t.me/teez2157"><span>01</span>telegram<span>→</span></a>
       <a href="https://t.me/nbvkxd"><span>02</span>blog<span>→</span></a>
@@ -126,6 +132,8 @@
       <a href="https://firefox.com"><img src="./files/images/banners/firefox.gif"></a>
       <a href="https://t.me/teez2157"><img src="./files/images/banners/your-ad-here.png"></a>
     </div>
+
+    <span class="italic" id="quote" onclick="changeQuote();" translate="no"></span>
 
     <footer class="footer"></footer>
   </div>
