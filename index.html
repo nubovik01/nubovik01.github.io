@@ -283,44 +283,52 @@
     }
   ];
 
-  var wrap = document.getElementById("projects");
-  projects.forEach(function (p) {
-    var row = document.createElement("div");
+  const wrap = document.getElementById("projects");
+  projects.forEach(function (project) {
+    const row = document.createElement("div");
     row.className = "project";
 
-    var head = document.createElement("div");
+    const head = document.createElement("div");
     head.className = "project-head";
 
-    if (p.icon) {
-      var im = document.createElement("img");
-      im.src = p.icon; im.alt = "";
-      head.appendChild(im);
+    if (project.icon) {
+      const image = document.createElement("img");
+      image.src = project.icon; image.alt = "";
+      head.appendChild(image);
     };
 
-    var name = document.createElement("span");
-    name.className = "pname";
-    name.textContent = p.title;
+    const name = document.createElement("span");
+    name.className = "name";
+    name.textContent = project.title;
     head.appendChild(name);
 
-    if (p.link) {
-      var a = document.createElement("a");
-      a.className = "plink"; a.href = p.link; a.textContent = "open";
-      head.appendChild(a);
+    if (project.link) {
+      const link = document.createElement("a");
+
+      link.className = "link";
+      link.href = project.link;
+      link.textContent = "open";
+
+      head.appendChild(link);
     };
 
     row.appendChild(head);
 
-    if (p.description) {
-      var desc = document.createElement("p");
-      desc.textContent = p.description;
-      row.appendChild(desc);
+    if (project.description) {
+      const description = document.createElement("p");
+
+      description.textContent = project.description;
+
+      row.appendChild(description);
     };
 
-    if (p.status) {
-      var st = document.createElement("p");
-      st.className = "status";
-      st.textContent = p.status;
-      row.appendChild(st);
+    if (project.status) {
+      const status = document.createElement("p");
+
+      status.className = "status";
+      status.textContent = project.status;
+
+      row.appendChild(status);
     };
 
     wrap.appendChild(row);

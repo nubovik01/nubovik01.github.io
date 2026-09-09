@@ -554,11 +554,11 @@ noscript p {
   border: 1px solid light-dark(#E3E1DA, #23252B);
 }
 
-.project-head .pname {
+.project-head .name {
   font-weight: 600;
 }
 
-.project-head .plink {
+.project-head .link {
   margin-left: auto;
   color: light-dark(#767A82, #8B8E96);
 }
